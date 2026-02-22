@@ -1,23 +1,25 @@
+// proximity.js - Entity proximity detection with level gating
 import { world, system } from "@minecraft/server";
-import { entityMap } from "./vocabulary.js";
-import { unlockWord } from "./progress.js";
+import { entityMap } from "./vocab/index.js";
+import { unlockWord, getPlayerLevel } from "./progress.js";
+import { celebrateLevelUp } from "./levelUp.js";
+import { COOLDOWN_TICKS, DETECT_RANGE } from "./config.js";
 
 const cooldowns = new Map();
-const COOLDOWN_TICKS = 1200;
-const DETECT_RANGE = 5;
-const CHECK_INTERVAL = 20;
+const CHECK_INTERVAL = 20; // every 1 second
 
 function showWord(player, word, isNew) {
   try {
     const dim = player.dimension;
     const sel = '@a[name="' + player.name + '"]';
-    
+
+    dim.runCommand("titleraw " + sel + " times 10 40 10");
+
     const titleJson = JSON.stringify({ rawtext: [{ text: "§a§l" + word.en + "§r" }] });
     dim.runCommand("titleraw " + sel + " title " + titleJson);
 
     const subtitleJson = JSON.stringify({ rawtext: [{ text: "§f" + word.cn + "  §7" + word.phonetic + "§r" }] });
     dim.runCommand("titleraw " + sel + " subtitle " + subtitleJson);
-    dim.runCommand("titleraw " + sel + " times 10 40 10");
 
     if (isNew) {
       dim.runCommand("playsound random.levelup " + sel);
@@ -25,10 +27,7 @@ function showWord(player, word, isNew) {
       const abJson = JSON.stringify({ rawtext: [{ text: "§e✨ New Word Unlocked! ✨§r" }] });
       dim.runCommand("titleraw " + sel + " actionbar " + abJson);
     }
-    console.warn("[English Learning] Showed " + word.en + " to " + player.name);
-  } catch (e) {
-    console.warn("[English Learning] showWord error: " + e);
-  }
+  } catch (e) {}
 }
 
 function isOnCooldown(playerId, entityTypeId, currentTick) {
@@ -52,6 +51,7 @@ export function startProximityDetection() {
 
     for (const player of players) {
       try {
+        const playerLevel = getPlayerLevel(player);
         const nearby = player.dimension.getEntities({
           location: player.location,
           maxDistance: DETECT_RANGE,
@@ -63,16 +63,22 @@ export function startProximityDetection() {
             const typeId = entity.typeId;
             const word = entityMap.get(typeId);
             if (!word) continue;
+            if (word.level > playerLevel) continue; // level gated
             if (isOnCooldown(player.id, typeId, currentTick)) continue;
+
             setCooldown(player.id, typeId, currentTick);
-            const isNew = unlockWord(player, "entities", typeId);
-            showWord(player, word, isNew);
-            break;
+            const result = unlockWord(player, "entities", typeId, word.level);
+            showWord(player, word, result.isNew);
+
+            if (result.leveledUp) {
+              system.runTimeout(() => {
+                celebrateLevelUp(player, result.newLevel);
+              }, 40);
+            }
+            break; // one word per tick per player
           } catch (e) { continue; }
         }
-      } catch (e) {
-        console.warn("[English Learning] player error: " + e);
-      }
+      } catch (e) {}
     }
   }, CHECK_INTERVAL);
 }

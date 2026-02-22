@@ -1,0 +1,9 @@
+{
+  "unlockThreshold": 0.8,
+  "cooldownSeconds": 60,
+  "detectRange": 2,
+  "questIntervalSeconds": 300,
+  "questTimeoutSeconds": 300,
+  "voiceEnabled": false,
+  "maxLevel": 5
+}

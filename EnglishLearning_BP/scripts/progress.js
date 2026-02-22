@@ -1,32 +1,89 @@
+// progress.js - Player progress tracking with level system
 import { world } from "@minecraft/server";
-import { entities, blocks } from "./vocabulary.js";
+import { levels, getWordCount, getTotalWordCount } from "./vocab/index.js";
+import { CONFIG } from "./config.js";
 
-const PROP_PREFIX = "eng_progress_";
+const PROP_PREFIX = "eng_v2_";
+
+function defaultProgress() {
+  return {
+    level: 1,
+    unlocked: { level1: [], level2: [], level3: [], level4: [], level5: [] },
+    totalWords: 0,
+    questsCompleted: 0,
+  };
+}
 
 export function getProgress(player) {
   try {
     const raw = world.getDynamicProperty(PROP_PREFIX + player.id);
-    if (raw) { try { return JSON.parse(raw); } catch {} }
+    if (raw) {
+      try {
+        const p = JSON.parse(raw);
+        // Ensure all keys exist (migration from v1)
+        if (!p.level) p.level = 1;
+        if (!p.unlocked) p.unlocked = {};
+        for (let i = 1; i <= 5; i++) {
+          if (!p.unlocked["level" + i]) p.unlocked["level" + i] = [];
+        }
+        if (!p.totalWords) p.totalWords = 0;
+        if (!p.questsCompleted) p.questsCompleted = 0;
+        return p;
+      } catch {}
+    }
   } catch (e) {}
-  return { entities: [], blocks: [] };
+  return defaultProgress();
 }
 
 function saveProgress(player, progress) {
-  try { world.setDynamicProperty(PROP_PREFIX + player.id, JSON.stringify(progress)); } catch (e) {}
+  try {
+    world.setDynamicProperty(PROP_PREFIX + player.id, JSON.stringify(progress));
+  } catch (e) {}
 }
 
-export function unlockWord(player, category, wordId) {
+/**
+ * Unlock a word. Returns { isNew, leveledUp, newLevel }
+ */
+export function unlockWord(player, category, wordId, wordLevel) {
   const progress = getProgress(player);
-  if (!progress[category]) progress[category] = [];
-  if (progress[category].includes(wordId)) return false;
-  progress[category].push(wordId);
+  const key = "level" + wordLevel;
+
+  if (!progress.unlocked[key]) progress.unlocked[key] = [];
+  if (progress.unlocked[key].includes(wordId)) {
+    return { isNew: false, leveledUp: false, newLevel: progress.level };
+  }
+
+  progress.unlocked[key].push(wordId);
+  progress.totalWords++;
+
+  // Check level up
+  let leveledUp = false;
+  let newLevel = progress.level;
+
+  if (progress.level < CONFIG.maxLevel) {
+    const currentLevelKey = "level" + progress.level;
+    const currentUnlocked = progress.unlocked[currentLevelKey].length;
+    const currentTotal = getWordCount(progress.level);
+
+    if (currentTotal > 0 && currentUnlocked / currentTotal >= CONFIG.unlockThreshold) {
+      progress.level++;
+      newLevel = progress.level;
+      leveledUp = true;
+    }
+  }
+
   saveProgress(player, progress);
-  return true;
+  return { isNew: true, leveledUp, newLevel };
 }
 
-export function isUnlocked(player, category, wordId) {
+export function getPlayerLevel(player) {
+  return getProgress(player).level;
+}
+
+export function incrementQuests(player) {
   const progress = getProgress(player);
-  return progress[category]?.includes(wordId) ?? false;
+  progress.questsCompleted++;
+  saveProgress(player, progress);
 }
 
 export function showAlbum(player) {
@@ -34,18 +91,38 @@ export function showAlbum(player) {
     const dim = player.dimension;
     const sel = '@a[name="' + player.name + '"]';
     const progress = getProgress(player);
-    const ue = progress.entities || [];
-    const ub = progress.blocks || [];
-    const total = ue.length + ub.length;
-    const max = entities.length + blocks.length;
-    function tell(text) { dim.runCommand("tellraw " + sel + " " + JSON.stringify({ rawtext: [{ text: text }] })); }
-    tell("§e§l📖 English Album (" + total + "/" + max + ")§r");
-    let el = "§b🐾 Animals:§r ";
-    for (const e of entities) el += ue.includes(e.id) ? ("§a" + e.en + "✅ ") : "§7??? ";
-    tell(el);
-    let bl = "§6🪨 Blocks:§r ";
-    for (const b of blocks) bl += ub.includes(b.id) ? ("§a" + b.en + "✅ ") : "§7??? ";
-    tell(bl);
-    tell("§e🏆 Unlocked: " + total + " / " + max + "§r");
+    const total = progress.totalWords;
+    const max = getTotalWordCount();
+
+    function tell(text) {
+      dim.runCommand("tellraw " + sel + " " + JSON.stringify({ rawtext: [{ text: text }] }));
+    }
+
+    tell("§e§l📖 English Album (" + total + "/" + max + ") §d Lv." + progress.level + "§r");
+    tell("§a───────────────────────§r");
+
+    for (let i = 0; i < levels.length; i++) {
+      const lvl = levels[i];
+      const num = i + 1;
+      const key = "level" + num;
+      const unlocked = progress.unlocked[key] || [];
+      const wordCount = lvl.entities.length + lvl.blocks.length;
+      const locked = num > progress.level;
+
+      if (locked) {
+        tell("§7" + lvl.star + " " + lvl.nameCn + " " + lvl.name + " 🔒§r");
+      } else {
+        tell("§b" + lvl.star + " " + lvl.nameCn + " " + lvl.name + " (" + unlocked.length + "/" + wordCount + ")§r");
+        let line = "";
+        const allWords = lvl.entities.concat(lvl.blocks);
+        for (const w of allWords) {
+          line += unlocked.includes(w.id) ? ("§a" + w.en + "✅ ") : "§7??? ";
+        }
+        tell(line + "§r");
+      }
+    }
+
+    tell("§a───────────────────────§r");
+    tell("§e🏆 Total: " + total + " / " + max + " | Quests: " + progress.questsCompleted + "§r");
   } catch (e) {}
 }

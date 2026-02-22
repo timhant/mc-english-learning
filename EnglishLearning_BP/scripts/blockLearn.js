@@ -1,9 +1,11 @@
+// blockLearn.js - Learn words when breaking/placing blocks, with level gating
 import { world, system } from "@minecraft/server";
-import { blockMap } from "./vocabulary.js";
-import { unlockWord } from "./progress.js";
+import { blockMap } from "./vocab/index.js";
+import { unlockWord, getPlayerLevel } from "./progress.js";
+import { celebrateLevelUp } from "./levelUp.js";
+import { COOLDOWN_TICKS } from "./config.js";
 
 const cooldowns = new Map();
-const COOLDOWN_TICKS = 1200;
 
 function isOnCooldown(pid, bid, tick) {
   const k = pid + ":" + bid;
@@ -17,9 +19,9 @@ function showBlockWord(player, word, isNew) {
     const dim = player.dimension;
     const sel = '@a[name="' + player.name + '"]';
     if (isNew) {
+      dim.runCommand("titleraw " + sel + " times 10 40 10");
       dim.runCommand("titleraw " + sel + " title " + JSON.stringify({ rawtext: [{ text: "§a§l" + word.en + "§r" }] }));
       dim.runCommand("titleraw " + sel + " subtitle " + JSON.stringify({ rawtext: [{ text: "§f" + word.cn + "  §7" + word.phonetic + "§r" }] }));
-      dim.runCommand("titleraw " + sel + " times 10 40 10");
       dim.runCommand("playsound random.levelup " + sel);
       dim.runCommand("xp 3 " + sel);
       dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({ rawtext: [{ text: "§e✨ New Word Unlocked! ✨§r" }] }));
@@ -29,19 +31,33 @@ function showBlockWord(player, word, isNew) {
   } catch (e) {}
 }
 
+function handleBlock(player, blockId) {
+  try {
+    const word = blockMap.get(blockId);
+    if (!word) return;
+    const playerLevel = getPlayerLevel(player);
+    if (word.level > playerLevel) return;
+
+    const tick = system.currentTick;
+    if (isOnCooldown(player.id, blockId, tick)) return;
+    setCooldown(player.id, blockId, tick);
+
+    const result = unlockWord(player, "blocks", blockId, word.level);
+    showBlockWord(player, word, result.isNew);
+
+    if (result.leveledUp) {
+      system.runTimeout(() => {
+        celebrateLevelUp(player, result.newLevel);
+      }, 40);
+    }
+  } catch (e) {}
+}
+
 export function startBlockLearning() {
   world.afterEvents.playerBreakBlock.subscribe((event) => {
-    const p = event.player, bid = event.brokenBlockPermutation.type.id, tick = system.currentTick;
-    const w = blockMap.get(bid);
-    if (!w || isOnCooldown(p.id, bid, tick)) return;
-    setCooldown(p.id, bid, tick);
-    showBlockWord(p, w, unlockWord(p, "blocks", bid));
+    handleBlock(event.player, event.brokenBlockPermutation.type.id);
   });
   world.afterEvents.playerPlaceBlock.subscribe((event) => {
-    const p = event.player, bid = event.block.typeId, tick = system.currentTick;
-    const w = blockMap.get(bid);
-    if (!w || isOnCooldown(p.id, bid, tick)) return;
-    setCooldown(p.id, bid, tick);
-    showBlockWord(p, w, unlockWord(p, "blocks", bid));
+    handleBlock(event.player, event.block.typeId);
   });
 }
