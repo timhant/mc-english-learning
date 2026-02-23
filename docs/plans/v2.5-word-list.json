@@ -1,0 +1,2675 @@
+{
+  "version": "2.5",
+  "totalWords": 434,
+  "levels": [
+    {
+      "level": 1,
+      "name": "First Day",
+      "nameCn": "第一天",
+      "star": "⭐",
+      "description": "出生后第一天能遇到的一切：地表方块、常见动物、基础工具",
+      "entities": [
+        {
+          "id": "minecraft:cow",
+          "en": "COW",
+          "cn": "奶牛",
+          "phonetic": "/kaʊ/"
+        },
+        {
+          "id": "minecraft:pig",
+          "en": "PIG",
+          "cn": "猪",
+          "phonetic": "/pɪɡ/"
+        },
+        {
+          "id": "minecraft:sheep",
+          "en": "SHEEP",
+          "cn": "绵羊",
+          "phonetic": "/ʃiːp/"
+        },
+        {
+          "id": "minecraft:chicken",
+          "en": "CHICKEN",
+          "cn": "鸡",
+          "phonetic": "/ˈtʃɪkɪn/"
+        },
+        {
+          "id": "minecraft:horse",
+          "en": "HORSE",
+          "cn": "马",
+          "phonetic": "/hɔːrs/"
+        },
+        {
+          "id": "minecraft:donkey",
+          "en": "DONKEY",
+          "cn": "驴",
+          "phonetic": "/ˈdɒŋki/"
+        },
+        {
+          "id": "minecraft:cat",
+          "en": "CAT",
+          "cn": "猫",
+          "phonetic": "/kæt/"
+        },
+        {
+          "id": "minecraft:wolf",
+          "en": "WOLF",
+          "cn": "狼",
+          "phonetic": "/wʊlf/"
+        },
+        {
+          "id": "minecraft:rabbit",
+          "en": "RABBIT",
+          "cn": "兔子",
+          "phonetic": "/ˈræbɪt/"
+        },
+        {
+          "id": "minecraft:bee",
+          "en": "BEE",
+          "cn": "蜜蜂",
+          "phonetic": "/biː/"
+        },
+        {
+          "id": "minecraft:bat",
+          "en": "BAT",
+          "cn": "蝙蝠",
+          "phonetic": "/bæt/"
+        },
+        {
+          "id": "minecraft:squid",
+          "en": "SQUID",
+          "cn": "鱿鱼",
+          "phonetic": "/skwɪd/"
+        },
+        {
+          "id": "minecraft:cod",
+          "en": "COD",
+          "cn": "鳕鱼",
+          "phonetic": "/kɒd/"
+        },
+        {
+          "id": "minecraft:zombie",
+          "en": "ZOMBIE",
+          "cn": "僵尸",
+          "phonetic": "/ˈzɒmbi/"
+        },
+        {
+          "id": "minecraft:skeleton",
+          "en": "SKELETON",
+          "cn": "骷髅",
+          "phonetic": "/ˈskelɪtən/"
+        },
+        {
+          "id": "minecraft:spider",
+          "en": "SPIDER",
+          "cn": "蜘蛛",
+          "phonetic": "/ˈspaɪdər/"
+        },
+        {
+          "id": "minecraft:creeper",
+          "en": "CREEPER",
+          "cn": "苦力怕",
+          "phonetic": "/ˈkriːpər/"
+        }
+      ],
+      "blocks": [
+        {
+          "id": "minecraft:dirt",
+          "en": "DIRT",
+          "cn": "泥土",
+          "phonetic": "/dɜːrt/"
+        },
+        {
+          "id": "minecraft:grass_block",
+          "en": "GRASS",
+          "cn": "草方块",
+          "phonetic": "/ɡræs/"
+        },
+        {
+          "id": "minecraft:stone",
+          "en": "STONE",
+          "cn": "石头",
+          "phonetic": "/stoʊn/"
+        },
+        {
+          "id": "minecraft:cobblestone",
+          "en": "COBBLESTONE",
+          "cn": "圆石",
+          "phonetic": "/ˈkɒblstoʊn/"
+        },
+        {
+          "id": "minecraft:sand",
+          "en": "SAND",
+          "cn": "沙子",
+          "phonetic": "/sænd/"
+        },
+        {
+          "id": "minecraft:gravel",
+          "en": "GRAVEL",
+          "cn": "砂砾",
+          "phonetic": "/ˈɡrævəl/"
+        },
+        {
+          "id": "minecraft:oak_log",
+          "en": "OAK LOG",
+          "cn": "橡木原木",
+          "phonetic": "/oʊk lɒɡ/"
+        },
+        {
+          "id": "minecraft:oak_planks",
+          "en": "OAK PLANKS",
+          "cn": "橡木板",
+          "phonetic": "/oʊk plæŋks/"
+        },
+        {
+          "id": "minecraft:crafting_table",
+          "en": "CRAFTING TABLE",
+          "cn": "工作台",
+          "phonetic": "/ˈkræftɪŋ ˈteɪbl/"
+        },
+        {
+          "id": "minecraft:furnace",
+          "en": "FURNACE",
+          "cn": "熔炉",
+          "phonetic": "/ˈfɜːrnɪs/"
+        },
+        {
+          "id": "minecraft:chest",
+          "en": "CHEST",
+          "cn": "箱子",
+          "phonetic": "/tʃest/"
+        },
+        {
+          "id": "minecraft:torch",
+          "en": "TORCH",
+          "cn": "火把",
+          "phonetic": "/tɔːrtʃ/"
+        },
+        {
+          "id": "minecraft:bed",
+          "en": "BED",
+          "cn": "床",
+          "phonetic": "/bed/"
+        },
+        {
+          "id": "minecraft:door",
+          "en": "DOOR",
+          "cn": "门",
+          "phonetic": "/dɔːr/"
+        },
+        {
+          "id": "minecraft:ladder",
+          "en": "LADDER",
+          "cn": "梯子",
+          "phonetic": "/ˈlædər/"
+        },
+        {
+          "id": "minecraft:glass",
+          "en": "GLASS",
+          "cn": "玻璃",
+          "phonetic": "/ɡlæs/"
+        },
+        {
+          "id": "minecraft:fence",
+          "en": "FENCE",
+          "cn": "栅栏",
+          "phonetic": "/fens/"
+        },
+        {
+          "id": "minecraft:red_flower",
+          "en": "FLOWER",
+          "cn": "花",
+          "phonetic": "/flaʊər/"
+        },
+        {
+          "id": "minecraft:brown_mushroom",
+          "en": "MUSHROOM",
+          "cn": "蘑菇",
+          "phonetic": "/ˈmʌʃruːm/"
+        },
+        {
+          "id": "minecraft:sugarcane",
+          "en": "SUGAR CANE",
+          "cn": "甘蔗",
+          "phonetic": "/ˈʃʊɡər keɪn/"
+        },
+        {
+          "id": "minecraft:wheat",
+          "en": "WHEAT",
+          "cn": "小麦",
+          "phonetic": "/wiːt/"
+        },
+        {
+          "id": "minecraft:pumpkin",
+          "en": "PUMPKIN",
+          "cn": "南瓜",
+          "phonetic": "/ˈpʌmpkɪn/"
+        },
+        {
+          "id": "minecraft:leaves",
+          "en": "LEAVES",
+          "cn": "树叶",
+          "phonetic": "/liːvz/"
+        },
+        {
+          "id": "minecraft:water",
+          "en": "WATER",
+          "cn": "水",
+          "phonetic": "/ˈwɔːtər/"
+        },
+        {
+          "id": "minecraft:lava",
+          "en": "LAVA",
+          "cn": "岩浆",
+          "phonetic": "/ˈlɑːvə/"
+        },
+        {
+          "id": "minecraft:coal_ore",
+          "en": "COAL ORE",
+          "cn": "煤矿石",
+          "phonetic": "/koʊl ɔːr/"
+        },
+        {
+          "id": "minecraft:iron_ore",
+          "en": "IRON ORE",
+          "cn": "铁矿石",
+          "phonetic": "/ˈaɪərn ɔːr/"
+        },
+        {
+          "id": "minecraft:copper_ore",
+          "en": "COPPER ORE",
+          "cn": "铜矿石",
+          "phonetic": "/ˈkɒpər ɔːr/"
+        },
+        {
+          "id": "minecraft:farmland",
+          "en": "FARMLAND",
+          "cn": "耕地",
+          "phonetic": "/ˈfɑːrmlænd/"
+        },
+        {
+          "id": "minecraft:trapdoor",
+          "en": "TRAPDOOR",
+          "cn": "活板门",
+          "phonetic": "/ˈtræpdɔːr/"
+        },
+        {
+          "id": "minecraft:slab",
+          "en": "SLAB",
+          "cn": "台阶",
+          "phonetic": "/slæb/"
+        },
+        {
+          "id": "minecraft:stairs",
+          "en": "STAIRS",
+          "cn": "楼梯",
+          "phonetic": "/stɛrz/"
+        },
+        {
+          "id": "minecraft:sign",
+          "en": "SIGN",
+          "cn": "告示牌",
+          "phonetic": "/saɪn/"
+        },
+        {
+          "id": "minecraft:wool",
+          "en": "WOOL",
+          "cn": "羊毛",
+          "phonetic": "/wʊl/"
+        },
+        {
+          "id": "minecraft:carpet",
+          "en": "CARPET",
+          "cn": "地毯",
+          "phonetic": "/ˈkɑːrpɪt/"
+        },
+        {
+          "id": "minecraft:painting",
+          "en": "PAINTING",
+          "cn": "画",
+          "phonetic": "/ˈpeɪntɪŋ/"
+        },
+        {
+          "id": "minecraft:flower_pot",
+          "en": "FLOWER POT",
+          "cn": "花盆",
+          "phonetic": "/flaʊər pɒt/"
+        },
+        {
+          "id": "minecraft:fern",
+          "en": "FERN",
+          "cn": "蕨",
+          "phonetic": "/fɜːrn/"
+        },
+        {
+          "id": "minecraft:beetroot",
+          "en": "BEETROOT",
+          "cn": "甜菜",
+          "phonetic": "/ˈbiːtruːt/"
+        },
+        {
+          "id": "minecraft:mud",
+          "en": "MUD",
+          "cn": "泥巴",
+          "phonetic": "/mʌd/"
+        },
+        {
+          "id": "minecraft:sandstone",
+          "en": "SANDSTONE",
+          "cn": "砂岩",
+          "phonetic": "/ˈsændstoʊn/"
+        },
+        {
+          "id": "minecraft:seagrass",
+          "en": "SEAGRASS",
+          "cn": "海草",
+          "phonetic": "/ˈsiːɡræs/"
+        },
+        {
+          "id": "minecraft:kelp",
+          "en": "KELP",
+          "cn": "海带",
+          "phonetic": "/kelp/"
+        },
+        {
+          "id": "minecraft:moss_carpet",
+          "en": "MOSS CARPET",
+          "cn": "苔藓地毯",
+          "phonetic": "/mɒs ˈkɑːrpɪt/"
+        },
+        {
+          "id": "minecraft:clay",
+          "en": "CLAY",
+          "cn": "粘土块",
+          "phonetic": "/kleɪ/"
+        }
+      ],
+      "items": [
+        {
+          "id": "minecraft:wooden_sword",
+          "en": "WOODEN SWORD",
+          "cn": "木剑",
+          "phonetic": "/ˈwʊdən sɔːrd/"
+        },
+        {
+          "id": "minecraft:wooden_pickaxe",
+          "en": "WOODEN PICKAXE",
+          "cn": "木镐",
+          "phonetic": "/ˈwʊdən ˈpɪkæks/"
+        },
+        {
+          "id": "minecraft:wooden_axe",
+          "en": "WOODEN AXE",
+          "cn": "木斧",
+          "phonetic": "/ˈwʊdən æks/"
+        },
+        {
+          "id": "minecraft:wooden_shovel",
+          "en": "WOODEN SHOVEL",
+          "cn": "木锹",
+          "phonetic": "/ˈwʊdən ˈʃʌvəl/"
+        },
+        {
+          "id": "minecraft:wooden_hoe",
+          "en": "WOODEN HOE",
+          "cn": "木锄",
+          "phonetic": "/ˈwʊdən hoʊ/"
+        },
+        {
+          "id": "minecraft:stone_sword",
+          "en": "STONE SWORD",
+          "cn": "石剑",
+          "phonetic": "/stoʊn sɔːrd/"
+        },
+        {
+          "id": "minecraft:stone_pickaxe",
+          "en": "STONE PICKAXE",
+          "cn": "石镐",
+          "phonetic": "/stoʊn ˈpɪkæks/"
+        },
+        {
+          "id": "minecraft:stone_axe",
+          "en": "STONE AXE",
+          "cn": "石斧",
+          "phonetic": "/stoʊn æks/"
+        },
+        {
+          "id": "minecraft:apple",
+          "en": "APPLE",
+          "cn": "苹果",
+          "phonetic": "/ˈæpl/"
+        },
+        {
+          "id": "minecraft:bread",
+          "en": "BREAD",
+          "cn": "面包",
+          "phonetic": "/bred/"
+        },
+        {
+          "id": "minecraft:stick",
+          "en": "STICK",
+          "cn": "木棍",
+          "phonetic": "/stɪk/"
+        },
+        {
+          "id": "minecraft:coal",
+          "en": "COAL",
+          "cn": "煤炭",
+          "phonetic": "/koʊl/"
+        },
+        {
+          "id": "minecraft:bone",
+          "en": "BONE",
+          "cn": "骨头",
+          "phonetic": "/boʊn/"
+        },
+        {
+          "id": "minecraft:arrow",
+          "en": "ARROW",
+          "cn": "箭",
+          "phonetic": "/ˈæroʊ/"
+        },
+        {
+          "id": "minecraft:bow",
+          "en": "BOW",
+          "cn": "弓",
+          "phonetic": "/baʊ/"
+        },
+        {
+          "id": "minecraft:shield",
+          "en": "SHIELD",
+          "cn": "盾牌",
+          "phonetic": "/ʃiːld/"
+        },
+        {
+          "id": "minecraft:leather",
+          "en": "LEATHER",
+          "cn": "皮革",
+          "phonetic": "/ˈleðər/"
+        },
+        {
+          "id": "minecraft:string",
+          "en": "STRING",
+          "cn": "线",
+          "phonetic": "/strɪŋ/"
+        },
+        {
+          "id": "minecraft:feather",
+          "en": "FEATHER",
+          "cn": "羽毛",
+          "phonetic": "/ˈfeðər/"
+        },
+        {
+          "id": "minecraft:egg",
+          "en": "EGG",
+          "cn": "鸡蛋",
+          "phonetic": "/eɡ/"
+        },
+        {
+          "id": "minecraft:wheat_seeds",
+          "en": "SEEDS",
+          "cn": "种子",
+          "phonetic": "/siːdz/"
+        },
+        {
+          "id": "minecraft:bucket",
+          "en": "BUCKET",
+          "cn": "桶",
+          "phonetic": "/ˈbʌkɪt/"
+        },
+        {
+          "id": "minecraft:carrot",
+          "en": "CARROT",
+          "cn": "胡萝卜",
+          "phonetic": "/ˈkærət/"
+        },
+        {
+          "id": "minecraft:potato",
+          "en": "POTATO",
+          "cn": "马铃薯",
+          "phonetic": "/pəˈteɪtoʊ/"
+        },
+        {
+          "id": "minecraft:melon_slice",
+          "en": "MELON SLICE",
+          "cn": "西瓜片",
+          "phonetic": "/ˈmelən slaɪs/"
+        },
+        {
+          "id": "minecraft:sweet_berries",
+          "en": "SWEET BERRIES",
+          "cn": "甜浆果",
+          "phonetic": "/swiːt ˈberiz/"
+        },
+        {
+          "id": "minecraft:mushroom_stew",
+          "en": "MUSHROOM STEW",
+          "cn": "蘑菇煲",
+          "phonetic": "/ˈmʌʃruːm stjuː/"
+        },
+        {
+          "id": "minecraft:raw_beef",
+          "en": "RAW BEEF",
+          "cn": "生牛肉",
+          "phonetic": "/rɔː biːf/"
+        },
+        {
+          "id": "minecraft:raw_porkchop",
+          "en": "RAW PORKCHOP",
+          "cn": "生猪排",
+          "phonetic": "/rɔː ˈpɔːrktʃɒp/"
+        },
+        {
+          "id": "minecraft:raw_chicken",
+          "en": "RAW CHICKEN",
+          "cn": "生鸡肉",
+          "phonetic": "/rɔː ˈtʃɪkɪn/"
+        },
+        {
+          "id": "minecraft:flint",
+          "en": "FLINT",
+          "cn": "燧石",
+          "phonetic": "/flɪnt/"
+        },
+        {
+          "id": "minecraft:charcoal",
+          "en": "CHARCOAL",
+          "cn": "木炭",
+          "phonetic": "/ˈtʃɑːrkoʊl/"
+        },
+        {
+          "id": "minecraft:rotten_flesh",
+          "en": "ROTTEN FLESH",
+          "cn": "腐肉",
+          "phonetic": "/ˈrɒtən fleʃ/"
+        },
+        {
+          "id": "minecraft:gunpowder",
+          "en": "GUNPOWDER",
+          "cn": "火药",
+          "phonetic": "/ˈɡʌnpaʊdər/"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "name": "First Week",
+      "nameCn": "第一周",
+      "star": "⭐⭐",
+      "description": "建房、养殖、深挖后接触的内容",
+      "entities": [
+        {
+          "id": "minecraft:villager_v2",
+          "en": "VILLAGER",
+          "cn": "村民",
+          "phonetic": "/ˈvɪlɪdʒər/"
+        },
+        {
+          "id": "minecraft:iron_golem",
+          "en": "IRON GOLEM",
+          "cn": "铁傀儡",
+          "phonetic": "/ˈaɪərn ˈɡoʊləm/"
+        },
+        {
+          "id": "minecraft:fox",
+          "en": "FOX",
+          "cn": "狐狸",
+          "phonetic": "/fɒks/"
+        },
+        {
+          "id": "minecraft:ocelot",
+          "en": "OCELOT",
+          "cn": "豹猫",
+          "phonetic": "/ˈɒsəlɒt/"
+        },
+        {
+          "id": "minecraft:parrot",
+          "en": "PARROT",
+          "cn": "鹦鹉",
+          "phonetic": "/ˈpærət/"
+        },
+        {
+          "id": "minecraft:turtle",
+          "en": "TURTLE",
+          "cn": "海龟",
+          "phonetic": "/ˈtɜːrtl/"
+        },
+        {
+          "id": "minecraft:dolphin",
+          "en": "DOLPHIN",
+          "cn": "海豚",
+          "phonetic": "/ˈdɒlfɪn/"
+        },
+        {
+          "id": "minecraft:panda",
+          "en": "PANDA",
+          "cn": "熊猫",
+          "phonetic": "/ˈpændə/"
+        },
+        {
+          "id": "minecraft:goat",
+          "en": "GOAT",
+          "cn": "山羊",
+          "phonetic": "/ɡoʊt/"
+        },
+        {
+          "id": "minecraft:salmon",
+          "en": "SALMON",
+          "cn": "鲑鱼",
+          "phonetic": "/ˈsæmən/"
+        },
+        {
+          "id": "minecraft:tropicalfish",
+          "en": "TROPICAL FISH",
+          "cn": "热带鱼",
+          "phonetic": "/ˈtrɒpɪkəl fɪʃ/"
+        },
+        {
+          "id": "minecraft:witch",
+          "en": "WITCH",
+          "cn": "女巫",
+          "phonetic": "/wɪtʃ/"
+        },
+        {
+          "id": "minecraft:slime",
+          "en": "SLIME",
+          "cn": "史莱姆",
+          "phonetic": "/slaɪm/"
+        },
+        {
+          "id": "minecraft:husk",
+          "en": "HUSK",
+          "cn": "尸壳",
+          "phonetic": "/hʌsk/"
+        },
+        {
+          "id": "minecraft:stray",
+          "en": "STRAY",
+          "cn": "流浪者",
+          "phonetic": "/streɪ/"
+        },
+        {
+          "id": "minecraft:enderman",
+          "en": "ENDERMAN",
+          "cn": "末影人",
+          "phonetic": "/ˈendərmæn/"
+        },
+        {
+          "id": "minecraft:phantom",
+          "en": "PHANTOM",
+          "cn": "幻翼",
+          "phonetic": "/ˈfæntəm/"
+        },
+        {
+          "id": "minecraft:drowned",
+          "en": "DROWNED",
+          "cn": "溺尸",
+          "phonetic": "/draʊnd/"
+        }
+      ],
+      "blocks": [
+        {
+          "id": "minecraft:gold_ore",
+          "en": "GOLD ORE",
+          "cn": "金矿石",
+          "phonetic": "/ɡoʊld ɔːr/"
+        },
+        {
+          "id": "minecraft:diamond_ore",
+          "en": "DIAMOND ORE",
+          "cn": "钻石矿",
+          "phonetic": "/ˈdaɪmənd ɔːr/"
+        },
+        {
+          "id": "minecraft:redstone_ore",
+          "en": "REDSTONE ORE",
+          "cn": "红石矿",
+          "phonetic": "/ˈredˌstoʊn ɔːr/"
+        },
+        {
+          "id": "minecraft:lapis_ore",
+          "en": "LAPIS ORE",
+          "cn": "青金石矿",
+          "phonetic": "/ˈlæpɪs ɔːr/"
+        },
+        {
+          "id": "minecraft:emerald_ore",
+          "en": "EMERALD ORE",
+          "cn": "绿宝石矿",
+          "phonetic": "/ˈemərəld ɔːr/"
+        },
+        {
+          "id": "minecraft:deepslate",
+          "en": "DEEPSLATE",
+          "cn": "深板岩",
+          "phonetic": "/ˈdiːpsleɪt/"
+        },
+        {
+          "id": "minecraft:iron_block",
+          "en": "IRON BLOCK",
+          "cn": "铁块",
+          "phonetic": "/ˈaɪərn blɒk/"
+        },
+        {
+          "id": "minecraft:gold_block",
+          "en": "GOLD BLOCK",
+          "cn": "金块",
+          "phonetic": "/ɡoʊld blɒk/"
+        },
+        {
+          "id": "minecraft:birch_log",
+          "en": "BIRCH LOG",
+          "cn": "白桦原木",
+          "phonetic": "/bɜːrtʃ lɒɡ/"
+        },
+        {
+          "id": "minecraft:spruce_log",
+          "en": "SPRUCE LOG",
+          "cn": "云杉原木",
+          "phonetic": "/spruːs lɒɡ/"
+        },
+        {
+          "id": "minecraft:jungle_log",
+          "en": "JUNGLE LOG",
+          "cn": "丛林原木",
+          "phonetic": "/ˈdʒʌŋɡl lɒɡ/"
+        },
+        {
+          "id": "minecraft:acacia_log",
+          "en": "ACACIA LOG",
+          "cn": "金合欢原木",
+          "phonetic": "/əˈkeɪʃə lɒɡ/"
+        },
+        {
+          "id": "minecraft:ice",
+          "en": "ICE",
+          "cn": "冰",
+          "phonetic": "/aɪs/"
+        },
+        {
+          "id": "minecraft:snow",
+          "en": "SNOW",
+          "cn": "雪",
+          "phonetic": "/snoʊ/"
+        },
+        {
+          "id": "minecraft:cactus",
+          "en": "CACTUS",
+          "cn": "仙人掌",
+          "phonetic": "/ˈkæktəs/"
+        },
+        {
+          "id": "minecraft:melon_block",
+          "en": "MELON",
+          "cn": "西瓜",
+          "phonetic": "/ˈmelən/"
+        },
+        {
+          "id": "minecraft:bamboo_block",
+          "en": "BAMBOO",
+          "cn": "竹子",
+          "phonetic": "/bæmˈbuː/"
+        },
+        {
+          "id": "minecraft:vine",
+          "en": "VINE",
+          "cn": "藤蔓",
+          "phonetic": "/vaɪn/"
+        },
+        {
+          "id": "minecraft:lily_pad",
+          "en": "LILY PAD",
+          "cn": "睡莲",
+          "phonetic": "/ˈlɪli pæd/"
+        },
+        {
+          "id": "minecraft:sunflower",
+          "en": "SUNFLOWER",
+          "cn": "向日葵",
+          "phonetic": "/ˈsʌnflaʊər/"
+        },
+        {
+          "id": "minecraft:hay_block",
+          "en": "HAY",
+          "cn": "干草",
+          "phonetic": "/heɪ/"
+        },
+        {
+          "id": "minecraft:bookshelf",
+          "en": "BOOKSHELF",
+          "cn": "书架",
+          "phonetic": "/ˈbʊkʃelf/"
+        },
+        {
+          "id": "minecraft:anvil",
+          "en": "ANVIL",
+          "cn": "铁砧",
+          "phonetic": "/ˈænvɪl/"
+        },
+        {
+          "id": "minecraft:stonebrick",
+          "en": "STONE BRICK",
+          "cn": "石砖",
+          "phonetic": "/stoʊn brɪk/"
+        },
+        {
+          "id": "minecraft:brick_block",
+          "en": "BRICK",
+          "cn": "砖块",
+          "phonetic": "/brɪk/"
+        },
+        {
+          "id": "minecraft:mossy_cobblestone",
+          "en": "MOSSY STONE",
+          "cn": "苔石",
+          "phonetic": "/ˈmɒsi stoʊn/"
+        },
+        {
+          "id": "minecraft:rail",
+          "en": "RAIL",
+          "cn": "铁轨",
+          "phonetic": "/reɪl/"
+        },
+        {
+          "id": "minecraft:barrel",
+          "en": "BARREL",
+          "cn": "木桶",
+          "phonetic": "/ˈbærəl/"
+        },
+        {
+          "id": "minecraft:lantern",
+          "en": "LANTERN",
+          "cn": "灯笼",
+          "phonetic": "/ˈlæntərn/"
+        },
+        {
+          "id": "minecraft:campfire",
+          "en": "CAMPFIRE",
+          "cn": "营火",
+          "phonetic": "/ˈkæmpfaɪər/"
+        },
+        {
+          "id": "minecraft:bell",
+          "en": "BELL",
+          "cn": "钟",
+          "phonetic": "/bel/"
+        },
+        {
+          "id": "minecraft:composter",
+          "en": "COMPOSTER",
+          "cn": "堆肥桶",
+          "phonetic": "/kəmˈpoʊstər/"
+        },
+        {
+          "id": "minecraft:smoker",
+          "en": "SMOKER",
+          "cn": "烟熏炉",
+          "phonetic": "/ˈsmoʊkər/"
+        },
+        {
+          "id": "minecraft:stonecutter_block",
+          "en": "STONECUTTER",
+          "cn": "切石机",
+          "phonetic": "/ˈstoʊnˌkʌtər/"
+        },
+        {
+          "id": "minecraft:grindstone",
+          "en": "GRINDSTONE",
+          "cn": "砂轮",
+          "phonetic": "/ˈɡraɪndstoʊn/"
+        },
+        {
+          "id": "minecraft:tnt",
+          "en": "TNT",
+          "cn": "炸药",
+          "phonetic": "/tiː en tiː/"
+        },
+        {
+          "id": "minecraft:obsidian",
+          "en": "OBSIDIAN",
+          "cn": "黑曜石",
+          "phonetic": "/əbˈsɪdiən/"
+        },
+        {
+          "id": "minecraft:terracotta",
+          "en": "TERRACOTTA",
+          "cn": "陶瓦",
+          "phonetic": "/ˌterəˈkɒtə/"
+        },
+        {
+          "id": "minecraft:concrete",
+          "en": "CONCRETE",
+          "cn": "混凝土",
+          "phonetic": "/ˈkɒnkriːt/"
+        },
+        {
+          "id": "minecraft:loom",
+          "en": "LOOM",
+          "cn": "织布机",
+          "phonetic": "/luːm/"
+        },
+        {
+          "id": "minecraft:lectern",
+          "en": "LECTERN",
+          "cn": "讲台",
+          "phonetic": "/ˈlektərn/"
+        },
+        {
+          "id": "minecraft:cartography_table",
+          "en": "CARTOGRAPHY TABLE",
+          "cn": "制图台",
+          "phonetic": "/kɑːrˈtɒɡrəfi ˈteɪbl/"
+        },
+        {
+          "id": "minecraft:fletching_table",
+          "en": "FLETCHING TABLE",
+          "cn": "制箭台",
+          "phonetic": "/ˈfletʃɪŋ ˈteɪbl/"
+        },
+        {
+          "id": "minecraft:beehive",
+          "en": "BEEHIVE",
+          "cn": "蜂巢",
+          "phonetic": "/ˈbiːhaɪv/"
+        },
+        {
+          "id": "minecraft:jukebox",
+          "en": "JUKEBOX",
+          "cn": "唱片机",
+          "phonetic": "/ˈdʒuːkbɒks/"
+        },
+        {
+          "id": "minecraft:note_block",
+          "en": "NOTE BLOCK",
+          "cn": "音符盒",
+          "phonetic": "/noʊt blɒk/"
+        },
+        {
+          "id": "minecraft:tripwire_hook",
+          "en": "TRIPWIRE HOOK",
+          "cn": "绊线钩",
+          "phonetic": "/ˈtrɪpwaɪər hʊk/"
+        },
+        {
+          "id": "minecraft:pressure_plate",
+          "en": "PRESSURE PLATE",
+          "cn": "压力板",
+          "phonetic": "/ˈpreʃər pleɪt/"
+        },
+        {
+          "id": "minecraft:lever",
+          "en": "LEVER",
+          "cn": "拉杆",
+          "phonetic": "/ˈlevər/"
+        },
+        {
+          "id": "minecraft:button",
+          "en": "BUTTON",
+          "cn": "按钮",
+          "phonetic": "/ˈbʌtən/"
+        },
+        {
+          "id": "minecraft:dark_oak_log",
+          "en": "DARK OAK LOG",
+          "cn": "深色橡木原木",
+          "phonetic": "/dɑːrk oʊk lɒɡ/"
+        },
+        {
+          "id": "minecraft:mangrove_log",
+          "en": "MANGROVE LOG",
+          "cn": "红树原木",
+          "phonetic": "/ˈmæŋɡroʊv lɒɡ/"
+        },
+        {
+          "id": "minecraft:cherry_log",
+          "en": "CHERRY LOG",
+          "cn": "樱花原木",
+          "phonetic": "/ˈtʃeri lɒɡ/"
+        }
+      ],
+      "items": [
+        {
+          "id": "minecraft:iron_sword",
+          "en": "IRON SWORD",
+          "cn": "铁剑",
+          "phonetic": "/ˈaɪərn sɔːrd/"
+        },
+        {
+          "id": "minecraft:iron_pickaxe",
+          "en": "IRON PICKAXE",
+          "cn": "铁镐",
+          "phonetic": "/ˈaɪərn ˈpɪkæks/"
+        },
+        {
+          "id": "minecraft:iron_axe",
+          "en": "IRON AXE",
+          "cn": "铁斧",
+          "phonetic": "/ˈaɪərn æks/"
+        },
+        {
+          "id": "minecraft:iron_shovel",
+          "en": "IRON SHOVEL",
+          "cn": "铁锹",
+          "phonetic": "/ˈaɪərn ˈʃʌvəl/"
+        },
+        {
+          "id": "minecraft:iron_hoe",
+          "en": "IRON HOE",
+          "cn": "铁锄",
+          "phonetic": "/ˈaɪərn hoʊ/"
+        },
+        {
+          "id": "minecraft:iron_helmet",
+          "en": "IRON HELMET",
+          "cn": "铁头盔",
+          "phonetic": "/ˈaɪərn ˈhelmɪt/"
+        },
+        {
+          "id": "minecraft:iron_chestplate",
+          "en": "IRON CHESTPLATE",
+          "cn": "铁胸甲",
+          "phonetic": "/ˈaɪərn ˈtʃestpleɪt/"
+        },
+        {
+          "id": "minecraft:iron_leggings",
+          "en": "IRON LEGGINGS",
+          "cn": "铁护腿",
+          "phonetic": "/ˈaɪərn ˈleɡɪŋz/"
+        },
+        {
+          "id": "minecraft:iron_boots",
+          "en": "IRON BOOTS",
+          "cn": "铁靴子",
+          "phonetic": "/ˈaɪərn buːts/"
+        },
+        {
+          "id": "minecraft:fishing_rod",
+          "en": "FISHING ROD",
+          "cn": "钓鱼竿",
+          "phonetic": "/ˈfɪʃɪŋ rɒd/"
+        },
+        {
+          "id": "minecraft:shears",
+          "en": "SHEARS",
+          "cn": "剪刀",
+          "phonetic": "/ʃɪrz/"
+        },
+        {
+          "id": "minecraft:flint_and_steel",
+          "en": "FLINT AND STEEL",
+          "cn": "打火石",
+          "phonetic": "/flɪnt ænd stiːl/"
+        },
+        {
+          "id": "minecraft:compass",
+          "en": "COMPASS",
+          "cn": "指南针",
+          "phonetic": "/ˈkʌmpəs/"
+        },
+        {
+          "id": "minecraft:clock",
+          "en": "CLOCK",
+          "cn": "时钟",
+          "phonetic": "/klɒk/"
+        },
+        {
+          "id": "minecraft:map",
+          "en": "MAP",
+          "cn": "地图",
+          "phonetic": "/mæp/"
+        },
+        {
+          "id": "minecraft:book",
+          "en": "BOOK",
+          "cn": "书",
+          "phonetic": "/bʊk/"
+        },
+        {
+          "id": "minecraft:paper",
+          "en": "PAPER",
+          "cn": "纸",
+          "phonetic": "/ˈpeɪpər/"
+        },
+        {
+          "id": "minecraft:iron_ingot",
+          "en": "IRON INGOT",
+          "cn": "铁锭",
+          "phonetic": "/ˈaɪərn ˈɪŋɡət/"
+        },
+        {
+          "id": "minecraft:gold_ingot",
+          "en": "GOLD INGOT",
+          "cn": "金锭",
+          "phonetic": "/ɡoʊld ˈɪŋɡət/"
+        },
+        {
+          "id": "minecraft:diamond",
+          "en": "DIAMOND",
+          "cn": "钻石",
+          "phonetic": "/ˈdaɪmənd/"
+        },
+        {
+          "id": "minecraft:emerald",
+          "en": "EMERALD",
+          "cn": "绿宝石",
+          "phonetic": "/ˈemərəld/"
+        },
+        {
+          "id": "minecraft:cooked_beef",
+          "en": "STEAK",
+          "cn": "牛排",
+          "phonetic": "/steɪk/"
+        },
+        {
+          "id": "minecraft:cooked_porkchop",
+          "en": "PORKCHOP",
+          "cn": "猪排",
+          "phonetic": "/ˈpɔːrktʃɒp/"
+        },
+        {
+          "id": "minecraft:cooked_chicken",
+          "en": "COOKED CHICKEN",
+          "cn": "熟鸡肉",
+          "phonetic": "/kʊkt ˈtʃɪkɪn/"
+        },
+        {
+          "id": "minecraft:cookie",
+          "en": "COOKIE",
+          "cn": "曲奇",
+          "phonetic": "/ˈkʊki/"
+        },
+        {
+          "id": "minecraft:cake",
+          "en": "CAKE",
+          "cn": "蛋糕",
+          "phonetic": "/keɪk/"
+        },
+        {
+          "id": "minecraft:milk_bucket",
+          "en": "MILK",
+          "cn": "牛奶",
+          "phonetic": "/mɪlk/"
+        },
+        {
+          "id": "minecraft:lead",
+          "en": "LEAD",
+          "cn": "拴绳",
+          "phonetic": "/liːd/"
+        },
+        {
+          "id": "minecraft:saddle",
+          "en": "SADDLE",
+          "cn": "鞍",
+          "phonetic": "/ˈsædl/"
+        },
+        {
+          "id": "minecraft:name_tag",
+          "en": "NAME TAG",
+          "cn": "命名牌",
+          "phonetic": "/neɪm tæɡ/"
+        },
+        {
+          "id": "minecraft:gold_sword",
+          "en": "GOLDEN SWORD",
+          "cn": "金剑",
+          "phonetic": "/ˈɡoʊldən sɔːrd/"
+        },
+        {
+          "id": "minecraft:gold_pickaxe",
+          "en": "GOLDEN PICKAXE",
+          "cn": "金镐",
+          "phonetic": "/ˈɡoʊldən ˈpɪkæks/"
+        },
+        {
+          "id": "minecraft:leather_helmet",
+          "en": "LEATHER HELMET",
+          "cn": "皮革头盔",
+          "phonetic": "/ˈleðər ˈhelmɪt/"
+        },
+        {
+          "id": "minecraft:chainmail_helmet",
+          "en": "CHAINMAIL HELMET",
+          "cn": "锁链头盔",
+          "phonetic": "/ˈtʃeɪnmeɪl ˈhelmɪt/"
+        },
+        {
+          "id": "minecraft:pumpkin_pie",
+          "en": "PUMPKIN PIE",
+          "cn": "南瓜派",
+          "phonetic": "/ˈpʌmpkɪn paɪ/"
+        },
+        {
+          "id": "minecraft:honey_bottle",
+          "en": "HONEY BOTTLE",
+          "cn": "蜂蜜瓶",
+          "phonetic": "/ˈhʌni ˈbɒtl/"
+        },
+        {
+          "id": "minecraft:honeycomb",
+          "en": "HONEYCOMB",
+          "cn": "蜜脾",
+          "phonetic": "/ˈhʌnikoʊm/"
+        },
+        {
+          "id": "minecraft:dye",
+          "en": "DYE",
+          "cn": "染料",
+          "phonetic": "/daɪ/"
+        },
+        {
+          "id": "minecraft:banner",
+          "en": "BANNER",
+          "cn": "旗帜",
+          "phonetic": "/ˈbænər/"
+        },
+        {
+          "id": "minecraft:minecart",
+          "en": "MINECART",
+          "cn": "矿车",
+          "phonetic": "/ˈmaɪnkɑːrt/"
+        },
+        {
+          "id": "minecraft:boat",
+          "en": "BOAT",
+          "cn": "船",
+          "phonetic": "/boʊt/"
+        },
+        {
+          "id": "minecraft:copper_ingot",
+          "en": "COPPER INGOT",
+          "cn": "铜锭",
+          "phonetic": "/ˈkɒpər ˈɪŋɡət/"
+        },
+        {
+          "id": "minecraft:raw_iron",
+          "en": "RAW IRON",
+          "cn": "粗铁",
+          "phonetic": "/rɔː ˈaɪərn/"
+        },
+        {
+          "id": "minecraft:raw_gold",
+          "en": "RAW GOLD",
+          "cn": "粗金",
+          "phonetic": "/rɔː ɡoʊld/"
+        },
+        {
+          "id": "minecraft:raw_copper",
+          "en": "RAW COPPER",
+          "cn": "粗铜",
+          "phonetic": "/rɔː ˈkɒpər/"
+        },
+        {
+          "id": "minecraft:dried_kelp",
+          "en": "DRIED KELP",
+          "cn": "干海带",
+          "phonetic": "/draɪd kelp/"
+        },
+        {
+          "id": "minecraft:suspicious_stew",
+          "en": "SUSPICIOUS STEW",
+          "cn": "迷之炖菜",
+          "phonetic": "/səˈspɪʃəs stjuː/"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "name": "Exploration",
+      "nameCn": "探索期",
+      "star": "⭐⭐⭐",
+      "description": "探索更多生态群系、村庄、遗迹",
+      "entities": [
+        {
+          "id": "minecraft:polar_bear",
+          "en": "POLAR BEAR",
+          "cn": "北极熊",
+          "phonetic": "/ˈpoʊlər bɛr/"
+        },
+        {
+          "id": "minecraft:llama",
+          "en": "LLAMA",
+          "cn": "羊驼",
+          "phonetic": "/ˈlɑːmə/"
+        },
+        {
+          "id": "minecraft:wandering_trader",
+          "en": "TRADER",
+          "cn": "商人",
+          "phonetic": "/ˈtreɪdər/"
+        },
+        {
+          "id": "minecraft:frog",
+          "en": "FROG",
+          "cn": "青蛙",
+          "phonetic": "/frɒɡ/"
+        },
+        {
+          "id": "minecraft:camel",
+          "en": "CAMEL",
+          "cn": "骆驼",
+          "phonetic": "/ˈkæməl/"
+        },
+        {
+          "id": "minecraft:sniffer",
+          "en": "SNIFFER",
+          "cn": "嗅探兽",
+          "phonetic": "/ˈsnɪfər/"
+        },
+        {
+          "id": "minecraft:armadillo",
+          "en": "ARMADILLO",
+          "cn": "犰狳",
+          "phonetic": "/ˌɑːrməˈdɪloʊ/"
+        },
+        {
+          "id": "minecraft:axolotl",
+          "en": "AXOLOTL",
+          "cn": "美西螈",
+          "phonetic": "/ˈæksəlɒtl/"
+        },
+        {
+          "id": "minecraft:glow_squid",
+          "en": "GLOW SQUID",
+          "cn": "发光鱿鱼",
+          "phonetic": "/ɡloʊ skwɪd/"
+        },
+        {
+          "id": "minecraft:cave_spider",
+          "en": "CAVE SPIDER",
+          "cn": "洞穴蜘蛛",
+          "phonetic": "/keɪv ˈspaɪdər/"
+        },
+        {
+          "id": "minecraft:silverfish",
+          "en": "SILVERFISH",
+          "cn": "蠹虫",
+          "phonetic": "/ˈsɪlvərfɪʃ/"
+        },
+        {
+          "id": "minecraft:pillager",
+          "en": "PILLAGER",
+          "cn": "掠夺者",
+          "phonetic": "/ˈpɪlɪdʒər/"
+        },
+        {
+          "id": "minecraft:ravager",
+          "en": "RAVAGER",
+          "cn": "劫掠兽",
+          "phonetic": "/ˈrævɪdʒər/"
+        },
+        {
+          "id": "minecraft:evoker",
+          "en": "EVOKER",
+          "cn": "唤魔者",
+          "phonetic": "/ɪˈvoʊkər/"
+        },
+        {
+          "id": "minecraft:vex",
+          "en": "VEX",
+          "cn": "恼鬼",
+          "phonetic": "/veks/"
+        },
+        {
+          "id": "minecraft:guardian",
+          "en": "GUARDIAN",
+          "cn": "守卫者",
+          "phonetic": "/ˈɡɑːrdiən/"
+        },
+        {
+          "id": "minecraft:snow_golem",
+          "en": "SNOW GOLEM",
+          "cn": "雪傀儡",
+          "phonetic": "/snoʊ ˈɡoʊləm/"
+        },
+        {
+          "id": "minecraft:mule",
+          "en": "MULE",
+          "cn": "骡子",
+          "phonetic": "/mjuːl/"
+        }
+      ],
+      "blocks": [
+        {
+          "id": "minecraft:diamond_block",
+          "en": "DIAMOND BLOCK",
+          "cn": "钻石块",
+          "phonetic": "/ˈdaɪmənd blɒk/"
+        },
+        {
+          "id": "minecraft:enchanting_table",
+          "en": "ENCHANTING TABLE",
+          "cn": "附魔台",
+          "phonetic": "/ɪnˈtʃæntɪŋ ˈteɪbl/"
+        },
+        {
+          "id": "minecraft:brewing_stand",
+          "en": "BREWING STAND",
+          "cn": "酿造台",
+          "phonetic": "/ˈbruːɪŋ stænd/"
+        },
+        {
+          "id": "minecraft:cauldron",
+          "en": "CAULDRON",
+          "cn": "炼药锅",
+          "phonetic": "/ˈkɔːldrən/"
+        },
+        {
+          "id": "minecraft:smithing_table",
+          "en": "SMITHING TABLE",
+          "cn": "锻造台",
+          "phonetic": "/ˈsmɪθɪŋ ˈteɪbl/"
+        },
+        {
+          "id": "minecraft:blast_furnace",
+          "en": "BLAST FURNACE",
+          "cn": "高炉",
+          "phonetic": "/blæst ˈfɜːrnɪs/"
+        },
+        {
+          "id": "minecraft:soul_sand",
+          "en": "SOUL SAND",
+          "cn": "灵魂沙",
+          "phonetic": "/soʊl sænd/"
+        },
+        {
+          "id": "minecraft:mob_spawner",
+          "en": "SPAWNER",
+          "cn": "刷怪笼",
+          "phonetic": "/ˈspɔːnər/"
+        },
+        {
+          "id": "minecraft:cobweb",
+          "en": "COBWEB",
+          "cn": "蜘蛛网",
+          "phonetic": "/ˈkɒbweb/"
+        },
+        {
+          "id": "minecraft:bone_block",
+          "en": "BONE BLOCK",
+          "cn": "骨块",
+          "phonetic": "/boʊn blɒk/"
+        },
+        {
+          "id": "minecraft:target",
+          "en": "TARGET",
+          "cn": "标靶",
+          "phonetic": "/ˈtɑːrɡɪt/"
+        },
+        {
+          "id": "minecraft:piston",
+          "en": "PISTON",
+          "cn": "活塞",
+          "phonetic": "/ˈpɪstən/"
+        },
+        {
+          "id": "minecraft:sticky_piston",
+          "en": "STICKY PISTON",
+          "cn": "粘性活塞",
+          "phonetic": "/ˈstɪki ˈpɪstən/"
+        },
+        {
+          "id": "minecraft:redstone_block",
+          "en": "REDSTONE BLOCK",
+          "cn": "红石块",
+          "phonetic": "/ˈredˌstoʊn blɒk/"
+        },
+        {
+          "id": "minecraft:repeater",
+          "en": "REPEATER",
+          "cn": "中继器",
+          "phonetic": "/rɪˈpiːtər/"
+        },
+        {
+          "id": "minecraft:comparator",
+          "en": "COMPARATOR",
+          "cn": "比较器",
+          "phonetic": "/kəmˈpærətər/"
+        },
+        {
+          "id": "minecraft:observer",
+          "en": "OBSERVER",
+          "cn": "侦测器",
+          "phonetic": "/əbˈzɜːrvər/"
+        },
+        {
+          "id": "minecraft:hopper",
+          "en": "HOPPER",
+          "cn": "漏斗",
+          "phonetic": "/ˈhɒpər/"
+        },
+        {
+          "id": "minecraft:dropper",
+          "en": "DROPPER",
+          "cn": "投掷器",
+          "phonetic": "/ˈdrɒpər/"
+        },
+        {
+          "id": "minecraft:dispenser",
+          "en": "DISPENSER",
+          "cn": "发射器",
+          "phonetic": "/dɪˈspensər/"
+        },
+        {
+          "id": "minecraft:daylight_detector",
+          "en": "DAYLIGHT SENSOR",
+          "cn": "阳光传感器",
+          "phonetic": "/ˈdeɪlaɪt ˈsensər/"
+        },
+        {
+          "id": "minecraft:amethyst_block",
+          "en": "AMETHYST",
+          "cn": "紫水晶",
+          "phonetic": "/ˈæməθɪst/"
+        },
+        {
+          "id": "minecraft:dripstone_block",
+          "en": "DRIPSTONE",
+          "cn": "滴水石",
+          "phonetic": "/ˈdrɪpstoʊn/"
+        },
+        {
+          "id": "minecraft:moss_block",
+          "en": "MOSS",
+          "cn": "苔藓",
+          "phonetic": "/mɒs/"
+        },
+        {
+          "id": "minecraft:tuff",
+          "en": "TUFF",
+          "cn": "凝灰岩",
+          "phonetic": "/tʌf/"
+        },
+        {
+          "id": "minecraft:copper_block",
+          "en": "COPPER BLOCK",
+          "cn": "铜块",
+          "phonetic": "/ˈkɒpər blɒk/"
+        },
+        {
+          "id": "minecraft:prismarine",
+          "en": "PRISMARINE",
+          "cn": "海晶石",
+          "phonetic": "/ˈprɪzməriːn/"
+        },
+        {
+          "id": "minecraft:sea_lantern",
+          "en": "SEA LANTERN",
+          "cn": "海晶灯",
+          "phonetic": "/siː ˈlæntərn/"
+        },
+        {
+          "id": "minecraft:sponge",
+          "en": "SPONGE",
+          "cn": "海绵",
+          "phonetic": "/spʌndʒ/"
+        },
+        {
+          "id": "minecraft:flowering_azalea",
+          "en": "FLOWERING AZALEA",
+          "cn": "盛开的杜鹃花",
+          "phonetic": "/ˈflaʊərɪŋ əˈzeɪliə/"
+        },
+        {
+          "id": "minecraft:glow_lichen",
+          "en": "GLOW LICHEN",
+          "cn": "发光地衣",
+          "phonetic": "/ɡloʊ ˈlaɪkən/"
+        },
+        {
+          "id": "minecraft:pointed_dripstone",
+          "en": "POINTED DRIPSTONE",
+          "cn": "滴水石锥",
+          "phonetic": "/ˈpɔɪntɪd ˈdrɪpstoʊn/"
+        },
+        {
+          "id": "minecraft:coral_block",
+          "en": "CORAL",
+          "cn": "珊瑚",
+          "phonetic": "/ˈkɒrəl/"
+        },
+        {
+          "id": "minecraft:chain",
+          "en": "CHAIN",
+          "cn": "锁链",
+          "phonetic": "/tʃeɪn/"
+        },
+        {
+          "id": "minecraft:lightning_rod",
+          "en": "LIGHTNING ROD",
+          "cn": "避雷针",
+          "phonetic": "/ˈlaɪtnɪŋ rɒd/"
+        },
+        {
+          "id": "minecraft:candle",
+          "en": "CANDLE",
+          "cn": "蜡烛",
+          "phonetic": "/ˈkændl/"
+        },
+        {
+          "id": "minecraft:ender_chest",
+          "en": "ENDER CHEST",
+          "cn": "末影箱",
+          "phonetic": "/ˈendər tʃest/"
+        },
+        {
+          "id": "minecraft:armor_stand",
+          "en": "ARMOR STAND",
+          "cn": "盔甲架",
+          "phonetic": "/ˈɑːrmər stænd/"
+        },
+        {
+          "id": "minecraft:decorated_pot",
+          "en": "DECORATED POT",
+          "cn": "彩陶罐",
+          "phonetic": "/ˈdekəreɪtɪd pɒt/"
+        },
+        {
+          "id": "minecraft:chiseled_bookshelf",
+          "en": "CHISELED BOOKSHELF",
+          "cn": "雕纹书架",
+          "phonetic": "/ˈtʃɪzəld ˈbʊkʃelf/"
+        },
+        {
+          "id": "minecraft:suspicious_sand",
+          "en": "SUSPICIOUS SAND",
+          "cn": "可疑的沙子",
+          "phonetic": "/səˈspɪʃəs sænd/"
+        },
+        {
+          "id": "minecraft:suspicious_gravel",
+          "en": "SUSPICIOUS GRAVEL",
+          "cn": "可疑的砂砾",
+          "phonetic": "/səˈspɪʃəs ˈɡrævəl/"
+        }
+      ],
+      "items": [
+        {
+          "id": "minecraft:diamond_sword",
+          "en": "DIAMOND SWORD",
+          "cn": "钻石剑",
+          "phonetic": "/ˈdaɪmənd sɔːrd/"
+        },
+        {
+          "id": "minecraft:diamond_pickaxe",
+          "en": "DIAMOND PICKAXE",
+          "cn": "钻石镐",
+          "phonetic": "/ˈdaɪmənd ˈpɪkæks/"
+        },
+        {
+          "id": "minecraft:diamond_axe",
+          "en": "DIAMOND AXE",
+          "cn": "钻石斧",
+          "phonetic": "/ˈdaɪmənd æks/"
+        },
+        {
+          "id": "minecraft:diamond_shovel",
+          "en": "DIAMOND SHOVEL",
+          "cn": "钻石锹",
+          "phonetic": "/ˈdaɪmənd ˈʃʌvəl/"
+        },
+        {
+          "id": "minecraft:diamond_helmet",
+          "en": "DIAMOND HELMET",
+          "cn": "钻石头盔",
+          "phonetic": "/ˈdaɪmənd ˈhelmɪt/"
+        },
+        {
+          "id": "minecraft:diamond_chestplate",
+          "en": "DIAMOND CHESTPLATE",
+          "cn": "钻石胸甲",
+          "phonetic": "/ˈdaɪmənd ˈtʃestpleɪt/"
+        },
+        {
+          "id": "minecraft:diamond_leggings",
+          "en": "DIAMOND LEGGINGS",
+          "cn": "钻石护腿",
+          "phonetic": "/ˈdaɪmənd ˈleɡɪŋz/"
+        },
+        {
+          "id": "minecraft:diamond_boots",
+          "en": "DIAMOND BOOTS",
+          "cn": "钻石靴子",
+          "phonetic": "/ˈdaɪmənd buːts/"
+        },
+        {
+          "id": "minecraft:crossbow",
+          "en": "CROSSBOW",
+          "cn": "弩",
+          "phonetic": "/ˈkrɒsboʊ/"
+        },
+        {
+          "id": "minecraft:spyglass",
+          "en": "SPYGLASS",
+          "cn": "望远镜",
+          "phonetic": "/ˈspaɪɡlæs/"
+        },
+        {
+          "id": "minecraft:golden_apple",
+          "en": "GOLDEN APPLE",
+          "cn": "金苹果",
+          "phonetic": "/ˈɡoʊldən ˈæpl/"
+        },
+        {
+          "id": "minecraft:potion",
+          "en": "POTION",
+          "cn": "药水",
+          "phonetic": "/ˈpoʊʃən/"
+        },
+        {
+          "id": "minecraft:ender_pearl",
+          "en": "ENDER PEARL",
+          "cn": "末影珍珠",
+          "phonetic": "/ˈendər pɜːrl/"
+        },
+        {
+          "id": "minecraft:experience_bottle",
+          "en": "EXPERIENCE BOTTLE",
+          "cn": "经验瓶",
+          "phonetic": "/ɪkˈspɪriəns ˈbɒtl/"
+        },
+        {
+          "id": "minecraft:enchanted_book",
+          "en": "ENCHANTED BOOK",
+          "cn": "附魔书",
+          "phonetic": "/ɪnˈtʃæntɪd bʊk/"
+        },
+        {
+          "id": "minecraft:trident",
+          "en": "TRIDENT",
+          "cn": "三叉戟",
+          "phonetic": "/ˈtraɪdənt/"
+        },
+        {
+          "id": "minecraft:pufferfish",
+          "en": "PUFFERFISH",
+          "cn": "河豚",
+          "phonetic": "/ˈpʌfərfɪʃ/"
+        },
+        {
+          "id": "minecraft:slime_ball",
+          "en": "SLIME BALL",
+          "cn": "粘液球",
+          "phonetic": "/slaɪm bɔːl/"
+        },
+        {
+          "id": "minecraft:redstone",
+          "en": "REDSTONE",
+          "cn": "红石",
+          "phonetic": "/ˈredˌstoʊn/"
+        },
+        {
+          "id": "minecraft:lapis_lazuli",
+          "en": "LAPIS LAZULI",
+          "cn": "青金石",
+          "phonetic": "/ˈlæpɪs ˈlæzjʊli/"
+        },
+        {
+          "id": "minecraft:glowstone_dust",
+          "en": "GLOWSTONE DUST",
+          "cn": "荧石粉",
+          "phonetic": "/ˈɡloʊstoʊn dʌst/"
+        },
+        {
+          "id": "minecraft:brush",
+          "en": "BRUSH",
+          "cn": "刷子",
+          "phonetic": "/brʌʃ/"
+        },
+        {
+          "id": "minecraft:goat_horn",
+          "en": "GOAT HORN",
+          "cn": "山羊角",
+          "phonetic": "/ɡoʊt hɔːrn/"
+        },
+        {
+          "id": "minecraft:glow_ink_sac",
+          "en": "GLOW INK SAC",
+          "cn": "荧光墨囊",
+          "phonetic": "/ɡloʊ ɪŋk sæk/"
+        },
+        {
+          "id": "minecraft:amethyst_shard",
+          "en": "AMETHYST SHARD",
+          "cn": "紫水晶碎片",
+          "phonetic": "/ˈæməθɪst ʃɑːrd/"
+        },
+        {
+          "id": "minecraft:glass_bottle",
+          "en": "GLASS BOTTLE",
+          "cn": "玻璃瓶",
+          "phonetic": "/ɡlæs ˈbɒtl/"
+        },
+        {
+          "id": "minecraft:spider_eye",
+          "en": "SPIDER EYE",
+          "cn": "蜘蛛眼",
+          "phonetic": "/ˈspaɪdər aɪ/"
+        },
+        {
+          "id": "minecraft:fermented_spider_eye",
+          "en": "FERMENTED SPIDER EYE",
+          "cn": "发酵蜘蛛眼",
+          "phonetic": "/fərˈmentɪd ˈspaɪdər aɪ/"
+        },
+        {
+          "id": "minecraft:phantom_membrane",
+          "en": "PHANTOM MEMBRANE",
+          "cn": "幻翼膜",
+          "phonetic": "/ˈfæntəm ˈmembreɪn/"
+        },
+        {
+          "id": "minecraft:rabbit_foot",
+          "en": "RABBIT FOOT",
+          "cn": "兔子脚",
+          "phonetic": "/ˈræbɪt fʊt/"
+        },
+        {
+          "id": "minecraft:tipped_arrow",
+          "en": "TIPPED ARROW",
+          "cn": "药箭",
+          "phonetic": "/tɪpt ˈæroʊ/"
+        },
+        {
+          "id": "minecraft:splash_potion",
+          "en": "SPLASH POTION",
+          "cn": "喷溅药水",
+          "phonetic": "/splæʃ ˈpoʊʃən/"
+        },
+        {
+          "id": "minecraft:lingering_potion",
+          "en": "LINGERING POTION",
+          "cn": "滞留药水",
+          "phonetic": "/ˈlɪŋɡərɪŋ ˈpoʊʃən/"
+        },
+        {
+          "id": "minecraft:prismarine_shard",
+          "en": "PRISMARINE SHARD",
+          "cn": "海晶碎片",
+          "phonetic": "/ˈprɪzməriːn ʃɑːrd/"
+        },
+        {
+          "id": "minecraft:prismarine_crystals",
+          "en": "PRISMARINE CRYSTALS",
+          "cn": "海晶砂粒",
+          "phonetic": "/ˈprɪzməriːn ˈkrɪstlz/"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "name": "Nether Journey",
+      "nameCn": "下界征途",
+      "star": "⭐⭐⭐⭐",
+      "description": "下界探索、酿造、附魔",
+      "entities": [
+        {
+          "id": "minecraft:blaze",
+          "en": "BLAZE",
+          "cn": "烈焰人",
+          "phonetic": "/bleɪz/"
+        },
+        {
+          "id": "minecraft:ghast",
+          "en": "GHAST",
+          "cn": "恶魂",
+          "phonetic": "/ɡæst/"
+        },
+        {
+          "id": "minecraft:magma_cube",
+          "en": "MAGMA CUBE",
+          "cn": "岩浆怪",
+          "phonetic": "/ˈmæɡmə kjuːb/"
+        },
+        {
+          "id": "minecraft:piglin",
+          "en": "PIGLIN",
+          "cn": "猪灵",
+          "phonetic": "/ˈpɪɡlɪn/"
+        },
+        {
+          "id": "minecraft:hoglin",
+          "en": "HOGLIN",
+          "cn": "疣猪兽",
+          "phonetic": "/ˈhɒɡlɪn/"
+        },
+        {
+          "id": "minecraft:strider",
+          "en": "STRIDER",
+          "cn": "炽足兽",
+          "phonetic": "/ˈstraɪdər/"
+        },
+        {
+          "id": "minecraft:zombified_piglin",
+          "en": "ZOMBIFIED PIGLIN",
+          "cn": "僵尸猪灵",
+          "phonetic": "/ˈzɒmbɪfaɪd ˈpɪɡlɪn/"
+        },
+        {
+          "id": "minecraft:piglin_brute",
+          "en": "PIGLIN BRUTE",
+          "cn": "猪灵蛮兵",
+          "phonetic": "/ˈpɪɡlɪn bruːt/"
+        },
+        {
+          "id": "minecraft:wither_skeleton",
+          "en": "WITHER SKELETON",
+          "cn": "凋灵骷髅",
+          "phonetic": "/ˈwɪðər ˈskelɪtən/"
+        },
+        {
+          "id": "minecraft:elder_guardian",
+          "en": "ELDER GUARDIAN",
+          "cn": "远古守卫",
+          "phonetic": "/ˈeldər ˈɡɑːrdiən/"
+        }
+      ],
+      "blocks": [
+        {
+          "id": "minecraft:netherrack",
+          "en": "NETHERRACK",
+          "cn": "下界岩",
+          "phonetic": "/ˈneðəræk/"
+        },
+        {
+          "id": "minecraft:nether_brick",
+          "en": "NETHER BRICK",
+          "cn": "下界砖",
+          "phonetic": "/ˈneðər brɪk/"
+        },
+        {
+          "id": "minecraft:glowstone",
+          "en": "GLOWSTONE",
+          "cn": "荧石",
+          "phonetic": "/ˈɡloʊstoʊn/"
+        },
+        {
+          "id": "minecraft:magma",
+          "en": "MAGMA BLOCK",
+          "cn": "岩浆块",
+          "phonetic": "/ˈmæɡmə blɒk/"
+        },
+        {
+          "id": "minecraft:soul_soil",
+          "en": "SOUL SOIL",
+          "cn": "灵魂土",
+          "phonetic": "/soʊl sɔɪl/"
+        },
+        {
+          "id": "minecraft:warped_stem",
+          "en": "WARPED STEM",
+          "cn": "诡异菌柄",
+          "phonetic": "/wɔːrpt stem/"
+        },
+        {
+          "id": "minecraft:crimson_stem",
+          "en": "CRIMSON STEM",
+          "cn": "绯红菌柄",
+          "phonetic": "/ˈkrɪmzən stem/"
+        },
+        {
+          "id": "minecraft:warped_planks",
+          "en": "WARPED PLANKS",
+          "cn": "诡异木板",
+          "phonetic": "/wɔːrpt plæŋks/"
+        },
+        {
+          "id": "minecraft:crimson_planks",
+          "en": "CRIMSON PLANKS",
+          "cn": "绯红木板",
+          "phonetic": "/ˈkrɪmzən plæŋks/"
+        },
+        {
+          "id": "minecraft:shroomlight",
+          "en": "SHROOMLIGHT",
+          "cn": "菌光体",
+          "phonetic": "/ˈʃruːmlaɪt/"
+        },
+        {
+          "id": "minecraft:nether_gold_ore",
+          "en": "NETHER GOLD ORE",
+          "cn": "下界金矿",
+          "phonetic": "/ˈneðər ɡoʊld ɔːr/"
+        },
+        {
+          "id": "minecraft:ancient_debris",
+          "en": "ANCIENT DEBRIS",
+          "cn": "远古残骸",
+          "phonetic": "/ˈeɪnʃənt dəˈbriː/"
+        },
+        {
+          "id": "minecraft:basalt",
+          "en": "BASALT",
+          "cn": "玄武岩",
+          "phonetic": "/bəˈsɔːlt/"
+        },
+        {
+          "id": "minecraft:blackstone",
+          "en": "BLACKSTONE",
+          "cn": "黑石",
+          "phonetic": "/ˈblækstoʊn/"
+        },
+        {
+          "id": "minecraft:respawn_anchor",
+          "en": "RESPAWN ANCHOR",
+          "cn": "重生锚",
+          "phonetic": "/riːˈspɔːn ˈæŋkər/"
+        },
+        {
+          "id": "minecraft:crying_obsidian",
+          "en": "CRYING OBSIDIAN",
+          "cn": "哭泣黑曜石",
+          "phonetic": "/ˈkraɪɪŋ əbˈsɪdiən/"
+        },
+        {
+          "id": "minecraft:nether_wart",
+          "en": "NETHER WART",
+          "cn": "下界疣",
+          "phonetic": "/ˈneðər wɔːrt/"
+        },
+        {
+          "id": "minecraft:sculk",
+          "en": "SCULK",
+          "cn": "幽匿块",
+          "phonetic": "/skʌlk/"
+        },
+        {
+          "id": "minecraft:sculk_sensor",
+          "en": "SCULK SENSOR",
+          "cn": "幽匿感测器",
+          "phonetic": "/skʌlk ˈsensər/"
+        },
+        {
+          "id": "minecraft:sculk_shrieker",
+          "en": "SCULK SHRIEKER",
+          "cn": "幽匿尖啸体",
+          "phonetic": "/skʌlk ˈʃriːkər/"
+        },
+        {
+          "id": "minecraft:sculk_catalyst",
+          "en": "SCULK CATALYST",
+          "cn": "幽匿催发体",
+          "phonetic": "/skʌlk ˈkætəlɪst/"
+        },
+        {
+          "id": "minecraft:crimson_fungus",
+          "en": "CRIMSON FUNGUS",
+          "cn": "绯红菌",
+          "phonetic": "/ˈkrɪmzən ˈfʌŋɡəs/"
+        },
+        {
+          "id": "minecraft:warped_fungus",
+          "en": "WARPED FUNGUS",
+          "cn": "诡异菌",
+          "phonetic": "/wɔːrpt ˈfʌŋɡəs/"
+        },
+        {
+          "id": "minecraft:crimson_roots",
+          "en": "CRIMSON ROOTS",
+          "cn": "绯红菌索",
+          "phonetic": "/ˈkrɪmzən ruːts/"
+        },
+        {
+          "id": "minecraft:warped_roots",
+          "en": "WARPED ROOTS",
+          "cn": "诡异菌索",
+          "phonetic": "/wɔːrpt ruːts/"
+        },
+        {
+          "id": "minecraft:twisting_vines",
+          "en": "TWISTING VINES",
+          "cn": "缠怨藤",
+          "phonetic": "/ˈtwɪstɪŋ vaɪnz/"
+        },
+        {
+          "id": "minecraft:weeping_vines",
+          "en": "WEEPING VINES",
+          "cn": "垂泪藤",
+          "phonetic": "/ˈwiːpɪŋ vaɪnz/"
+        },
+        {
+          "id": "minecraft:nether_sprouts",
+          "en": "NETHER SPROUTS",
+          "cn": "下界苗",
+          "phonetic": "/ˈneðər spraʊts/"
+        },
+        {
+          "id": "minecraft:gilded_blackstone",
+          "en": "GILDED BLACKSTONE",
+          "cn": "镶金黑石",
+          "phonetic": "/ˈɡɪldɪd ˈblækstoʊn/"
+        },
+        {
+          "id": "minecraft:quartz_block",
+          "en": "QUARTZ",
+          "cn": "石英",
+          "phonetic": "/kwɔːrts/"
+        },
+        {
+          "id": "minecraft:soul_campfire",
+          "en": "SOUL CAMPFIRE",
+          "cn": "灵魂营火",
+          "phonetic": "/soʊl ˈkæmpfaɪər/"
+        },
+        {
+          "id": "minecraft:polished_basalt",
+          "en": "POLISHED BASALT",
+          "cn": "磨制玄武岩",
+          "phonetic": "/ˈpɒlɪʃt bəˈsɔːlt/"
+        },
+        {
+          "id": "minecraft:polished_blackstone",
+          "en": "POLISHED BLACKSTONE",
+          "cn": "磨制黑石",
+          "phonetic": "/ˈpɒlɪʃt ˈblækstoʊn/"
+        },
+        {
+          "id": "minecraft:warp_wart_block",
+          "en": "WARPED WART BLOCK",
+          "cn": "诡异疣块",
+          "phonetic": "/wɔːrpt wɔːrt blɒk/"
+        },
+        {
+          "id": "minecraft:nether_wart_block",
+          "en": "NETHER WART BLOCK",
+          "cn": "下界疣块",
+          "phonetic": "/ˈneðər wɔːrt blɒk/"
+        }
+      ],
+      "items": [
+        {
+          "id": "minecraft:netherite_sword",
+          "en": "NETHERITE SWORD",
+          "cn": "下界合金剑",
+          "phonetic": "/ˈneðəraɪt sɔːrd/"
+        },
+        {
+          "id": "minecraft:netherite_pickaxe",
+          "en": "NETHERITE PICKAXE",
+          "cn": "下界合金镐",
+          "phonetic": "/ˈneðəraɪt ˈpɪkæks/"
+        },
+        {
+          "id": "minecraft:netherite_axe",
+          "en": "NETHERITE AXE",
+          "cn": "下界合金斧",
+          "phonetic": "/ˈneðəraɪt æks/"
+        },
+        {
+          "id": "minecraft:netherite_helmet",
+          "en": "NETHERITE HELMET",
+          "cn": "下界合金头盔",
+          "phonetic": "/ˈneðəraɪt ˈhelmɪt/"
+        },
+        {
+          "id": "minecraft:netherite_chestplate",
+          "en": "NETHERITE CHESTPLATE",
+          "cn": "下界合金胸甲",
+          "phonetic": "/ˈneðəraɪt ˈtʃestpleɪt/"
+        },
+        {
+          "id": "minecraft:netherite_leggings",
+          "en": "NETHERITE LEGGINGS",
+          "cn": "下界合金护腿",
+          "phonetic": "/ˈneðəraɪt ˈleɡɪŋz/"
+        },
+        {
+          "id": "minecraft:netherite_boots",
+          "en": "NETHERITE BOOTS",
+          "cn": "下界合金靴子",
+          "phonetic": "/ˈneðəraɪt buːts/"
+        },
+        {
+          "id": "minecraft:blaze_rod",
+          "en": "BLAZE ROD",
+          "cn": "烈焰棒",
+          "phonetic": "/bleɪz rɒd/"
+        },
+        {
+          "id": "minecraft:blaze_powder",
+          "en": "BLAZE POWDER",
+          "cn": "烈焰粉",
+          "phonetic": "/bleɪz ˈpaʊdər/"
+        },
+        {
+          "id": "minecraft:nether_star",
+          "en": "NETHER STAR",
+          "cn": "下界之星",
+          "phonetic": "/ˈneðər stɑːr/"
+        },
+        {
+          "id": "minecraft:ghast_tear",
+          "en": "GHAST TEAR",
+          "cn": "恶魂之泪",
+          "phonetic": "/ɡæst tɪr/"
+        },
+        {
+          "id": "minecraft:magma_cream",
+          "en": "MAGMA CREAM",
+          "cn": "岩浆膏",
+          "phonetic": "/ˈmæɡmə kriːm/"
+        },
+        {
+          "id": "minecraft:netherite_ingot",
+          "en": "NETHERITE INGOT",
+          "cn": "下界合金锭",
+          "phonetic": "/ˈneðəraɪt ˈɪŋɡət/"
+        },
+        {
+          "id": "minecraft:netherite_scrap",
+          "en": "NETHERITE SCRAP",
+          "cn": "下界合金碎片",
+          "phonetic": "/ˈneðəraɪt skræp/"
+        },
+        {
+          "id": "minecraft:gold_nugget",
+          "en": "GOLD NUGGET",
+          "cn": "金粒",
+          "phonetic": "/ɡoʊld ˈnʌɡɪt/"
+        },
+        {
+          "id": "minecraft:soul_lantern",
+          "en": "SOUL LANTERN",
+          "cn": "灵魂灯笼",
+          "phonetic": "/soʊl ˈlæntərn/"
+        },
+        {
+          "id": "minecraft:warped_fungus_on_a_stick",
+          "en": "WARPED FUNGUS ON A STICK",
+          "cn": "诡异菌钓竿",
+          "phonetic": "/wɔːrpt ˈfʌŋɡəs ɒn ə stɪk/"
+        },
+        {
+          "id": "minecraft:fire_charge",
+          "en": "FIRE CHARGE",
+          "cn": "火焰弹",
+          "phonetic": "/faɪər tʃɑːrdʒ/"
+        },
+        {
+          "id": "minecraft:ender_eye",
+          "en": "EYE OF ENDER",
+          "cn": "末影之眼",
+          "phonetic": "/aɪ əv ˈendər/"
+        },
+        {
+          "id": "minecraft:wither_skeleton_skull",
+          "en": "WITHER SKULL",
+          "cn": "凋灵骷髅头",
+          "phonetic": "/ˈwɪðər skʌl/"
+        },
+        {
+          "id": "minecraft:armor_trim_smithing_template",
+          "en": "SMITHING TEMPLATE",
+          "cn": "锻造模板",
+          "phonetic": "/ˈsmɪθɪŋ ˈtempleɪt/"
+        },
+        {
+          "id": "minecraft:lodestone_compass",
+          "en": "LODESTONE COMPASS",
+          "cn": "磁石指针",
+          "phonetic": "/ˈloʊdstoʊn ˈkʌmpəs/"
+        },
+        {
+          "id": "minecraft:spectral_arrow",
+          "en": "SPECTRAL ARROW",
+          "cn": "光灵箭",
+          "phonetic": "/ˈspektrəl ˈæroʊ/"
+        },
+        {
+          "id": "minecraft:soul_torch",
+          "en": "SOUL TORCH",
+          "cn": "灵魂火把",
+          "phonetic": "/soʊl tɔːrtʃ/"
+        },
+        {
+          "id": "minecraft:warped_door",
+          "en": "WARPED DOOR",
+          "cn": "诡异门",
+          "phonetic": "/wɔːrpt dɔːr/"
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "name": "The End",
+      "nameCn": "终末之地",
+      "star": "⭐⭐⭐⭐⭐",
+      "description": "末地、终局Boss、收集向内容",
+      "entities": [
+        {
+          "id": "minecraft:ender_dragon",
+          "en": "ENDER DRAGON",
+          "cn": "末影龙",
+          "phonetic": "/ˈendər ˈdræɡən/"
+        },
+        {
+          "id": "minecraft:shulker",
+          "en": "SHULKER",
+          "cn": "潜影贝",
+          "phonetic": "/ˈʃʌlkər/"
+        },
+        {
+          "id": "minecraft:endermite",
+          "en": "ENDERMITE",
+          "cn": "末影螨",
+          "phonetic": "/ˈendərmaɪt/"
+        },
+        {
+          "id": "minecraft:allay",
+          "en": "ALLAY",
+          "cn": "悦灵",
+          "phonetic": "/əˈleɪ/"
+        },
+        {
+          "id": "minecraft:warden",
+          "en": "WARDEN",
+          "cn": "监守者",
+          "phonetic": "/ˈwɔːrdən/"
+        },
+        {
+          "id": "minecraft:wither",
+          "en": "WITHER",
+          "cn": "凋灵",
+          "phonetic": "/ˈwɪðər/"
+        },
+        {
+          "id": "minecraft:breeze",
+          "en": "BREEZE",
+          "cn": "旋风人",
+          "phonetic": "/briːz/"
+        }
+      ],
+      "blocks": [
+        {
+          "id": "minecraft:end_stone",
+          "en": "END STONE",
+          "cn": "末地石",
+          "phonetic": "/end stoʊn/"
+        },
+        {
+          "id": "minecraft:end_bricks",
+          "en": "END BRICK",
+          "cn": "末地砖",
+          "phonetic": "/end brɪk/"
+        },
+        {
+          "id": "minecraft:purpur_block",
+          "en": "PURPUR BLOCK",
+          "cn": "紫珀块",
+          "phonetic": "/ˈpɜːrpər blɒk/"
+        },
+        {
+          "id": "minecraft:end_rod",
+          "en": "END ROD",
+          "cn": "末地烛",
+          "phonetic": "/end rɒd/"
+        },
+        {
+          "id": "minecraft:dragon_egg",
+          "en": "DRAGON EGG",
+          "cn": "龙蛋",
+          "phonetic": "/ˈdræɡən eɡ/"
+        },
+        {
+          "id": "minecraft:chorus_plant",
+          "en": "CHORUS PLANT",
+          "cn": "紫颂植物",
+          "phonetic": "/ˈkɔːrəs plænt/"
+        },
+        {
+          "id": "minecraft:chorus_flower",
+          "en": "CHORUS FLOWER",
+          "cn": "紫颂花",
+          "phonetic": "/ˈkɔːrəs flaʊər/"
+        },
+        {
+          "id": "minecraft:beacon",
+          "en": "BEACON",
+          "cn": "信标",
+          "phonetic": "/ˈbiːkən/"
+        },
+        {
+          "id": "minecraft:conduit",
+          "en": "CONDUIT",
+          "cn": "潮涌核心",
+          "phonetic": "/ˈkɒndjuɪt/"
+        },
+        {
+          "id": "minecraft:lodestone",
+          "en": "LODESTONE",
+          "cn": "磁石",
+          "phonetic": "/ˈloʊdstoʊn/"
+        },
+        {
+          "id": "minecraft:emerald_block",
+          "en": "EMERALD BLOCK",
+          "cn": "绿宝石块",
+          "phonetic": "/ˈemərəld blɒk/"
+        },
+        {
+          "id": "minecraft:netherite_block",
+          "en": "NETHERITE BLOCK",
+          "cn": "下界合金块",
+          "phonetic": "/ˈneðəraɪt blɒk/"
+        },
+        {
+          "id": "minecraft:shulker_box",
+          "en": "SHULKER BOX",
+          "cn": "潜影盒",
+          "phonetic": "/ˈʃʌlkər bɒks/"
+        },
+        {
+          "id": "minecraft:reinforced_deepslate",
+          "en": "REINFORCED DEEPSLATE",
+          "cn": "强化深板岩",
+          "phonetic": "/ˌriːɪnˈfɔːrst ˈdiːpsleɪt/"
+        },
+        {
+          "id": "minecraft:heavy_core",
+          "en": "HEAVY CORE",
+          "cn": "重质核心",
+          "phonetic": "/ˈhevi kɔːr/"
+        },
+        {
+          "id": "minecraft:vault",
+          "en": "VAULT",
+          "cn": "宝库",
+          "phonetic": "/vɔːlt/"
+        },
+        {
+          "id": "minecraft:trial_spawner",
+          "en": "TRIAL SPAWNER",
+          "cn": "试炼刷怪笼",
+          "phonetic": "/ˈtraɪəl ˈspɔːnər/"
+        },
+        {
+          "id": "minecraft:copper_bulb",
+          "en": "COPPER BULB",
+          "cn": "铜灯泡",
+          "phonetic": "/ˈkɒpər bʌlb/"
+        },
+        {
+          "id": "minecraft:copper_grate",
+          "en": "COPPER GRATE",
+          "cn": "铜栅",
+          "phonetic": "/ˈkɒpər ɡreɪt/"
+        },
+        {
+          "id": "minecraft:crafter",
+          "en": "CRAFTER",
+          "cn": "合成器",
+          "phonetic": "/ˈkræftər/"
+        },
+        {
+          "id": "minecraft:tinted_glass",
+          "en": "TINTED GLASS",
+          "cn": "遮光玻璃",
+          "phonetic": "/ˈtɪntɪd ɡlæs/"
+        },
+        {
+          "id": "minecraft:purpur_pillar",
+          "en": "PURPUR PILLAR",
+          "cn": "竖纹紫珀块",
+          "phonetic": "/ˈpɜːrpər ˈpɪlər/"
+        },
+        {
+          "id": "minecraft:copper_door",
+          "en": "COPPER DOOR",
+          "cn": "铜门",
+          "phonetic": "/ˈkɒpər dɔːr/"
+        },
+        {
+          "id": "minecraft:copper_trapdoor",
+          "en": "COPPER TRAPDOOR",
+          "cn": "铜活板门",
+          "phonetic": "/ˈkɒpər ˈtræpdɔːr/"
+        }
+      ],
+      "items": [
+        {
+          "id": "minecraft:elytra",
+          "en": "ELYTRA",
+          "cn": "鞘翅",
+          "phonetic": "/ˈelɪtrə/"
+        },
+        {
+          "id": "minecraft:totem_of_undying",
+          "en": "TOTEM OF UNDYING",
+          "cn": "不死图腾",
+          "phonetic": "/ˈtoʊtəm əv ʌnˈdaɪɪŋ/"
+        },
+        {
+          "id": "minecraft:end_crystal",
+          "en": "END CRYSTAL",
+          "cn": "末影水晶",
+          "phonetic": "/end ˈkrɪstl/"
+        },
+        {
+          "id": "minecraft:chorus_fruit",
+          "en": "CHORUS FRUIT",
+          "cn": "紫颂果",
+          "phonetic": "/ˈkɔːrəs fruːt/"
+        },
+        {
+          "id": "minecraft:dragon_breath",
+          "en": "DRAGON BREATH",
+          "cn": "龙息",
+          "phonetic": "/ˈdræɡən breθ/"
+        },
+        {
+          "id": "minecraft:firework_rocket",
+          "en": "FIREWORK ROCKET",
+          "cn": "烟花火箭",
+          "phonetic": "/ˈfaɪərwɜːrk ˈrɒkɪt/"
+        },
+        {
+          "id": "minecraft:recovery_compass",
+          "en": "RECOVERY COMPASS",
+          "cn": "追溯指南针",
+          "phonetic": "/rɪˈkʌvəri ˈkʌmpəs/"
+        },
+        {
+          "id": "minecraft:echo_shard",
+          "en": "ECHO SHARD",
+          "cn": "回响碎片",
+          "phonetic": "/ˈekoʊ ʃɑːrd/"
+        },
+        {
+          "id": "minecraft:disc_fragment_5",
+          "en": "DISC FRAGMENT",
+          "cn": "唱片碎片",
+          "phonetic": "/dɪsk ˈfræɡmənt/"
+        },
+        {
+          "id": "minecraft:heart_of_the_sea",
+          "en": "HEART OF THE SEA",
+          "cn": "海洋之心",
+          "phonetic": "/hɑːrt əv ðə siː/"
+        },
+        {
+          "id": "minecraft:nautilus_shell",
+          "en": "NAUTILUS SHELL",
+          "cn": "鹦鹉螺壳",
+          "phonetic": "/ˈnɔːtɪləs ʃel/"
+        },
+        {
+          "id": "minecraft:turtle_helmet",
+          "en": "TURTLE HELMET",
+          "cn": "海龟壳头盔",
+          "phonetic": "/ˈtɜːrtl ˈhelmɪt/"
+        },
+        {
+          "id": "minecraft:mace",
+          "en": "MACE",
+          "cn": "锤",
+          "phonetic": "/meɪs/"
+        },
+        {
+          "id": "minecraft:wind_charge",
+          "en": "WIND CHARGE",
+          "cn": "风弹",
+          "phonetic": "/wɪnd tʃɑːrdʒ/"
+        },
+        {
+          "id": "minecraft:trial_key",
+          "en": "TRIAL KEY",
+          "cn": "试炼钥匙",
+          "phonetic": "/ˈtraɪəl kiː/"
+        },
+        {
+          "id": "minecraft:ominous_trial_key",
+          "en": "OMINOUS TRIAL KEY",
+          "cn": "不祥试炼钥匙",
+          "phonetic": "/ˈɒmɪnəs ˈtraɪəl kiː/"
+        },
+        {
+          "id": "minecraft:ominous_bottle",
+          "en": "OMINOUS BOTTLE",
+          "cn": "不祥之瓶",
+          "phonetic": "/ˈɒmɪnəs ˈbɒtl/"
+        },
+        {
+          "id": "minecraft:wolf_armor",
+          "en": "WOLF ARMOR",
+          "cn": "狼铠",
+          "phonetic": "/wʊlf ˈɑːrmər/"
+        },
+        {
+          "id": "minecraft:shulker_shell",
+          "en": "SHULKER SHELL",
+          "cn": "潜影壳",
+          "phonetic": "/ˈʃʌlkər ʃel/"
+        },
+        {
+          "id": "minecraft:music_disc_pigstep",
+          "en": "MUSIC DISC",
+          "cn": "音乐唱片",
+          "phonetic": "/ˈmjuːzɪk dɪsk/"
+        },
+        {
+          "id": "minecraft:globe_banner_pattern",
+          "en": "GLOBE BANNER PATTERN",
+          "cn": "地球旗帜图案",
+          "phonetic": "/ɡloʊb ˈbænər ˈpætərn/"
+        },
+        {
+          "id": "minecraft:creeper_banner_pattern",
+          "en": "CREEPER BANNER PATTERN",
+          "cn": "苦力怕旗帜图案",
+          "phonetic": "/ˈkriːpər ˈbænər ˈpætərn/"
+        },
+        {
+          "id": "minecraft:spire_armor_trim_smithing_template",
+          "en": "SPIRE ARMOR TRIM",
+          "cn": "尖塔纹饰",
+          "phonetic": "/spaɪər ˈɑːrmər trɪm/"
+        },
+        {
+          "id": "minecraft:eye_armor_trim_smithing_template",
+          "en": "EYE ARMOR TRIM",
+          "cn": "眼之纹饰",
+          "phonetic": "/aɪ ˈɑːrmər trɪm/"
+        }
+      ]
+    }
+  ]
+}
