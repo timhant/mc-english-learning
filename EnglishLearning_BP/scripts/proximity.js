@@ -1,32 +1,37 @@
-// proximity.js - Entity proximity detection with level gating
+// proximity.js - Entity proximity detection with dual-mode trigger
 import { world, system } from "@minecraft/server";
 import { entityMap } from "./vocab/index.js";
 import { unlockWord, getPlayerLevel } from "./progress.js";
 import { celebrateLevelUp } from "./levelUp.js";
-import { COOLDOWN_TICKS, DETECT_RANGE } from "./config.js";
+import { playWordAudio } from "./voice.js";
+import { COOLDOWN_TICKS, OUT_OF_LEVEL_COOLDOWN_TICKS, DETECT_RANGE } from "./config.js";
+import { CONFIG } from "./config.js";
 
 const cooldowns = new Map();
 const CHECK_INTERVAL = 20; // every 1 second
 
-function showWord(player, word, isNew) {
+function showFullExperience(player, word, isNew) {
   try {
     const dim = player.dimension;
     const sel = '@a[name="' + player.name + '"]';
 
     dim.runCommand("titleraw " + sel + " times 10 40 10");
-
-    const titleJson = JSON.stringify({ rawtext: [{ text: "§a§l" + word.en + "§r" }] });
-    dim.runCommand("titleraw " + sel + " title " + titleJson);
-
-    const subtitleJson = JSON.stringify({ rawtext: [{ text: "§f" + word.cn + "  §7" + word.phonetic + "§r" }] });
-    dim.runCommand("titleraw " + sel + " subtitle " + subtitleJson);
+    dim.runCommand("titleraw " + sel + " title " + JSON.stringify({ rawtext: [{ text: "§a§l" + word.en + "§r" }] }));
+    dim.runCommand("titleraw " + sel + " subtitle " + JSON.stringify({ rawtext: [{ text: "§f" + word.cn + "  §7" + word.phonetic + "§r" }] }));
 
     if (isNew) {
       dim.runCommand("playsound random.levelup " + sel);
       dim.runCommand("xp 3 " + sel);
-      const abJson = JSON.stringify({ rawtext: [{ text: "§e✨ New Word Unlocked! ✨§r" }] });
-      dim.runCommand("titleraw " + sel + " actionbar " + abJson);
+      dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({ rawtext: [{ text: "§e✨ New Word Unlocked! ✨§r" }] }));
     }
+  } catch (e) {}
+}
+
+function showLightExperience(player, word) {
+  try {
+    const dim = player.dimension;
+    const sel = '@a[name="' + player.name + '"]';
+    dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({ rawtext: [{ text: "§7" + word.en + " §8| §7" + word.cn + "§r" }] }));
   } catch (e) {}
 }
 
@@ -35,6 +40,13 @@ function isOnCooldown(playerId, entityTypeId, currentTick) {
   const pc = cooldowns.get(playerId);
   if (!pc.has(entityTypeId)) return false;
   return currentTick - pc.get(entityTypeId) < COOLDOWN_TICKS;
+}
+
+function isOnCooldownOutOfLevel(playerId, entityTypeId, currentTick) {
+  if (!cooldowns.has(playerId)) return false;
+  const pc = cooldowns.get(playerId);
+  if (!pc.has(entityTypeId)) return false;
+  return currentTick - pc.get(entityTypeId) < OUT_OF_LEVEL_COOLDOWN_TICKS;
 }
 
 function setCooldown(playerId, entityTypeId, currentTick) {
@@ -63,18 +75,35 @@ export function startProximityDetection() {
             const typeId = entity.typeId;
             const word = entityMap.get(typeId);
             if (!word) continue;
-            if (word.level > playerLevel) continue; // level gated
-            if (isOnCooldown(player.id, typeId, currentTick)) continue;
 
-            setCooldown(player.id, typeId, currentTick);
-            const result = unlockWord(player, "entities", typeId, word.level);
-            showWord(player, word, result.isNew);
+            const inLevel = word.level <= playerLevel;
 
-            if (result.leveledUp) {
-              system.runTimeout(() => {
-                celebrateLevelUp(player, result.newLevel);
-              }, 40);
+            if (inLevel) {
+              if (isOnCooldown(player.id, typeId, currentTick)) continue;
+              setCooldown(player.id, typeId, currentTick);
+
+              // Try to play audio; if locked, skip visual too
+              const played = playWordAudio(player, typeId);
+              if (!played) continue;
+
+              const result = unlockWord(player, "entities", typeId, word.level);
+              showFullExperience(player, word, result.isNew);
+
+              if (result.leveledUp) {
+                system.runTimeout(() => {
+                  celebrateLevelUp(player, result.newLevel);
+                }, 40);
+              }
+            } else if (CONFIG.outOfLevelEnabled) {
+              if (isOnCooldownOutOfLevel(player.id, typeId, currentTick)) continue;
+              setCooldown(player.id, typeId, currentTick);
+
+              const played = playWordAudio(player, typeId);
+              if (!played) continue;
+
+              showLightExperience(player, word);
             }
+
             break; // one word per tick per player
           } catch (e) { continue; }
         }

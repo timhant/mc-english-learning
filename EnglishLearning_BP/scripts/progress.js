@@ -1,4 +1,4 @@
-// progress.js - Player progress tracking with level system
+// progress.js - Player progress tracking with level system (v2.5: entities + blocks + items)
 import { world } from "@minecraft/server";
 import { levels, getWordCount, getTotalWordCount } from "./vocab/index.js";
 import { CONFIG } from "./config.js";
@@ -20,7 +20,6 @@ export function getProgress(player) {
     if (raw) {
       try {
         const p = JSON.parse(raw);
-        // Ensure all keys exist (migration from v1)
         if (!p.level) p.level = 1;
         if (!p.unlocked) p.unlocked = {};
         for (let i = 1; i <= 5; i++) {
@@ -43,6 +42,7 @@ function saveProgress(player, progress) {
 
 /**
  * Unlock a word. Returns { isNew, leveledUp, newLevel }
+ * category: "entities" | "blocks" | "items" (for display only, all stored per level)
  */
 export function unlockWord(player, category, wordId, wordLevel) {
   const progress = getProgress(player);
@@ -106,7 +106,7 @@ export function showAlbum(player) {
       const num = i + 1;
       const key = "level" + num;
       const unlocked = progress.unlocked[key] || [];
-      const wordCount = lvl.entities.length + lvl.blocks.length;
+      const wordCount = lvl.entities.length + lvl.blocks.length + (lvl.items ? lvl.items.length : 0);
       const locked = num > progress.level;
 
       if (locked) {
@@ -114,7 +114,7 @@ export function showAlbum(player) {
       } else {
         tell("§b" + lvl.star + " " + lvl.nameCn + " " + lvl.name + " (" + unlocked.length + "/" + wordCount + ")§r");
         let line = "";
-        const allWords = lvl.entities.concat(lvl.blocks);
+        const allWords = lvl.entities.concat(lvl.blocks).concat(lvl.items || []);
         for (const w of allWords) {
           line += unlocked.includes(w.id) ? ("§a" + w.en + "✅ ") : "§7??? ";
         }
