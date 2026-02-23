@@ -50,6 +50,13 @@ export function getLevelEntities(levelNum) {
   return lvl.entities;
 }
 
+// Get only block entries for a specific level (for quest system)
+export function getLevelBlocks(levelNum) {
+  const lvl = levels[levelNum - 1];
+  if (!lvl) return [];
+  return lvl.blocks;
+}
+
 // Reward items for quests
 export const rewardItems = [
   "minecraft:apple",
