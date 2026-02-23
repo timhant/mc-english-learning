@@ -1,5 +1,49 @@
 # Changelog | 更新日志
 
+## v2.6.0 (2026-02-23)
+
+### Quest System Upgrade | 任务系统升级
+
+- **Block quests** — quests now include "⛏ DIG: {block}" in addition to "🔍 FIND: {entity}"
+- **50/50 mix** — random selection between entity and block quests
+- **Dual completion** — block quests complete on break OR place
+
+- **方块任务** — 任务系统新增「⛏ 挖掘：{方块}」类型，与原有「🔍 找到：{生物}」并行
+- **随机混合** — 实体任务和方块任务各占 50%
+- **双向完成** — 挖掘或放置目标方块均可完成任务
+
+---
+
+## v2.5.0 (2026-02-23)
+
+### 🚀 Major Update — 434 Words & Gameplay-Progression Levels | 434词库 & 游戏进程分级
+
+- **434 Words** — expanded from 156 to 434 words (278 new words)
+- **5-Level Gameplay Progression** — levels now mirror natural Minecraft journey:
+  - Lv1: First Day (~100 words)
+  - Lv2: First Week (~100 words)
+  - Lv3: Exploration (~100 words)
+  - Lv4: Nether Journey (~100 words)
+  - Lv5: The End (~34 words)
+- **Item Trigger** — switch held items to learn their names (3rd trigger type alongside entity proximity & block break/place)
+- **Playback Lock** — global 4-second audio lock prevents overlapping narration
+- **Out-of-Level Lightweight Experience** — words above current level still trigger (ActionBar + voice) but without celebration/XP, so curiosity isn't punished
+- **Edge TTS Audio Regeneration** — all 868 audio files regenerated using Microsoft Edge TTS (en-US-JennyNeural + zh-CN-XiaoxiaoNeural)
+
+- **434 个单词** — 从 156 词扩充到 434 词（新增 278 词）
+- **5 级游戏进程分级** — 等级按游戏自然进程划分：
+  - Lv1：第一天（~100 词）
+  - Lv2：第一周（~100 词）
+  - Lv3：探索期（~100 词）
+  - Lv4：下界征途（~100 词）
+  - Lv5：终末之地（~34 词）
+- **物品触发** — 切换手持物品触发学习（第 3 种触发方式，与实体靠近、方块挖掘/放置并列）
+- **播放锁** — 全局 4 秒音频锁，防止语音重叠播放
+- **超纲词轻量体验** — 高于当前等级的词仍可触发（ActionBar + 语音），但不触发庆祝/经验值，满足好奇心不增加负担
+- **Edge TTS 音频重新生成** — 全部 868 个音频文件使用 Microsoft Edge TTS 重新生成（en-US-JennyNeural + zh-CN-XiaoxiaoNeural）
+
+---
+
 ## v2.0.0 (2026-02-23)
 
 ### 🚀 Major Update — Voice & Leveling System | 语音朗读 & 分级系统
@@ -19,6 +63,8 @@
 - **资源包** — 新增 `EnglishLearning_RP` 包含所有音频
 - **配置文件** — 外置 `config.json` 支持自定义设置
 - **Bug 修复** — playsound 坐标改为使用玩家位置
+
+---
 
 ## v1.0.0 (2026-02-22)
 

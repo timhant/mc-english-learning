@@ -24,31 +24,42 @@ Walk near any animal and its English name, Chinese translation, and phonetic spe
 ### ⛏️ Block Learning
 Mine or place blocks to see their English names. Common blocks, ores, redstone components — all labeled automatically.
 
-### 🔊 Voice Narration *(NEW in v2.0)*
-Every word is read aloud in **English first, then Chinese** — helping children connect pronunciation with meaning. 312 high-quality TTS audio files powered by Microsoft Edge TTS.
+### 🎒 Item Learning *(NEW in v2.5)*
+Switch your held item to see its English name. Every tool, weapon, food, and material is a new vocabulary opportunity.
 
-### 📈 5-Level Progression System *(NEW in v2.0)*
-Words are organized into 5 themed levels that unlock as children explore:
+### 🔊 Voice Narration
+Every word is read aloud in **English first, then Chinese** — helping children connect pronunciation with meaning. 868 high-quality TTS audio files powered by Microsoft Edge TTS (en-US-JennyNeural + zh-CN-XiaoxiaoNeural).
+
+### 📈 5-Level Gameplay Progression *(Upgraded in v2.5)*
+Words are organized into 5 levels that mirror natural Minecraft progression — children encounter the right words at exactly the right moment in their game journey:
 
 | Level | Theme | Words |
 |:---:|:---|:---:|
-| ⭐ Lv1 | Farm Life — animals, basic blocks, furniture | 27 |
-| ⭐⭐ Lv2 | Exploring Nature — wildlife, plants, trees | 36 |
-| ⭐⭐⭐ Lv3 | Miner's Path — ores, tools, crafting stations | 28 |
-| ⭐⭐⭐⭐ Lv4 | Brave Fighter — monsters, combat, enchanting | 30 |
-| ⭐⭐⭐⭐⭐ Lv5 | Master Workshop — redstone, nether, end, advanced | 35 |
-| | **Total** | **156** |
+| ⭐ Lv1 | First Day — your first night, farm animals, basic blocks | ~100 |
+| ⭐⭐ Lv2 | First Week — building, mining, villagers, early farms | ~100 |
+| ⭐⭐⭐ Lv3 | Exploration — biomes, ruins, hostile mobs, deep caves | ~100 |
+| ⭐⭐⭐⭐ Lv4 | Nether Journey — nether mobs, brewing, enchanting | ~100 |
+| ⭐⭐⭐⭐⭐ Lv5 | The End — endgame content, rare blocks, final boss | ~34 |
+| | **Total** | **434** |
 
 Unlock 80% of words in your current level to advance to the next!
 
+### 💡 Out-of-Level Lightweight Experience *(NEW in v2.5)*
+Stumble across a word from a future level? It still triggers a lightweight experience — English + Chinese displayed on the action bar, voice narration included — so curiosity is never punished. No celebration, no XP, just a quiet heads-up that a word exists. When formally unlocked at the right level, it becomes a rewarding "reunion!"
+
+### 🔒 Playback Lock *(NEW in v2.5)*
+Walk into a group of animals while switching your sword? No more overlapping audio chaos. A global playback lock ensures only one word plays at a time — discarding new triggers during the ~4-second narration window. Clean, calm, child-friendly.
+
 ### 🔍 Auto Quests
-Every 5 minutes, a "Find the Animal" quest appears automatically. Find the target animal to earn food rewards and XP. No typing required — perfect for kids who can't read yet.
+Every 5 minutes, a "Find the Animal" quest appears automatically. Find the target to earn food rewards and XP. No typing required — perfect for kids who can't read yet.
+*(v2.6: Quests will also send children to find specific mobs AND dig/place specific blocks.)*
 
 ### 📖 Word Album
 Parents can type `/words` to check their child's collection progress. Like a Pokédex but for English words!
 
 ### ✨ Designed for Kids
 - **Zero typing required** — everything is automatic or proximity-based
+- **3 trigger types** — entity proximity, block break/place, item hold/switch
 - **Bilingual display** — English + Chinese + phonetic symbols
 - **Voice narration** — hear every word spoken in English and Chinese
 - **Positive reinforcement** — sounds, particles, XP, and item rewards
@@ -65,31 +76,42 @@ Parents can type `/words` to check their child's collection progress. Like a Pok
 ### ⛏️ 方块学习
 挖掘或放置方块时，ActionBar 自动显示英文名称。覆盖基础方块、矿石、红石组件等。
 
-### 🔊 语音朗读 *（v2.0 新增）*
-每个单词都会**先朗读英文，再朗读中文**——帮助孩子将发音与含义建立联系。312 个高品质语音文件，由 Microsoft Edge TTS 生成。
+### 🎒 物品学习 *（v2.5 新增）*
+切换手持物品时触发学习。每一件工具、武器、食物和材料都是新的词汇机会。
 
-### 📈 5 级进阶系统 *（v2.0 新增）*
-单词按主题分为 5 个等级，随着探索逐步解锁：
+### 🔊 语音朗读
+每个单词都会**先朗读英文，再朗读中文**——帮助孩子将发音与含义建立联系。868 个高品质语音文件，由 Microsoft Edge TTS 生成（en-US-JennyNeural + zh-CN-XiaoxiaoNeural）。
+
+### 📈 5 级游戏进程分级 *（v2.5 升级）*
+单词按游戏进程分为 5 个等级，孩子在游戏中自然推进时，在最合适的时机学到最合适的单词：
 
 | 等级 | 主题 | 词数 |
 |:---:|:---|:---:|
-| ⭐ Lv1 | 农场生活 — 动物、基础方块、家具 | 27 |
-| ⭐⭐ Lv2 | 探索自然 — 野生动物、植物、树木 | 36 |
-| ⭐⭐⭐ Lv3 | 矿工之路 — 矿石、工具、工作站 | 28 |
-| ⭐⭐⭐⭐ Lv4 | 勇者战斗 — 怪物、战斗、附魔 | 30 |
-| ⭐⭐⭐⭐⭐ Lv5 | 大师工坊 — 红石、下界、末地、高级建筑 | 35 |
-| | **总计** | **156** |
+| ⭐ Lv1 | 第一天 — 第一夜、农场动物、基础方块 | ~100 |
+| ⭐⭐ Lv2 | 第一周 — 建造、挖矿、村民、早期农场 | ~100 |
+| ⭐⭐⭐ Lv3 | 探索期 — 生态群系、遗迹、敌对怪物、深层洞穴 | ~100 |
+| ⭐⭐⭐⭐ Lv4 | 下界征途 — 下界生物、药水酿造、附魔 | ~100 |
+| ⭐⭐⭐⭐⭐ Lv5 | 终末之地 — 末地内容、稀有方块、最终 Boss | ~34 |
+| | **总计** | **434** |
 
 解锁当前等级 80% 的单词即可升级到下一级！
 
+### 💡 超纲词轻量体验 *（v2.5 新增）*
+遇到了高于当前等级的词？依然会触发轻量体验——ActionBar 显示英文+中文，语音朗读照常——好奇心不会被辜负。不触发庆祝特效、不计入进度，只是悄悄告诉孩子"这个词存在"。等到正式解锁时，会有一种熟悉的"重逢惊喜"！
+
+### 🔒 播放锁 *（v2.5 新增）*
+走进一群动物的同时切换了武器？不再出现多个语音叠加的混乱。全局播放锁确保同一时间只播放一个单词，在约 4 秒的朗读窗口期内丢弃新触发。干净、平静、儿童友好。
+
 ### 🔍 自动寻宝
-每 5 分钟自动发布一个「找动物」任务，找到目标动物就能获得食物和经验值奖励。不需要打字——完全适合不识字的小朋友。
+每 5 分钟自动发布一个「找动物」任务，找到目标就能获得食物和经验值奖励。不需要打字——完全适合不识字的小朋友。
+*（v2.6：任务将同时支持「找生物」和「挖掘/放置特定方块」两种类型。）*
 
 ### 📖 单词图鉴
 家长输入 `/words` 可以查看孩子的单词收集进度，像宝可梦图鉴一样！
 
 ### ✨ 为儿童设计
 - **零打字需求** — 全部自动触发或靠近触发
+- **3 种触发类型** — 实体靠近、方块挖掘/放置、物品切换手持
 - **双语显示** — 英文 + 中文 + 音标
 - **语音朗读** — 每个单词都有英文和中文语音
 - **正向激励** — 音效、粒子特效、经验值、物品奖励
@@ -111,7 +133,7 @@ Parents can type `/words` to check their child's collection progress. Like a Pok
 ```json
 {
   "pack_id": "a3f1d7e2-8c4b-4f6a-9d2e-1b5c8a3f7e90",
-  "version": [2, 0, 0]
+  "version": [2, 5, 0]
 }
 ```
 
@@ -119,7 +141,7 @@ Parents can type `/words` to check their child's collection progress. Like a Pok
 ```json
 {
   "pack_id": "b4e2c8f1-7d3a-5e9b-8f1c-2a6d9b4e7f01",
-  "version": [2, 0, 0]
+  "version": [2, 5, 0]
 }
 ```
 
@@ -147,6 +169,7 @@ Parents can type `/words` to check their child's collection progress. Like a Pok
 |:---|:---|
 | Walk near an animal 走近动物 | Name displayed + English & Chinese voice 显示名称 + 英中语音朗读 |
 | Mine/place a block 挖掘/放置方块 | Block name + voice on ActionBar 方块名称 + 语音 |
+| Switch held item 切换手持物品 | Item name + voice on ActionBar 物品名称 + 语音 |
 | Wait 5 minutes 等待5分钟 | Auto quest appears 自动寻宝任务出现 |
 | Type `/words` 输入 `/words` | View word album & level progress 查看单词图鉴和等级进度 |
 
@@ -167,19 +190,20 @@ EnglishLearning_BP/          # Behavior Pack (logic)
     ├── config.js             # Config reader
     ├── proximity.js          # Entity proximity detection (2 blocks)
     ├── blockLearn.js         # Block break/place learning
+    ├── itemLearn.js          # Item hold/switch learning (NEW v2.5)
     ├── quest.js              # Auto find-the-animal quests
     ├── progress.js           # Player progress tracking
     ├── levelUp.js            # Level-up celebration & rewards
-    ├── voice.js              # Voice playback (EN then CN)
+    ├── voice.js              # Voice playback (EN then CN) + playback lock
     └── vocab/
         ├── index.js          # Vocabulary aggregator
-        ├── level1.js ~ level5.js  # Word definitions per level
+        ├── level1.js ~ level5.js  # Word definitions per level (gameplay-progression)
 
 EnglishLearning_RP/          # Resource Pack (audio)
 ├── manifest.json
 └── sounds/
     ├── sound_definitions.json
-    └── eng/                  # 312 audio files (156 words × 2)
+    └── eng/                  # 868 audio files (434 words × 2)
         ├── cow_en.ogg
         ├── cow_cn.ogg
         └── ...
@@ -193,13 +217,16 @@ Edit `EnglishLearning_BP/config.json`:
 
 ```json
 {
-  "unlockThreshold": 0.8,      // 80% words to level up
-  "cooldownSeconds": 60,        // Per-word cooldown
-  "detectRange": 2,             // Entity detection range (blocks)
-  "questIntervalSeconds": 300,  // Quest frequency (5 min)
-  "questTimeoutSeconds": 300,   // Quest timeout
-  "voiceEnabled": true,         // Toggle voice narration
-  "maxLevel": 5                 // Maximum level
+  "unlockThreshold": 0.8,        // 80% words to level up
+  "cooldownSeconds": 60,          // Per-word cooldown (in-level)
+  "outOfLevelCooldown": 120,      // Per-word cooldown for out-of-level words
+  "outOfLevelEnabled": true,      // Toggle lightweight out-of-level triggers
+  "detectRange": 2,               // Entity detection range (blocks)
+  "questIntervalSeconds": 300,    // Quest frequency (5 min)
+  "questTimeoutSeconds": 300,     // Quest timeout
+  "voiceEnabled": true,           // Toggle voice narration
+  "playLockDuration": 80,         // Playback lock duration in ticks (~4s)
+  "maxLevel": 5                   // Maximum level
 }
 ```
 
@@ -209,7 +236,10 @@ Edit `EnglishLearning_BP/config.json`:
 
 - **Platform**: Minecraft Bedrock Edition 1.21.60+
 - **API**: `@minecraft/server` 2.0.0 (Script API)
-- **Audio**: 312 OGG files, Microsoft Edge TTS (JennyNeural EN + XiaoxiaoNeural CN)
+- **Audio**: 868 OGG files, Microsoft Edge TTS (en-US-JennyNeural EN + zh-CN-XiaoxiaoNeural CN)
+- **Trigger types**: Entity proximity · Block break/place · Item hold/switch
+- **Playback lock**: Global 4-second lock prevents audio overlap
+- **Out-of-level**: Lightweight experience (ActionBar + voice, no XP) for words above current level
 - **Multiplayer compatible** — each player has independent progress
 - **Lightweight** — proximity check runs once per second, minimal performance impact
 - **Data persistence** — progress saved via Dynamic Properties (survives server restarts)
