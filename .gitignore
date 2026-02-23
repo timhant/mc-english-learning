@@ -16,3 +16,4 @@ package-lock.json
 *.mcworld
 *.mcpack
 *.mcaddon
+mc_audio_edge/
