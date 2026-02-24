@@ -1,26 +1,16 @@
 // itemLearn.js - Learn words when switching held items
 import { world, system } from "@minecraft/server";
 import { itemMap } from "./vocab/index.js";
+import { foodPhraseMap } from "./phraseData.js";
+import { hasLearnedNoun, showPhrase } from "./phraseCore.js";
 import { unlockWord, getPlayerLevel } from "./progress.js";
 import { celebrateLevelUp } from "./levelUp.js";
 import { playWordAudio } from "./voice.js";
-import { COOLDOWN_TICKS, OUT_OF_LEVEL_COOLDOWN_TICKS } from "./config.js";
+import { isOnCooldown, setCooldown } from "./cooldown.js";
 import { CONFIG } from "./config.js";
 
 const lastHeldItem = new Map();  // playerId -> itemTypeId
-const cooldowns = new Map();
 const CHECK_INTERVAL = 20; // every 1 second
-
-function isOnCooldown(pid, itemId, tick, inLevel) {
-  const k = pid + ":" + itemId;
-  if (!cooldowns.has(k)) return false;
-  const limit = inLevel ? COOLDOWN_TICKS : OUT_OF_LEVEL_COOLDOWN_TICKS;
-  return tick - cooldowns.get(k) < limit;
-}
-
-function setCooldown(pid, itemId, tick) {
-  cooldowns.set(pid + ":" + itemId, tick);
-}
 
 function showFullExperience(player, word, isNew) {
   try {
@@ -76,8 +66,20 @@ export function startItemLearning() {
         const inLevel = word.level <= playerLevel;
 
         if (!inLevel && !CONFIG.outOfLevelEnabled) continue;
-        if (isOnCooldown(player.id, currentItemId, tick, inLevel)) continue;
-        setCooldown(player.id, currentItemId, tick);
+        if (isOnCooldown(player.id, currentItemId, inLevel)) continue;
+
+        // v3.0: If noun is already learned, try to show food phrase instead
+        if (inLevel && hasLearnedNoun(player, currentItemId)) {
+          const phraseEntry = foodPhraseMap.get(currentItemId);
+          if (phraseEntry) {
+            setCooldown(player.id, currentItemId);
+            showPhrase(player, phraseEntry, phraseEntry.level);
+            continue;
+          }
+        }
+
+        // Fall through to noun display
+        setCooldown(player.id, currentItemId);
 
         const played = playWordAudio(player, currentItemId);
         if (!played) continue;

@@ -22,6 +22,11 @@ export const level2 = {
     { id: "minecraft:enderman", en: "ENDERMAN", cn: "末影人", phonetic: "/ˈendərmæn/" },
     { id: "minecraft:phantom", en: "PHANTOM", cn: "幻翼", phonetic: "/ˈfæntəm/" },
     { id: "minecraft:drowned", en: "DROWNED", cn: "溺尸", phonetic: "/draʊnd/" },
+    // v2.7 additions
+    { id: "minecraft:zombie_villager_v2", en: "ZOMBIE VILLAGER", cn: "僵尸村民", phonetic: "/ˈzɒmbi ˈvɪlɪdʒər/" },
+    { id: "minecraft:bogged", en: "BOGGED", cn: "沼骸", phonetic: "/bɒɡd/" },
+    { id: "minecraft:tadpole", en: "TADPOLE", cn: "蝌蚪", phonetic: "/ˈtædpoʊl/" },
+    { id: "minecraft:trader_llama", en: "TRADER LLAMA", cn: "行商羊驼", phonetic: "/ˈtreɪdər ˈlɑːmə/" },
   ],
   blocks: [
     { id: "minecraft:gold_ore", en: "GOLD ORE", cn: "金矿石", phonetic: "/ɡoʊld ɔːr/" },
@@ -77,6 +82,16 @@ export const level2 = {
     { id: "minecraft:dark_oak_log", en: "DARK OAK LOG", cn: "深色橡木原木", phonetic: "/dɑːrk oʊk lɒɡ/" },
     { id: "minecraft:mangrove_log", en: "MANGROVE LOG", cn: "红树原木", phonetic: "/ˈmæŋɡroʊv lɒɡ/" },
     { id: "minecraft:cherry_log", en: "CHERRY LOG", cn: "樱花原木", phonetic: "/ˈtʃeri lɒɡ/" },
+    // v2.7 additions
+    { id: "minecraft:glass_pane", en: "GLASS PANE", cn: "玻璃板", phonetic: "/ɡlæs peɪn/" },
+    { id: "minecraft:iron_bars", en: "IRON BARS", cn: "铁栏杆", phonetic: "/ˈaɪərn bɑːrz/" },
+    { id: "minecraft:dried_kelp_block", en: "DRIED KELP BLOCK", cn: "干海带块", phonetic: "/draɪd kelp blɒk/" },
+    { id: "minecraft:red_flower.blue_orchid", en: "BLUE ORCHID", cn: "兰花", phonetic: "/bluː ˈɔːrkɪd/" },
+    { id: "minecraft:red_flower.cornflower", en: "CORNFLOWER", cn: "矢车菊", phonetic: "/ˈkɔːrnflaʊər/" },
+    { id: "minecraft:red_flower.allium", en: "ALLIUM", cn: "绒球葱", phonetic: "/ˈæliəm/" },
+    { id: "minecraft:red_flower.tulip", en: "TULIP", cn: "郁金香", phonetic: "/ˈtjuːlɪp/" },
+    { id: "minecraft:spruce_sapling", en: "SPRUCE SAPLING", cn: "云杉树苗", phonetic: "/spruːs ˈsæplɪŋ/" },
+    { id: "minecraft:redstone_torch", en: "REDSTONE TORCH", cn: "红石火把", phonetic: "/ˈredˌstoʊn tɔːrtʃ/" },
   ],
   items: [
     { id: "minecraft:iron_sword", en: "IRON SWORD", cn: "铁剑", phonetic: "/ˈaɪərn sɔːrd/" },
@@ -126,5 +141,11 @@ export const level2 = {
     { id: "minecraft:raw_copper", en: "RAW COPPER", cn: "粗铜", phonetic: "/rɔː ˈkɒpər/" },
     { id: "minecraft:dried_kelp", en: "DRIED KELP", cn: "干海带", phonetic: "/draɪd kelp/" },
     { id: "minecraft:suspicious_stew", en: "SUSPICIOUS STEW", cn: "迷之炖菜", phonetic: "/səˈspɪʃəs stjuː/" },
+    // v2.7 additions
+    { id: "minecraft:baked_potato", en: "BAKED POTATO", cn: "烤马铃薯", phonetic: "/beɪkt pəˈteɪtoʊ/" },
+    { id: "minecraft:cooked_salmon", en: "COOKED SALMON", cn: "熟鲑鱼", phonetic: "/kʊkt ˈsæmən/" },
+    { id: "minecraft:item_frame", en: "ITEM FRAME", cn: "物品展示框", phonetic: "/ˈaɪtəm freɪm/" },
+    { id: "minecraft:chest_boat", en: "BOAT WITH CHEST", cn: "运输船", phonetic: "/boʊt wɪð tʃest/" },
+    { id: "minecraft:chest_minecart", en: "MINECART WITH CHEST", cn: "运输矿车", phonetic: "/ˈmaɪnkɑːrt wɪð tʃest/" },
   ],
 };

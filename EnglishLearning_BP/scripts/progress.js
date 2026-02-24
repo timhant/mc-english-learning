@@ -9,7 +9,9 @@ function defaultProgress() {
   return {
     level: 1,
     unlocked: { level1: [], level2: [], level3: [], level4: [], level5: [] },
+    phrases: { level1: [], level2: [], level3: [], level4: [], level5: [] },
     totalWords: 0,
+    totalPhrases: 0,
     questsCompleted: 0,
   };
 }
@@ -22,10 +24,13 @@ export function getProgress(player) {
         const p = JSON.parse(raw);
         if (!p.level) p.level = 1;
         if (!p.unlocked) p.unlocked = {};
+        if (!p.phrases) p.phrases = {};
         for (let i = 1; i <= 5; i++) {
           if (!p.unlocked["level" + i]) p.unlocked["level" + i] = [];
+          if (!p.phrases["level" + i]) p.phrases["level" + i] = [];
         }
         if (!p.totalWords) p.totalWords = 0;
+        if (!p.totalPhrases) p.totalPhrases = 0;
         if (!p.questsCompleted) p.questsCompleted = 0;
         return p;
       } catch {}
@@ -78,6 +83,25 @@ export function unlockWord(player, category, wordId, wordLevel) {
 
 export function getPlayerLevel(player) {
   return getProgress(player).level;
+}
+
+/**
+ * Unlock a phrase. Returns true if it was new.
+ * phraseId: "phrase:minecraft:zombie" etc.
+ */
+export function unlockPhrase(player, phraseId, phraseLevel) {
+  const progress = getProgress(player);
+  const key = "level" + phraseLevel;
+
+  if (!progress.phrases[key]) progress.phrases[key] = [];
+  if (progress.phrases[key].includes(phraseId)) {
+    return false;
+  }
+
+  progress.phrases[key].push(phraseId);
+  progress.totalPhrases++;
+  saveProgress(player, progress);
+  return true;
 }
 
 export function incrementQuests(player) {

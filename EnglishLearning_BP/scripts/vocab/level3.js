@@ -22,6 +22,13 @@ export const level3 = {
     { id: "minecraft:guardian", en: "GUARDIAN", cn: "守卫者", phonetic: "/ˈɡɑːrdiən/" },
     { id: "minecraft:snow_golem", en: "SNOW GOLEM", cn: "雪傀儡", phonetic: "/snoʊ ˈɡoʊləm/" },
     { id: "minecraft:mule", en: "MULE", cn: "骡子", phonetic: "/mjuːl/" },
+    // v2.7 additions
+    { id: "minecraft:mooshroom", en: "MOOSHROOM", cn: "哞菇", phonetic: "/ˈmuːʃruːm/" },
+    { id: "minecraft:skeleton_horse", en: "SKELETON HORSE", cn: "骷髅马", phonetic: "/ˈskelɪtən hɔːrs/" },
+    { id: "minecraft:zombie_horse", en: "ZOMBIE HORSE", cn: "僵尸马", phonetic: "/ˈzɒmbi hɔːrs/" },
+    { id: "minecraft:vindicator", en: "VINDICATOR", cn: "卫道士", phonetic: "/ˈvɪndɪkeɪtər/" },
+    { id: "minecraft:creaking", en: "CREAKING", cn: "嘎枝", phonetic: "/ˈkriːkɪŋ/" },
+    { id: "minecraft:evocation_illager", en: "EVOKER", cn: "唤魔者", phonetic: "/ɪˈvoʊkər/" },
   ],
   blocks: [
     { id: "minecraft:diamond_block", en: "DIAMOND BLOCK", cn: "钻石块", phonetic: "/ˈdaɪmənd blɒk/" },
@@ -66,6 +73,19 @@ export const level3 = {
     { id: "minecraft:chiseled_bookshelf", en: "CHISELED BOOKSHELF", cn: "雕纹书架", phonetic: "/ˈtʃɪzəld ˈbʊkʃelf/" },
     { id: "minecraft:suspicious_sand", en: "SUSPICIOUS SAND", cn: "可疑的沙子", phonetic: "/səˈspɪʃəs sænd/" },
     { id: "minecraft:suspicious_gravel", en: "SUSPICIOUS GRAVEL", cn: "可疑的砂砾", phonetic: "/səˈspɪʃəs ˈɡrævəl/" },
+    // v2.7 additions
+    { id: "minecraft:scaffolding", en: "SCAFFOLDING", cn: "脚手架", phonetic: "/ˈskæfəldɪŋ/" },
+    { id: "minecraft:hanging_sign", en: "HANGING SIGN", cn: "悬挂告示牌", phonetic: "/ˈhæŋɪŋ saɪn/" },
+    { id: "minecraft:trapped_chest", en: "TRAPPED CHEST", cn: "陷阱箱", phonetic: "/træpt tʃest/" },
+    { id: "minecraft:red_flower.lily_of_the_valley", en: "LILY OF THE VALLEY", cn: "铃兰", phonetic: "/ˈlɪli əv ðə ˈvæli/" },
+    { id: "minecraft:red_flower.azure_bluet", en: "AZURE BLUET", cn: "茜草花", phonetic: "/ˈæʒər ˈbluːɪt/" },
+    { id: "minecraft:red_flower.oxeye_daisy", en: "OXEYE DAISY", cn: "滨菊", phonetic: "/ˈɒksaɪ ˈdeɪzi/" },
+    { id: "minecraft:jungle_sapling", en: "JUNGLE SAPLING", cn: "丛林树苗", phonetic: "/ˈdʒʌŋɡl ˈsæplɪŋ/" },
+    { id: "minecraft:dark_oak_sapling", en: "DARK OAK SAPLING", cn: "深色橡木树苗", phonetic: "/dɑːrk oʊk ˈsæplɪŋ/" },
+    { id: "minecraft:acacia_sapling", en: "ACACIA SAPLING", cn: "金合欢树苗", phonetic: "/əˈkeɪʃə ˈsæplɪŋ/" },
+    { id: "minecraft:cherry_sapling", en: "CHERRY SAPLING", cn: "樱花树苗", phonetic: "/ˈtʃeri ˈsæplɪŋ/" },
+    { id: "minecraft:pitcher_plant", en: "PITCHER PLANT", cn: "瓶子草", phonetic: "/ˈpɪtʃər plænt/" },
+    { id: "minecraft:torchflower", en: "TORCHFLOWER", cn: "火把花", phonetic: "/tɔːrtʃflaʊər/" },
   ],
   items: [
     { id: "minecraft:diamond_sword", en: "DIAMOND SWORD", cn: "钻石剑", phonetic: "/ˈdaɪmənd sɔːrd/" },
@@ -103,5 +123,10 @@ export const level3 = {
     { id: "minecraft:lingering_potion", en: "LINGERING POTION", cn: "滞留药水", phonetic: "/ˈlɪŋɡərɪŋ ˈpoʊʃən/" },
     { id: "minecraft:prismarine_shard", en: "PRISMARINE SHARD", cn: "海晶碎片", phonetic: "/ˈprɪzməriːn ʃɑːrd/" },
     { id: "minecraft:prismarine_crystals", en: "PRISMARINE CRYSTALS", cn: "海晶砂粒", phonetic: "/ˈprɪzməriːn ˈkrɪstlz/" },
+    // v2.7 additions
+    { id: "minecraft:golden_carrot", en: "GOLDEN CARROT", cn: "金胡萝卜", phonetic: "/ˈɡoʊldən ˈkærət/" },
+    { id: "minecraft:rabbit_stew", en: "RABBIT STEW", cn: "兔肉煲", phonetic: "/ˈræbɪt stuː/" },
+    { id: "minecraft:cocoa_beans", en: "COCOA BEANS", cn: "可可豆", phonetic: "/ˈkoʊkoʊ biːnz/" },
+    { id: "minecraft:glow_berries", en: "GLOW BERRIES", cn: "荧光浆果", phonetic: "/ɡloʊ ˈberiz/" },
   ],
 };

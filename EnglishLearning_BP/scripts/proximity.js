@@ -4,10 +4,10 @@ import { entityMap } from "./vocab/index.js";
 import { unlockWord, getPlayerLevel } from "./progress.js";
 import { celebrateLevelUp } from "./levelUp.js";
 import { playWordAudio } from "./voice.js";
-import { COOLDOWN_TICKS, OUT_OF_LEVEL_COOLDOWN_TICKS, DETECT_RANGE } from "./config.js";
+import { DETECT_RANGE } from "./config.js";
 import { CONFIG } from "./config.js";
+import { isOnCooldown, setCooldown } from "./cooldown.js";
 
-const cooldowns = new Map();
 const CHECK_INTERVAL = 20; // every 1 second
 
 function showFullExperience(player, word, isNew) {
@@ -35,25 +35,6 @@ function showLightExperience(player, word) {
   } catch (e) {}
 }
 
-function isOnCooldown(playerId, entityTypeId, currentTick) {
-  if (!cooldowns.has(playerId)) return false;
-  const pc = cooldowns.get(playerId);
-  if (!pc.has(entityTypeId)) return false;
-  return currentTick - pc.get(entityTypeId) < COOLDOWN_TICKS;
-}
-
-function isOnCooldownOutOfLevel(playerId, entityTypeId, currentTick) {
-  if (!cooldowns.has(playerId)) return false;
-  const pc = cooldowns.get(playerId);
-  if (!pc.has(entityTypeId)) return false;
-  return currentTick - pc.get(entityTypeId) < OUT_OF_LEVEL_COOLDOWN_TICKS;
-}
-
-function setCooldown(playerId, entityTypeId, currentTick) {
-  if (!cooldowns.has(playerId)) cooldowns.set(playerId, new Map());
-  cooldowns.get(playerId).set(entityTypeId, currentTick);
-}
-
 export function startProximityDetection() {
   system.runInterval(() => {
     const currentTick = system.currentTick;
@@ -79,8 +60,8 @@ export function startProximityDetection() {
             const inLevel = word.level <= playerLevel;
 
             if (inLevel) {
-              if (isOnCooldown(player.id, typeId, currentTick)) continue;
-              setCooldown(player.id, typeId, currentTick);
+              if (isOnCooldown(player.id, typeId, true)) continue;
+              setCooldown(player.id, typeId);
 
               // Try to play audio; if locked, skip visual too
               const played = playWordAudio(player, typeId);
@@ -95,8 +76,8 @@ export function startProximityDetection() {
                 }, 40);
               }
             } else if (CONFIG.outOfLevelEnabled) {
-              if (isOnCooldownOutOfLevel(player.id, typeId, currentTick)) continue;
-              setCooldown(player.id, typeId, currentTick);
+              if (isOnCooldown(player.id, typeId, false)) continue;
+              setCooldown(player.id, typeId);
 
               const played = playWordAudio(player, typeId);
               if (!played) continue;

@@ -68,6 +68,11 @@ export const level1 = {
     { id: "minecraft:kelp", en: "KELP", cn: "海带", phonetic: "/kelp/" },
     { id: "minecraft:moss_carpet", en: "MOSS CARPET", cn: "苔藓地毯", phonetic: "/mɒs ˈkɑːrpɪt/" },
     { id: "minecraft:clay", en: "CLAY", cn: "粘土块", phonetic: "/kleɪ/" },
+    // v2.7 additions
+    { id: "minecraft:yellow_flower", en: "DANDELION", cn: "蒲公英", phonetic: "/ˈdændɪlaɪən/" },
+    { id: "minecraft:red_flower.poppy", en: "POPPY", cn: "虞美人", phonetic: "/ˈpɒpi/" },
+    { id: "minecraft:oak_sapling", en: "OAK SAPLING", cn: "橡木树苗", phonetic: "/oʊk ˈsæplɪŋ/" },
+    { id: "minecraft:birch_sapling", en: "BIRCH SAPLING", cn: "白桦树苗", phonetic: "/bɜːrtʃ ˈsæplɪŋ/" },
   ],
   items: [
     { id: "minecraft:wooden_sword", en: "WOODEN SWORD", cn: "木剑", phonetic: "/ˈwʊdən sɔːrd/" },
@@ -104,5 +109,7 @@ export const level1 = {
     { id: "minecraft:charcoal", en: "CHARCOAL", cn: "木炭", phonetic: "/ˈtʃɑːrkoʊl/" },
     { id: "minecraft:rotten_flesh", en: "ROTTEN FLESH", cn: "腐肉", phonetic: "/ˈrɒtən fleʃ/" },
     { id: "minecraft:gunpowder", en: "GUNPOWDER", cn: "火药", phonetic: "/ˈɡʌnpaʊdər/" },
+    // v2.7 additions
+    { id: "minecraft:cooked_cod", en: "COOKED COD", cn: "熟鳕鱼", phonetic: "/kʊkt kɒd/" },
   ],
 };

@@ -269,6 +269,24 @@ const SPECIAL_MAP = {
   "minecraft:piglin_brute": "piglin_brute",
   "minecraft:glow_squid": "glow_squid",
   "minecraft:ender_dragon": "ender_dragon",
+  // v2.7 new mappings
+  "minecraft:yellow_flower": "dandelion",
+  "minecraft:red_flower.poppy": "poppy",
+  "minecraft:red_flower.blue_orchid": "blue_orchid",
+  "minecraft:red_flower.cornflower": "cornflower",
+  "minecraft:red_flower.allium": "allium",
+  "minecraft:red_flower.tulip": "tulip",
+  "minecraft:red_flower.lily_of_the_valley": "lily_of_the_valley",
+  "minecraft:red_flower.azure_bluet": "azure_bluet",
+  "minecraft:red_flower.oxeye_daisy": "oxeye_daisy",
+  "minecraft:zombie_villager_v2": "zombie_villager",
+  "minecraft:evocation_illager": "evoker",
+  "minecraft:zombie_pigman": "zombified_piglin",
+  "minecraft:trader_llama": "trader_llama",
+  "minecraft:skeleton_horse": "skeleton_horse",
+  "minecraft:zombie_horse": "zombie_horse",
+  "minecraft:chest_boat": "chest_boat",
+  "minecraft:chest_minecart": "chest_minecart",
 };
 
 /**

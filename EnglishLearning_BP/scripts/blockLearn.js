@@ -1,27 +1,13 @@
 // blockLearn.js - Learn words when breaking/placing blocks, with dual-mode trigger
 import { world, system } from "@minecraft/server";
 import { blockMap } from "./vocab/index.js";
+import { breakPhraseMap, placePhraseMap } from "./phraseData.js";
+import { hasLearnedNoun, showPhrase } from "./phraseCore.js";
 import { unlockWord, getPlayerLevel } from "./progress.js";
 import { celebrateLevelUp } from "./levelUp.js";
 import { playWordAudio } from "./voice.js";
-import { COOLDOWN_TICKS, OUT_OF_LEVEL_COOLDOWN_TICKS } from "./config.js";
+import { isOnCooldown, setCooldown } from "./cooldown.js";
 import { CONFIG } from "./config.js";
-
-const cooldowns = new Map();
-
-function getCooldownLimit(inLevel) {
-  return inLevel ? COOLDOWN_TICKS : OUT_OF_LEVEL_COOLDOWN_TICKS;
-}
-
-function isOnCooldown(pid, bid, tick, inLevel) {
-  const k = pid + ":" + bid;
-  if (!cooldowns.has(k)) return false;
-  return tick - cooldowns.get(k) < getCooldownLimit(inLevel);
-}
-
-function setCooldown(pid, bid, tick) {
-  cooldowns.set(pid + ":" + bid, tick);
-}
 
 function showFullExperience(player, word, isNew) {
   try {
@@ -48,7 +34,7 @@ function showLightExperience(player, word) {
   } catch (e) {}
 }
 
-function handleBlock(player, blockId) {
+function handleBlock(player, blockId, actionType) {
   try {
     const word = blockMap.get(blockId);
     if (!word) return;
@@ -58,8 +44,21 @@ function handleBlock(player, blockId) {
     const tick = system.currentTick;
 
     if (!inLevel && !CONFIG.outOfLevelEnabled) return;
-    if (isOnCooldown(player.id, blockId, tick, inLevel)) return;
-    setCooldown(player.id, blockId, tick);
+    if (isOnCooldown(player.id, blockId, inLevel)) return;
+
+    // v3.0: If noun is already learned, try to show phrase instead
+    if (inLevel && hasLearnedNoun(player, blockId)) {
+      const phraseMap = actionType === "break" ? breakPhraseMap : placePhraseMap;
+      const phraseEntry = phraseMap.get(blockId);
+      if (phraseEntry) {
+        setCooldown(player.id, blockId);
+        showPhrase(player, phraseEntry, phraseEntry.level);
+        return;
+      }
+    }
+
+    // Fall through to noun display
+    setCooldown(player.id, blockId);
 
     const played = playWordAudio(player, blockId);
     if (!played) return;
@@ -81,9 +80,9 @@ function handleBlock(player, blockId) {
 
 export function startBlockLearning() {
   world.afterEvents.playerBreakBlock.subscribe((event) => {
-    handleBlock(event.player, event.brokenBlockPermutation.type.id);
+    handleBlock(event.player, event.brokenBlockPermutation.type.id, "break");
   });
   world.afterEvents.playerPlaceBlock.subscribe((event) => {
-    handleBlock(event.player, event.block.typeId);
+    handleBlock(event.player, event.block.typeId, "place");
   });
 }

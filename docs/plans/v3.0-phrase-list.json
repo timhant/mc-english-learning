@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "version": "3.0",
+    "totalPhrases": 175,
+    "types": {
+      "kill": 45,
+      "break": 42,
+      "place": 38,
+      "weather": 8,
+      "status": 12,
+      "food": 15,
+      "action": 15
+    }
+  },
+  "level1": {
+    "phrases": [
+      { "trigger": "kill", "entity": "minecraft:zombie", "en": "Kill a zombie", "cn": "击杀僵尸", "requires": "minecraft:zombie" },
+      { "trigger": "kill", "entity": "minecraft:skeleton", "en": "Kill a skeleton", "cn": "击杀骷髅", "requires": "minecraft:skeleton" },
+      { "trigger": "kill", "entity": "minecraft:spider", "en": "Kill a spider", "cn": "击杀蜘蛛", "requires": "minecraft:spider" },
+      { "trigger": "kill", "entity": "minecraft:creeper", "en": "Kill a creeper", "cn": "击杀苦力怕", "requires": "minecraft:creeper" },
+      { "trigger": "kill", "entity": "minecraft:cow", "en": "Kill a cow", "cn": "击杀奶牛", "requires": "minecraft:cow" },
+      { "trigger": "kill", "entity": "minecraft:pig", "en": "Kill a pig", "cn": "击杀猪", "requires": "minecraft:pig" },
+      { "trigger": "kill", "entity": "minecraft:sheep", "en": "Kill a sheep", "cn": "击杀绵羊", "requires": "minecraft:sheep" },
+      { "trigger": "kill", "entity": "minecraft:chicken", "en": "Kill a chicken", "cn": "击杀鸡", "requires": "minecraft:chicken" },
+      { "trigger": "kill", "entity": "minecraft:rabbit", "en": "Kill a rabbit", "cn": "击杀兔子", "requires": "minecraft:rabbit" },
+      { "trigger": "kill", "entity": "minecraft:bat", "en": "Kill a bat", "cn": "击杀蝙蝠", "requires": "minecraft:bat" },
+
+      { "trigger": "break", "block": "minecraft:stone", "en": "Mine the stone", "cn": "挖掘石头", "requires": "minecraft:stone" },
+      { "trigger": "break", "block": "minecraft:dirt", "en": "Dig the dirt", "cn": "挖掘泥土", "requires": "minecraft:dirt" },
+      { "trigger": "break", "block": "minecraft:sand", "en": "Dig the sand", "cn": "挖掘沙子", "requires": "minecraft:sand" },
+      { "trigger": "break", "block": "minecraft:gravel", "en": "Dig the gravel", "cn": "挖掘砂砾", "requires": "minecraft:gravel" },
+      { "trigger": "break", "block": "minecraft:oak_log", "en": "Chop the oak log", "cn": "砍伐橡木", "requires": "minecraft:oak_log" },
+      { "trigger": "break", "block": "minecraft:cobblestone", "en": "Mine the cobblestone", "cn": "挖掘圆石", "requires": "minecraft:cobblestone" },
+      { "trigger": "break", "block": "minecraft:coal_ore", "en": "Mine coal ore", "cn": "挖掘煤矿", "requires": "minecraft:coal_ore" },
+      { "trigger": "break", "block": "minecraft:iron_ore", "en": "Mine iron ore", "cn": "挖掘铁矿", "requires": "minecraft:iron_ore" },
+      { "trigger": "break", "block": "minecraft:copper_ore", "en": "Mine copper ore", "cn": "挖掘铜矿", "requires": "minecraft:copper_ore" },
+      { "trigger": "break", "block": "minecraft:clay", "en": "Dig the clay", "cn": "挖掘粘土", "requires": "minecraft:clay" },
+      { "trigger": "break", "block": "minecraft:grass_block", "en": "Dig the grass", "cn": "挖掘草方块", "requires": "minecraft:grass_block" },
+      { "trigger": "break", "block": "minecraft:leaves", "en": "Break the leaves", "cn": "打碎树叶", "requires": "minecraft:leaves" },
+
+      { "trigger": "place", "block": "minecraft:torch", "en": "Place a torch", "cn": "放置火把", "requires": "minecraft:torch" },
+      { "trigger": "place", "block": "minecraft:bed", "en": "Place a bed", "cn": "放置床", "requires": "minecraft:bed" },
+      { "trigger": "place", "block": "minecraft:crafting_table", "en": "Place a crafting table", "cn": "放置工作台", "requires": "minecraft:crafting_table" },
+      { "trigger": "place", "block": "minecraft:furnace", "en": "Place a furnace", "cn": "放置熔炉", "requires": "minecraft:furnace" },
+      { "trigger": "place", "block": "minecraft:chest", "en": "Place a chest", "cn": "放置箱子", "requires": "minecraft:chest" },
+      { "trigger": "place", "block": "minecraft:door", "en": "Place a door", "cn": "放置门", "requires": "minecraft:door" },
+      { "trigger": "place", "block": "minecraft:fence", "en": "Build a fence", "cn": "建造栅栏", "requires": "minecraft:fence" },
+      { "trigger": "place", "block": "minecraft:ladder", "en": "Place a ladder", "cn": "放置梯子", "requires": "minecraft:ladder" },
+      { "trigger": "place", "block": "minecraft:cobblestone", "en": "Build with cobblestone", "cn": "用圆石建造", "requires": "minecraft:cobblestone" },
+      { "trigger": "place", "block": "minecraft:oak_planks", "en": "Build with oak planks", "cn": "用橡木板建造", "requires": "minecraft:oak_planks" },
+
+      { "trigger": "food", "item": "minecraft:apple", "en": "Eat an apple", "cn": "吃苹果", "requires": "minecraft:apple" },
+      { "trigger": "food", "item": "minecraft:bread", "en": "Eat some bread", "cn": "吃面包", "requires": "minecraft:bread" },
+      { "trigger": "food", "item": "minecraft:raw_beef", "en": "Hold raw beef", "cn": "拿着生牛肉", "requires": "minecraft:raw_beef" },
+      { "trigger": "food", "item": "minecraft:raw_chicken", "en": "Hold raw chicken", "cn": "拿着生鸡肉", "requires": "minecraft:raw_chicken" },
+
+      { "trigger": "weather", "event": "rain", "en": "It's raining", "cn": "下雨了", "requires": null },
+      { "trigger": "weather", "event": "clear", "en": "The rain stopped", "cn": "雨停了", "requires": null },
+      { "trigger": "status", "event": "fire", "en": "You're on fire!", "cn": "你着火了！", "requires": null },
+      { "trigger": "status", "event": "night", "en": "Night is coming", "cn": "夜晚来临", "requires": null }
+    ]
+  },
+  "level2": {
+    "phrases": [
+      { "trigger": "kill", "entity": "minecraft:drowned", "en": "Kill a drowned", "cn": "击杀溺尸", "requires": "minecraft:drowned" },
+      { "trigger": "kill", "entity": "minecraft:husk", "en": "Kill a husk", "cn": "击杀尸壳", "requires": "minecraft:husk" },
+      { "trigger": "kill", "entity": "minecraft:stray", "en": "Kill a stray", "cn": "击杀流浪者", "requires": "minecraft:stray" },
+      { "trigger": "kill", "entity": "minecraft:witch", "en": "Kill a witch", "cn": "击杀女巫", "requires": "minecraft:witch" },
+      { "trigger": "kill", "entity": "minecraft:enderman", "en": "Kill an enderman", "cn": "击杀末影人", "requires": "minecraft:enderman" },
+      { "trigger": "kill", "entity": "minecraft:phantom", "en": "Kill a phantom", "cn": "击杀幻翼", "requires": "minecraft:phantom" },
+      { "trigger": "kill", "entity": "minecraft:slime", "en": "Kill a slime", "cn": "击杀史莱姆", "requires": "minecraft:slime" },
+      { "trigger": "kill", "entity": "minecraft:dolphin", "en": "Kill a dolphin", "cn": "击杀海豚", "requires": "minecraft:dolphin" },
+      { "trigger": "kill", "entity": "minecraft:zombie_villager_v2", "en": "Kill a zombie villager", "cn": "击杀僵尸村民", "requires": "minecraft:zombie_villager_v2" },
+      { "trigger": "kill", "entity": "minecraft:bogged", "en": "Kill a bogged", "cn": "击杀沼骸", "requires": "minecraft:bogged" },
+
+      { "trigger": "break", "block": "minecraft:diamond_ore", "en": "Mine diamond ore", "cn": "挖掘钻石矿", "requires": "minecraft:diamond_ore" },
+      { "trigger": "break", "block": "minecraft:gold_ore", "en": "Mine gold ore", "cn": "挖掘金矿", "requires": "minecraft:gold_ore" },
+      { "trigger": "break", "block": "minecraft:redstone_ore", "en": "Mine redstone ore", "cn": "挖掘红石矿", "requires": "minecraft:redstone_ore" },
+      { "trigger": "break", "block": "minecraft:lapis_ore", "en": "Mine lapis ore", "cn": "挖掘青金石矿", "requires": "minecraft:lapis_ore" },
+      { "trigger": "break", "block": "minecraft:emerald_ore", "en": "Mine emerald ore", "cn": "挖掘绿宝石矿", "requires": "minecraft:emerald_ore" },
+      { "trigger": "break", "block": "minecraft:ice", "en": "Break the ice", "cn": "打碎冰块", "requires": "minecraft:ice" },
+      { "trigger": "break", "block": "minecraft:melon_block", "en": "Break the melon", "cn": "打碎西瓜", "requires": "minecraft:melon_block" },
+      { "trigger": "break", "block": "minecraft:birch_log", "en": "Chop the birch log", "cn": "砍伐白桦木", "requires": "minecraft:birch_log" },
+      { "trigger": "break", "block": "minecraft:jungle_log", "en": "Chop the jungle log", "cn": "砍伐丛林木", "requires": "minecraft:jungle_log" },
+      { "trigger": "break", "block": "minecraft:dark_oak_log", "en": "Chop the dark oak log", "cn": "砍伐深色橡木", "requires": "minecraft:dark_oak_log" },
+
+      { "trigger": "place", "block": "minecraft:anvil", "en": "Place an anvil", "cn": "放置铁砧", "requires": "minecraft:anvil" },
+      { "trigger": "place", "block": "minecraft:bookshelf", "en": "Place a bookshelf", "cn": "放置书架", "requires": "minecraft:bookshelf" },
+      { "trigger": "place", "block": "minecraft:campfire", "en": "Place a campfire", "cn": "放置营火", "requires": "minecraft:campfire" },
+      { "trigger": "place", "block": "minecraft:barrel", "en": "Place a barrel", "cn": "放置木桶", "requires": "minecraft:barrel" },
+      { "trigger": "place", "block": "minecraft:smoker", "en": "Place a smoker", "cn": "放置烟熏炉", "requires": "minecraft:smoker" },
+      { "trigger": "place", "block": "minecraft:tnt", "en": "Place some TNT", "cn": "放置TNT", "requires": "minecraft:tnt" },
+      { "trigger": "place", "block": "minecraft:lantern", "en": "Hang a lantern", "cn": "挂上灯笼", "requires": "minecraft:lantern" },
+      { "trigger": "place", "block": "minecraft:glass_pane", "en": "Place a glass pane", "cn": "放置玻璃板", "requires": "minecraft:glass_pane" },
+      { "trigger": "place", "block": "minecraft:rail", "en": "Place a rail", "cn": "放置铁轨", "requires": "minecraft:rail" },
+
+      { "trigger": "food", "item": "minecraft:cooked_beef", "en": "Eat cooked beef", "cn": "吃熟牛排", "requires": "minecraft:cooked_beef" },
+      { "trigger": "food", "item": "minecraft:cooked_chicken", "en": "Eat cooked chicken", "cn": "吃熟鸡肉", "requires": "minecraft:cooked_chicken" },
+      { "trigger": "food", "item": "minecraft:cooked_porkchop", "en": "Eat a pork chop", "cn": "吃熟猪排", "requires": "minecraft:cooked_porkchop" },
+      { "trigger": "food", "item": "minecraft:cookie", "en": "Eat a cookie", "cn": "吃曲奇", "requires": "minecraft:cookie" },
+      { "trigger": "food", "item": "minecraft:cake", "en": "Eat some cake", "cn": "吃蛋糕", "requires": "minecraft:cake" },
+      { "trigger": "food", "item": "minecraft:milk_bucket", "en": "Drink the milk", "cn": "喝牛奶", "requires": "minecraft:milk_bucket" },
+      { "trigger": "food", "item": "minecraft:baked_potato", "en": "Eat a baked potato", "cn": "吃烤马铃薯", "requires": "minecraft:baked_potato" },
+
+      { "trigger": "weather", "event": "thunder", "en": "It's thundering!", "cn": "打雷了！", "requires": null },
+      { "trigger": "status", "event": "drowning", "en": "You're drowning!", "cn": "你在溺水！", "requires": null }
+    ]
+  },
+  "level3": {
+    "phrases": [
+      { "trigger": "kill", "entity": "minecraft:cave_spider", "en": "Kill a cave spider", "cn": "击杀洞穴蜘蛛", "requires": "minecraft:cave_spider" },
+      { "trigger": "kill", "entity": "minecraft:guardian", "en": "Kill a guardian", "cn": "击杀守卫者", "requires": "minecraft:guardian" },
+      { "trigger": "kill", "entity": "minecraft:pillager", "en": "Kill a pillager", "cn": "击杀掠夺者", "requires": "minecraft:pillager" },
+      { "trigger": "kill", "entity": "minecraft:ravager", "en": "Kill a ravager", "cn": "击杀劫掠兽", "requires": "minecraft:ravager" },
+      { "trigger": "kill", "entity": "minecraft:silverfish", "en": "Kill a silverfish", "cn": "击杀蠹虫", "requires": "minecraft:silverfish" },
+      { "trigger": "kill", "entity": "minecraft:vex", "en": "Kill a vex", "cn": "击杀恼鬼", "requires": "minecraft:vex" },
+      { "trigger": "kill", "entity": "minecraft:vindicator", "en": "Kill a vindicator", "cn": "击杀卫道士", "requires": "minecraft:vindicator" },
+      { "trigger": "kill", "entity": "minecraft:evocation_illager", "en": "Kill an evoker", "cn": "击杀唤魔者", "requires": "minecraft:evocation_illager" },
+      { "trigger": "kill", "entity": "minecraft:pufferfish", "en": "Kill a pufferfish", "cn": "击杀河豚", "requires": "minecraft:pufferfish" },
+      { "trigger": "kill", "entity": "minecraft:creaking", "en": "Kill a creaking", "cn": "击杀嘎枝", "requires": "minecraft:creaking" },
+
+      { "trigger": "break", "block": "minecraft:amethyst_block", "en": "Mine the amethyst", "cn": "挖掘紫水晶", "requires": "minecraft:amethyst_block" },
+      { "trigger": "break", "block": "minecraft:cobweb", "en": "Break the cobweb", "cn": "打碎蛛网", "requires": "minecraft:cobweb" },
+      { "trigger": "break", "block": "minecraft:moss_block", "en": "Break the moss", "cn": "打碎苔藓", "requires": "minecraft:moss_block" },
+      { "trigger": "break", "block": "minecraft:coral_block", "en": "Break the coral", "cn": "打碎珊瑚", "requires": "minecraft:coral_block" },
+      { "trigger": "break", "block": "minecraft:dripstone_block", "en": "Mine the dripstone", "cn": "挖掘滴水石", "requires": "minecraft:dripstone_block" },
+      { "trigger": "break", "block": "minecraft:bone_block", "en": "Mine the bone block", "cn": "挖掘骨块", "requires": "minecraft:bone_block" },
+      { "trigger": "break", "block": "minecraft:sponge", "en": "Break the sponge", "cn": "打碎海绵", "requires": "minecraft:sponge" },
+      { "trigger": "break", "block": "minecraft:glowstone_dust", "en": "Mine glowstone", "cn": "挖掘荧石", "requires": "minecraft:glowstone_dust" },
+
+      { "trigger": "place", "block": "minecraft:blast_furnace", "en": "Place a blast furnace", "cn": "放置高炉", "requires": "minecraft:blast_furnace" },
+      { "trigger": "place", "block": "minecraft:enchanting_table", "en": "Place an enchanting table", "cn": "放置附魔台", "requires": "minecraft:enchanting_table" },
+      { "trigger": "place", "block": "minecraft:brewing_stand", "en": "Place a brewing stand", "cn": "放置酿造台", "requires": "minecraft:brewing_stand" },
+      { "trigger": "place", "block": "minecraft:ender_chest", "en": "Place an ender chest", "cn": "放置末影箱", "requires": "minecraft:ender_chest" },
+      { "trigger": "place", "block": "minecraft:hopper", "en": "Place a hopper", "cn": "放置漏斗", "requires": "minecraft:hopper" },
+      { "trigger": "place", "block": "minecraft:piston", "en": "Place a piston", "cn": "放置活塞", "requires": "minecraft:piston" },
+      { "trigger": "place", "block": "minecraft:dispenser", "en": "Place a dispenser", "cn": "放置发射器", "requires": "minecraft:dispenser" },
+      { "trigger": "place", "block": "minecraft:scaffolding", "en": "Place scaffolding", "cn": "搭建脚手架", "requires": "minecraft:scaffolding" },
+      { "trigger": "place", "block": "minecraft:trapped_chest", "en": "Place a trapped chest", "cn": "放置陷阱箱", "requires": "minecraft:trapped_chest" },
+
+      { "trigger": "food", "item": "minecraft:golden_apple", "en": "Eat a golden apple", "cn": "吃金苹果", "requires": "minecraft:golden_apple" },
+      { "trigger": "food", "item": "minecraft:golden_carrot", "en": "Eat a golden carrot", "cn": "吃金胡萝卜", "requires": "minecraft:golden_carrot" },
+      { "trigger": "food", "item": "minecraft:rabbit_stew", "en": "Eat rabbit stew", "cn": "吃兔肉煲", "requires": "minecraft:rabbit_stew" },
+
+      { "trigger": "status", "event": "low_health", "en": "Your health is low!", "cn": "你的血量很低！", "requires": null },
+      { "trigger": "status", "event": "full_health", "en": "You're fully healed", "cn": "你满血了", "requires": null }
+    ]
+  },
+  "level4": {
+    "phrases": [
+      { "trigger": "kill", "entity": "minecraft:blaze", "en": "Kill a blaze", "cn": "击杀烈焰人", "requires": "minecraft:blaze" },
+      { "trigger": "kill", "entity": "minecraft:ghast", "en": "Kill a ghast", "cn": "击杀恶魂", "requires": "minecraft:ghast" },
+      { "trigger": "kill", "entity": "minecraft:wither_skeleton", "en": "Kill a wither skeleton", "cn": "击杀凋零骷髅", "requires": "minecraft:wither_skeleton" },
+      { "trigger": "kill", "entity": "minecraft:magma_cube", "en": "Kill a magma cube", "cn": "击杀岩浆怪", "requires": "minecraft:magma_cube" },
+      { "trigger": "kill", "entity": "minecraft:hoglin", "en": "Kill a hoglin", "cn": "击杀疣猪兽", "requires": "minecraft:hoglin" },
+      { "trigger": "kill", "entity": "minecraft:piglin", "en": "Kill a piglin", "cn": "击杀猪灵", "requires": "minecraft:piglin" },
+      { "trigger": "kill", "entity": "minecraft:piglin_brute", "en": "Kill a piglin brute", "cn": "击杀猪灵蛮兵", "requires": "minecraft:piglin_brute" },
+      { "trigger": "kill", "entity": "minecraft:elder_guardian", "en": "Kill an elder guardian", "cn": "击杀远古守卫者", "requires": "minecraft:elder_guardian" },
+      { "trigger": "kill", "entity": "minecraft:zoglin", "en": "Kill a zoglin", "cn": "击杀僵尸疣猪兽", "requires": "minecraft:zoglin" },
+
+      { "trigger": "break", "block": "minecraft:ancient_debris", "en": "Mine ancient debris", "cn": "挖掘远古残骸", "requires": "minecraft:ancient_debris" },
+      { "trigger": "break", "block": "minecraft:netherrack", "en": "Mine the netherrack", "cn": "挖掘下界岩", "requires": "minecraft:netherrack" },
+      { "trigger": "break", "block": "minecraft:nether_gold_ore", "en": "Mine nether gold ore", "cn": "挖掘下界金矿", "requires": "minecraft:nether_gold_ore" },
+      { "trigger": "break", "block": "minecraft:basalt", "en": "Mine the basalt", "cn": "挖掘玄武岩", "requires": "minecraft:basalt" },
+      { "trigger": "break", "block": "minecraft:blackstone", "en": "Mine the blackstone", "cn": "挖掘黑石", "requires": "minecraft:blackstone" },
+      { "trigger": "break", "block": "minecraft:glowstone", "en": "Mine the glowstone", "cn": "挖掘荧石", "requires": "minecraft:glowstone" },
+      { "trigger": "break", "block": "minecraft:sculk", "en": "Mine the sculk", "cn": "挖掘幽匿块", "requires": "minecraft:sculk" },
+      { "trigger": "break", "block": "minecraft:nether_wart", "en": "Harvest nether wart", "cn": "收获地狱疣", "requires": "minecraft:nether_wart" },
+
+      { "trigger": "place", "block": "minecraft:obsidian", "en": "Place obsidian", "cn": "放置黑曜石", "requires": "minecraft:obsidian" },
+      { "trigger": "place", "block": "minecraft:respawn_anchor", "en": "Place a respawn anchor", "cn": "放置重生锚", "requires": "minecraft:respawn_anchor" },
+      { "trigger": "place", "block": "minecraft:soul_torch", "en": "Place a soul torch", "cn": "放置灵魂火把", "requires": "minecraft:soul_torch" },
+      { "trigger": "place", "block": "minecraft:soul_lantern", "en": "Hang a soul lantern", "cn": "挂上灵魂灯笼", "requires": "minecraft:soul_lantern" },
+      { "trigger": "place", "block": "minecraft:soul_campfire", "en": "Place a soul campfire", "cn": "放置灵魂营火", "requires": "minecraft:soul_campfire" },
+      { "trigger": "place", "block": "minecraft:crying_obsidian", "en": "Place crying obsidian", "cn": "放置哭泣黑曜石", "requires": "minecraft:crying_obsidian" },
+
+      { "trigger": "status", "event": "nether_enter", "en": "Welcome to the Nether!", "cn": "欢迎来到下界！", "requires": null },
+      { "trigger": "status", "event": "nether_leave", "en": "Back to the Overworld", "cn": "回到主世界", "requires": null }
+    ]
+  },
+  "level5": {
+    "phrases": [
+      { "trigger": "kill", "entity": "minecraft:ender_dragon", "en": "Defeat the Ender Dragon!", "cn": "击败末影龙！", "requires": "minecraft:ender_dragon" },
+      { "trigger": "kill", "entity": "minecraft:wither", "en": "Defeat the Wither!", "cn": "击败凋零！", "requires": "minecraft:wither" },
+      { "trigger": "kill", "entity": "minecraft:shulker", "en": "Kill a shulker", "cn": "击杀潜影贝", "requires": "minecraft:shulker" },
+      { "trigger": "kill", "entity": "minecraft:endermite", "en": "Kill an endermite", "cn": "击杀末影螨", "requires": "minecraft:endermite" },
+      { "trigger": "kill", "entity": "minecraft:warden", "en": "Defeat the Warden!", "cn": "击败监守者！", "requires": "minecraft:warden" },
+      { "trigger": "kill", "entity": "minecraft:breeze", "en": "Kill a breeze", "cn": "击杀旋风人", "requires": "minecraft:breeze" },
+
+      { "trigger": "break", "block": "minecraft:end_stone", "en": "Mine the end stone", "cn": "挖掘末地石", "requires": "minecraft:end_stone" },
+      { "trigger": "break", "block": "minecraft:purpur_block", "en": "Mine the purpur block", "cn": "挖掘紫珀块", "requires": "minecraft:purpur_block" },
+      { "trigger": "break", "block": "minecraft:end_bricks", "en": "Mine the end bricks", "cn": "挖掘末地砖", "requires": "minecraft:end_bricks" },
+      { "trigger": "break", "block": "minecraft:chorus_plant", "en": "Break the chorus plant", "cn": "打碎紫颂植物", "requires": "minecraft:chorus_plant" },
+      { "trigger": "break", "block": "minecraft:reinforced_deepslate", "en": "Mine reinforced deepslate", "cn": "挖掘强化深板岩", "requires": "minecraft:reinforced_deepslate" },
+
+      { "trigger": "place", "block": "minecraft:beacon", "en": "Place a beacon", "cn": "放置信标", "requires": "minecraft:beacon" },
+      { "trigger": "place", "block": "minecraft:conduit", "en": "Place a conduit", "cn": "放置潮涌核心", "requires": "minecraft:conduit" },
+      { "trigger": "place", "block": "minecraft:shulker_box", "en": "Place a shulker box", "cn": "放置潜影盒", "requires": "minecraft:shulker_box" },
+      { "trigger": "place", "block": "minecraft:lodestone", "en": "Place a lodestone", "cn": "放置磁石", "requires": "minecraft:lodestone" },
+      { "trigger": "place", "block": "minecraft:end_rod", "en": "Place an end rod", "cn": "放置末地烛", "requires": "minecraft:end_rod" },
+
+      { "trigger": "food", "item": "minecraft:chorus_fruit", "en": "Eat chorus fruit", "cn": "吃紫颂果", "requires": "minecraft:chorus_fruit" },
+
+      { "trigger": "status", "event": "end_enter", "en": "Welcome to the End!", "cn": "欢迎来到末地！", "requires": null },
+      { "trigger": "status", "event": "elytra_fly", "en": "You're flying!", "cn": "你在飞行！", "requires": null },
+      { "trigger": "status", "event": "player_death", "en": "Never give up!", "cn": "永不放弃！", "requires": null },
+      { "trigger": "status", "event": "respawn", "en": "Try again!", "cn": "再来一次！", "requires": null }
+    ]
+  }
+}

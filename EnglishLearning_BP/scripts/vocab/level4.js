@@ -15,6 +15,10 @@ export const level4 = {
     { id: "minecraft:wither_skeleton", en: "WITHER SKELETON", cn: "凋灵骷髅", phonetic: "/ˈwɪðər ˈskelɪtən/" },
     { id: "minecraft:elder_guardian", en: "ELDER GUARDIAN", cn: "远古守卫", phonetic: "/ˈeldər ˈɡɑːrdiən/" },
     { id: "minecraft:nautilus", en: "NAUTILUS", cn: "鹦鹉螺", phonetic: "/ˈnɔːtɪləs/" },
+    // v2.7 additions
+    { id: "minecraft:zoglin", en: "ZOGLIN", cn: "僵尸疣猪兽", phonetic: "/ˈzɒɡlɪn/" },
+    { id: "minecraft:happy_ghast", en: "HAPPY GHAST", cn: "快乐恶魂", phonetic: "/ˈhæpi ɡæst/" },
+    { id: "minecraft:zombie_pigman", en: "ZOMBIFIED PIGLIN", cn: "僵尸猪灵", phonetic: "/ˈzɒmbɪfaɪd ˈpɪɡlɪn/" },
   ],
   blocks: [
     { id: "minecraft:netherrack", en: "NETHERRACK", cn: "下界岩", phonetic: "/ˈneðəræk/" },
@@ -52,6 +56,8 @@ export const level4 = {
     { id: "minecraft:polished_blackstone", en: "POLISHED BLACKSTONE", cn: "磨制黑石", phonetic: "/ˈpɒlɪʃt ˈblækstoʊn/" },
     { id: "minecraft:warp_wart_block", en: "WARPED WART BLOCK", cn: "诡异疣块", phonetic: "/wɔːrpt wɔːrt blɒk/" },
     { id: "minecraft:nether_wart_block", en: "NETHER WART BLOCK", cn: "下界疣块", phonetic: "/ˈneðər wɔːrt blɒk/" },
+    // v2.7 additions
+    { id: "minecraft:wither_rose", en: "WITHER ROSE", cn: "凋零玫瑰", phonetic: "/ˈwɪðər roʊz/" },
   ],
   items: [
     { id: "minecraft:netherite_sword", en: "NETHERITE SWORD", cn: "下界合金剑", phonetic: "/ˈneðəraɪt sɔːrd/" },
