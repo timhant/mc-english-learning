@@ -1,11 +1,19 @@
 {
   "format_version": 2,
   "header": {
-    "name": "English Learning - 英语启蒙",
-    "description": "Learn English while playing Minecraft! 边玩边学英语！",
+    "name": "English Learning - \u82f1\u8bed\u542f\u8499",
+    "description": "Learn English while playing Minecraft! \u8fb9\u73a9\u8fb9\u5b66\u82f1\u8bed\uff01",
     "uuid": "a3f1d7e2-8c4b-4f6a-9d2e-1b5c8a3f7e90",
-    "version": [1, 0, 0],
-    "min_engine_version": [1, 21, 60]
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      60
+    ]
   },
   "modules": [
     {
@@ -13,13 +21,25 @@
       "language": "javascript",
       "entry": "scripts/main.js",
       "uuid": "b4e2c8f3-9d5a-4e7b-8f1c-2a6d9b4e8c71",
-      "version": [1, 0, 0]
+      "version": [
+        1,
+        0,
+        0
+      ]
     }
   ],
   "dependencies": [
     {
       "module_name": "@minecraft/server",
       "version": "2.0.0"
+    },
+    {
+      "uuid": "d4e5f6a7-1b2c-3d4e-5f6a-7b8c9d0e1f2a",
+      "version": [
+        1,
+        0,
+        0
+      ]
     }
   ]
 }

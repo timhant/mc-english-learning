@@ -1,5 +1,19 @@
 # Changelog | 更新日志
 
+## v2.6.1 (2026-02-24)
+
+### 🐛 Bug Fix — sound_definitions.json 结构修复 | Audio Structure Fix
+
+- **[修复] sound_definitions.json 结构错误** — 868 个音频条目原本错误地写在 JSON 顶层而非 `sound_definitions` 嵌套对象内，导致 Bedrock 引擎无法识别音频定义，表现为大量单词（如 sandstone 等）有 GUI 提示但无语音朗读。修复后全部 868 条目移入 `sound_definitions` 内，category 统一为 `ui`，sounds 格式统一为对象数组。
+- **[调整] 冷却时间缩短** — 同类目标物的朗读间隔从 60 秒缩短为 45 秒（`config.js` 中 `cooldownSeconds: 60 → 45`），提高学习频率。
+- **新增 vocabulary.js** — 词库辅助文件新增到 scripts 目录。
+
+- **[Fix] sound_definitions.json structure** — 868 audio entries were incorrectly placed at the JSON root level instead of inside the `sound_definitions` nested object, causing Bedrock engine to not recognize audio definitions (words like sandstone showed GUI prompts but no voice). All 868 entries moved inside `sound_definitions`, category unified as `ui`, sounds formatted as object arrays.
+- **[Tweak] Cooldown reduced** — Per-word cooldown shortened from 60s to 45s (`cooldownSeconds: 60 → 45`), increasing learning frequency.
+- **New vocabulary.js** — Added vocabulary helper file to scripts directory.
+
+---
+
 ## v2.6.0 (2026-02-23)
 
 ### Quest System Upgrade | 任务系统升级

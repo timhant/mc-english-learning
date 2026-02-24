@@ -1,7 +1,7 @@
 // config.js - Runtime configuration
 export const CONFIG = {
   unlockThreshold: 0.8,       // % of words needed to level up
-  cooldownSeconds: 60,        // cooldown per word (in-level)
+  cooldownSeconds: 45,        // cooldown per word (in-level)
   outOfLevelCooldown: 120,    // cooldown for out-of-level words (seconds)
   outOfLevelEnabled: true,    // enable lightweight trigger for out-of-level words
   detectRange: 2,             // entity proximity range (blocks)

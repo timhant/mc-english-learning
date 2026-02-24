@@ -64,7 +64,7 @@ Parents can type `/words` to check their child's collection progress. Like a Pok
 - **Voice narration** — hear every word spoken in English and Chinese
 - **Positive reinforcement** — sounds, particles, XP, and item rewards
 - **Non-intrusive** — enhances normal gameplay, doesn't interrupt it
-- **60-second cooldown** — won't spam the same word repeatedly
+- **45-second cooldown** — won't spam the same word repeatedly
 
 ---
 
@@ -116,7 +116,7 @@ Parents can type `/words` to check their child's collection progress. Like a Pok
 - **语音朗读** — 每个单词都有英文和中文语音
 - **正向激励** — 音效、粒子特效、经验值、物品奖励
 - **不打断游戏** — 增强玩法，不干扰正常游戏体验
-- **60 秒冷却** — 同一单词不会重复刷屏
+- **45 秒冷却** — 同一单词不会重复刷屏
 
 ---
 
@@ -218,7 +218,7 @@ Edit `EnglishLearning_BP/config.json`:
 ```json
 {
   "unlockThreshold": 0.8,        // 80% words to level up
-  "cooldownSeconds": 60,          // Per-word cooldown (in-level)
+  "cooldownSeconds": 45,          // Per-word cooldown (in-level)
   "outOfLevelCooldown": 120,      // Per-word cooldown for out-of-level words
   "outOfLevelEnabled": true,      // Toggle lightweight out-of-level triggers
   "detectRange": 2,               // Entity detection range (blocks)
