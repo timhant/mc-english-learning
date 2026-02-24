@@ -14,6 +14,7 @@ export const level4 = {
     { id: "minecraft:piglin_brute", en: "PIGLIN BRUTE", cn: "猪灵蛮兵", phonetic: "/ˈpɪɡlɪn bruːt/" },
     { id: "minecraft:wither_skeleton", en: "WITHER SKELETON", cn: "凋灵骷髅", phonetic: "/ˈwɪðər ˈskelɪtən/" },
     { id: "minecraft:elder_guardian", en: "ELDER GUARDIAN", cn: "远古守卫", phonetic: "/ˈeldər ˈɡɑːrdiən/" },
+    { id: "minecraft:nautilus", en: "NAUTILUS", cn: "鹦鹉螺", phonetic: "/ˈnɔːtɪləs/" },
   ],
   blocks: [
     { id: "minecraft:netherrack", en: "NETHERRACK", cn: "下界岩", phonetic: "/ˈneðəræk/" },
