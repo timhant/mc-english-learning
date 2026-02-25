@@ -56,30 +56,24 @@ export function showPhrase(player, phrase, phraseLevel) {
     const y = pos.y.toFixed(1);
     const z = pos.z.toFixed(1);
 
-    // ActionBar display: §a§lEnglish phrase §f中文翻译
+    // ActionBar display
     const isNew = inLevel ? unlockPhrase(player, cooldownId, phraseLevel) : false;
 
     if (isNew) {
       // New phrase: celebration
-      dim.runCommand("titleraw " + sel + " times 5 50 10");
-      dim.runCommand("titleraw " + sel + " title " + JSON.stringify({ rawtext: [{ text: "" }] }));
-      dim.runCommand("titleraw " + sel + " subtitle " + JSON.stringify({
+      dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({
         rawtext: [{ text: "§e✨ §a§l" + phrase.en + " §f" + phrase.cn + " §e✨§r" }]
       }));
       dim.runCommand("playsound random.orb " + sel + " " + x + " " + y + " " + z + " 0.5 1.2");
       dim.runCommand("xp 2 " + sel);
     } else if (inLevel) {
       // Known phrase: normal display
-      dim.runCommand("titleraw " + sel + " times 5 40 10");
-      dim.runCommand("titleraw " + sel + " title " + JSON.stringify({ rawtext: [{ text: "" }] }));
-      dim.runCommand("titleraw " + sel + " subtitle " + JSON.stringify({
+      dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({
         rawtext: [{ text: "§a§l" + phrase.en + " §f" + phrase.cn + "§r" }]
       }));
     } else {
       // Out-of-level: dimmed display
-      dim.runCommand("titleraw " + sel + " times 5 40 10");
-      dim.runCommand("titleraw " + sel + " title " + JSON.stringify({ rawtext: [{ text: "" }] }));
-      dim.runCommand("titleraw " + sel + " subtitle " + JSON.stringify({
+      dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({
         rawtext: [{ text: "§7" + phrase.en + " §8| §7" + phrase.cn + "§r" }]
       }));
     }

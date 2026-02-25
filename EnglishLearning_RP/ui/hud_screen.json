@@ -1,0 +1,28 @@
+{
+  "namespace": "hud",
+
+  "hud_actionbar_text": {
+    "type": "panel",
+    "size": [ "100%c + 12px", "100%c + 5px" ],
+    "offset": [ 0, 128 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "alpha": "@hud.anim_actionbar_text_background_alpha_out",
+    "controls": [
+      {
+        "actionbar_message": {
+          "type": "label",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "color": "$tool_tip_text",
+          "enable_profanity_filter": true,
+          "layer": 31,
+          "text": "$actionbar_text",
+          "shadow": true,
+          "localize": false,
+          "alpha": "@hud.anim_actionbar_text_alpha_out"
+        }
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 // config.js - Runtime configuration
 export const CONFIG = {
   unlockThreshold: 0.8,       // % of words needed to level up
-  cooldownSeconds: 20,        // cooldown per word (in-level)
+  cooldownSeconds: 5,        // cooldown per word (in-level)
   outOfLevelCooldown: 120,    // cooldown for out-of-level words (seconds)
   outOfLevelEnabled: true,    // enable lightweight trigger for out-of-level words
   detectRange: 2,             // entity proximity range (blocks)
@@ -9,7 +9,7 @@ export const CONFIG = {
   questTimeoutSeconds: 300,   // quest expires after N seconds
   voiceEnabled: true,         // TTS audio
   maxLevel: 5,
-  playLockTicks: 80,          // 4 seconds playback lock (prevent audio overlap)
+  playLockTicks: 40,          // 4 seconds playback lock (prevent audio overlap)
 };
 
 export const COOLDOWN_TICKS = CONFIG.cooldownSeconds * 20;

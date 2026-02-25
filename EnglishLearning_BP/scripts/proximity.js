@@ -15,14 +15,15 @@ function showFullExperience(player, word, isNew) {
     const dim = player.dimension;
     const sel = '@a[name="' + player.name + '"]';
 
-    dim.runCommand("titleraw " + sel + " times 10 40 10");
-    dim.runCommand("titleraw " + sel + " title " + JSON.stringify({ rawtext: [{ text: "§a§l" + word.en + "§r" }] }));
-    dim.runCommand("titleraw " + sel + " subtitle " + JSON.stringify({ rawtext: [{ text: "§f" + word.cn + "  §7" + word.phonetic + "§r" }] }));
-
     if (isNew) {
+      dim.runCommand("titleraw " + sel + " times 10 40 10");
+      dim.runCommand("titleraw " + sel + " title " + JSON.stringify({ rawtext: [{ text: "§a§l" + word.en + "§r" }] }));
+      dim.runCommand("titleraw " + sel + " subtitle " + JSON.stringify({ rawtext: [{ text: "§f" + word.cn + "  §7" + word.phonetic + "§r" }] }));
       dim.runCommand("playsound random.levelup " + sel);
       dim.runCommand("xp 3 " + sel);
       dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({ rawtext: [{ text: "§e✨ New Word Unlocked! ✨§r" }] }));
+    } else {
+      dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({ rawtext: [{ text: "§a" + word.en + "  §f" + word.cn + "  §7" + word.phonetic + "§r" }] }));
     }
   } catch (e) {}
 }
@@ -31,9 +32,7 @@ function showLightExperience(player, word) {
   try {
     const dim = player.dimension;
     const sel = '@a[name="' + player.name + '"]';
-    dim.runCommand("titleraw " + sel + " times 5 40 10");
-    dim.runCommand("titleraw " + sel + " title " + JSON.stringify({ rawtext: [{ text: "" }] }));
-    dim.runCommand("titleraw " + sel + " subtitle " + JSON.stringify({ rawtext: [{ text: "§7" + word.en + " §8| §7" + word.cn + "§r" }] }));
+    dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({ rawtext: [{ text: "§7" + word.en + " §8| §7" + word.cn + "§r" }] }));
   } catch (e) {}
 }
 

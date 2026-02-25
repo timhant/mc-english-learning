@@ -1,5 +1,18 @@
 # Changelog | 更新日志
 
+## v3.0.1 (2026-02-25)
+
+### Changed
+- 词条提示从 actionbar（屏幕底部）迁移到自定义 JSON UI（屏幕上方中央），避免与游戏物品名称提示重叠
+- 冷却时间从 20s 缩短到 5s
+- 语音播放锁从 4s 缩短到 2s
+- 溺水检测改为基于玩家实际水中位置（修复陆地误报）
+
+### Added
+- Resource Pack 新增 `ui/hud_screen.json`：自定义 HUD 覆盖，将 actionbar 重定位到屏幕顶部向下 128px
+
+---
+
 ## v3.0.0 (2026-02-25)
 
 ### 🗣️ Action Phrase System | 动作短语系统
