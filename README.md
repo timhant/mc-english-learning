@@ -27,8 +27,15 @@ Mine or place blocks to see their English names. Common blocks, ores, redstone c
 ### 🎒 Item Learning *(NEW in v2.5)*
 Switch your held item to see its English name. Every tool, weapon, food, and material is a new vocabulary opportunity.
 
+### 🗣️ Action Phrases *(NEW in v3.0)*
+Play naturally and hear English in context! When you **jump**, **sneak**, **attack**, **eat**, **shoot an arrow**, or perform other actions, a matching English phrase pops up with voice narration — building sentence-level intuition through real gameplay moments.
+
+> Jump → *"Jump up high!"* · Eat → *"Yummy! This tastes great!"* · Attack → *"Fight! Be brave!"*
+
+156 action phrases across everyday gameplay actions, each with full English + Chinese audio.
+
 ### 🔊 Voice Narration
-Every word is read aloud in **English first, then Chinese** — helping children connect pronunciation with meaning. 868 high-quality TTS audio files powered by Microsoft Edge TTS (en-US-JennyNeural + zh-CN-XiaoxiaoNeural).
+Every word and phrase is read aloud in **English first, then Chinese** — helping children connect pronunciation with meaning. 1276+ high-quality TTS audio files powered by Microsoft Edge TTS (en-US-JennyNeural + zh-CN-XiaoxiaoNeural).
 
 ### 📈 5-Level Gameplay Progression *(Upgraded in v2.5)*
 Words are organized into 5 levels that mirror natural Minecraft progression — children encounter the right words at exactly the right moment in their game journey:
@@ -39,8 +46,8 @@ Words are organized into 5 levels that mirror natural Minecraft progression — 
 | ⭐⭐ Lv2 | First Week — building, mining, villagers, early farms | ~100 |
 | ⭐⭐⭐ Lv3 | Exploration — biomes, ruins, hostile mobs, deep caves | ~100 |
 | ⭐⭐⭐⭐ Lv4 | Nether Journey — nether mobs, brewing, enchanting | ~100 |
-| ⭐⭐⭐⭐⭐ Lv5 | The End — endgame content, rare blocks, final boss | ~34 |
-| | **Total** | **434** |
+| ⭐⭐⭐⭐⭐ Lv5 | The End — endgame content, rare blocks, final boss | ~84 |
+| | **Total** | **484** |
 
 Unlock 80% of words in your current level to advance to the next!
 
@@ -59,7 +66,7 @@ Parents can type `/words` to check their child's collection progress. Like a Pok
 
 ### ✨ Designed for Kids
 - **Zero typing required** — everything is automatic or proximity-based
-- **3 trigger types** — entity proximity, block break/place, item hold/switch
+- **4 trigger types** — entity proximity, block break/place, item hold/switch, player action phrases
 - **Bilingual display** — English + Chinese + phonetic symbols
 - **Voice narration** — hear every word spoken in English and Chinese
 - **Positive reinforcement** — sounds, particles, XP, and item rewards
@@ -79,8 +86,15 @@ Parents can type `/words` to check their child's collection progress. Like a Pok
 ### 🎒 物品学习 *（v2.5 新增）*
 切换手持物品时触发学习。每一件工具、武器、食物和材料都是新的词汇机会。
 
+### 🗣️ 动作短语 *（v3.0 新增）*
+自然游玩时，孩子的每个动作都能触发对应的英语短语！**跳跃、潜行、攻击、吃东西、射箭**等动作会弹出配套英语句子并语音朗读，在真实游玩情境中建立句子直觉。
+
+> 跳跃 → *"Jump up high!"* · 吃东西 → *"Yummy! This tastes great!"* · 攻击 → *"Fight! Be brave!"*
+
+156 条动作短语覆盖日常游玩动作，每条均有完整英文+中文语音。
+
 ### 🔊 语音朗读
-每个单词都会**先朗读英文，再朗读中文**——帮助孩子将发音与含义建立联系。868 个高品质语音文件，由 Microsoft Edge TTS 生成（en-US-JennyNeural + zh-CN-XiaoxiaoNeural）。
+每个单词和短语都会**先朗读英文，再朗读中文**——帮助孩子将发音与含义建立联系。1276+ 个高品质语音文件，由 Microsoft Edge TTS 生成（en-US-JennyNeural + zh-CN-XiaoxiaoNeural）。
 
 ### 📈 5 级游戏进程分级 *（v2.5 升级）*
 单词按游戏进程分为 5 个等级，孩子在游戏中自然推进时，在最合适的时机学到最合适的单词：
@@ -91,8 +105,8 @@ Parents can type `/words` to check their child's collection progress. Like a Pok
 | ⭐⭐ Lv2 | 第一周 — 建造、挖矿、村民、早期农场 | ~100 |
 | ⭐⭐⭐ Lv3 | 探索期 — 生态群系、遗迹、敌对怪物、深层洞穴 | ~100 |
 | ⭐⭐⭐⭐ Lv4 | 下界征途 — 下界生物、药水酿造、附魔 | ~100 |
-| ⭐⭐⭐⭐⭐ Lv5 | 终末之地 — 末地内容、稀有方块、最终 Boss | ~34 |
-| | **总计** | **434** |
+| ⭐⭐⭐⭐⭐ Lv5 | 终末之地 — 末地内容、稀有方块、最终 Boss | ~84 |
+| | **总计** | **484** |
 
 解锁当前等级 80% 的单词即可升级到下一级！
 
@@ -111,7 +125,7 @@ Parents can type `/words` to check their child's collection progress. Like a Pok
 
 ### ✨ 为儿童设计
 - **零打字需求** — 全部自动触发或靠近触发
-- **3 种触发类型** — 实体靠近、方块挖掘/放置、物品切换手持
+- **4 种触发类型** — 实体靠近、方块挖掘/放置、物品切换手持、玩家动作短语
 - **双语显示** — 英文 + 中文 + 音标
 - **语音朗读** — 每个单词都有英文和中文语音
 - **正向激励** — 音效、粒子特效、经验值、物品奖励
@@ -170,6 +184,7 @@ Parents can type `/words` to check their child's collection progress. Like a Pok
 | Walk near an animal 走近动物 | Name displayed + English & Chinese voice 显示名称 + 英中语音朗读 |
 | Mine/place a block 挖掘/放置方块 | Block name + voice on ActionBar 方块名称 + 语音 |
 | Switch held item 切换手持物品 | Item name + voice on ActionBar 物品名称 + 语音 |
+| Jump / eat / attack / sneak… 跳跃/吃东西/攻击/潜行… | English phrase + voice 英语短语 + 语音朗读 |
 | Wait 5 minutes 等待5分钟 | Auto quest appears 自动寻宝任务出现 |
 | Type `/words` 输入 `/words` | View word album & level progress 查看单词图鉴和等级进度 |
 
@@ -195,15 +210,17 @@ EnglishLearning_BP/          # Behavior Pack (logic)
     ├── progress.js           # Player progress tracking
     ├── levelUp.js            # Level-up celebration & rewards
     ├── voice.js              # Voice playback (EN then CN) + playback lock
+    ├── phraseLearn.js        # Action phrase triggers (NEW v3.0)
     └── vocab/
         ├── index.js          # Vocabulary aggregator
         ├── level1.js ~ level5.js  # Word definitions per level (gameplay-progression)
+        └── phrases.js        # 156 action phrases (NEW v3.0)
 
 EnglishLearning_RP/          # Resource Pack (audio)
 ├── manifest.json
 └── sounds/
     ├── sound_definitions.json
-    └── eng/                  # 868 audio files (434 words × 2)
+    └── eng/                  # 1276+ audio files (484 words × 2 + 156 phrases × 2)
         ├── cow_en.ogg
         ├── cow_cn.ogg
         └── ...
@@ -236,8 +253,10 @@ Edit `EnglishLearning_BP/config.json`:
 
 - **Platform**: Minecraft Bedrock Edition 1.21.60+
 - **API**: `@minecraft/server` 2.0.0 (Script API)
-- **Audio**: 868 OGG files, Microsoft Edge TTS (en-US-JennyNeural EN + zh-CN-XiaoxiaoNeural CN)
-- **Trigger types**: Entity proximity · Block break/place · Item hold/switch
+- **Audio**: 1276+ OGG files, Microsoft Edge TTS (en-US-JennyNeural EN + zh-CN-XiaoxiaoNeural CN)
+- **Vocabulary**: 484 words across 5 gameplay-progression levels
+- **Phrases**: 156 action phrases triggered by player gameplay actions *(NEW v3.0)*
+- **Trigger types**: Entity proximity · Block break/place · Item hold/switch · Player action phrases
 - **Playback lock**: Global 4-second lock prevents audio overlap
 - **Out-of-level**: Lightweight experience (ActionBar + voice, no XP) for words above current level
 - **Multiplayer compatible** — each player has independent progress

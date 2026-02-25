@@ -1,5 +1,45 @@
 # Changelog | 更新日志
 
+## v3.0.0 (2026-02-25)
+
+### 🗣️ Action Phrase System | 动作短语系统
+
+- **156 Action Phrases** — brand-new phrase system: player gameplay actions (jump, sneak, attack, eat, shoot arrow, swim, sleep, etc.) now trigger contextual English phrases with voice narration. Each phrase is displayed with English + Chinese translation and read aloud.
+  > Examples: Jump → *"Jump up high!"* · Eat → *"Yummy! This tastes great!"* · Attack → *"Fight! Be brave!"*
+- **406 new audio files** — 156 phrase pairs (EN + CN) generated via Microsoft Edge TTS, bringing total audio to 1276+
+- **phraseLearn.js** — new script module handling player action event subscriptions and phrase playback
+- **phrases.js** — new vocabulary file containing all 156 action phrases
+- **voice.js SPECIAL_MAP** — updated 17 pronunciation mappings for improved TTS accuracy
+- **4th trigger type** — player actions join entity proximity, block break/place, and item hold/switch as full trigger types
+
+- **156 条动作短语** — 全新短语系统：玩家游玩动作（跳跃、潜行、攻击、吃东西、射箭、游泳、睡觉等）触发情境英语短语，伴随语音朗读。每条短语展示英文+中文译文并朗读。
+  > 示例：跳跃 → *"Jump up high!"* · 吃东西 → *"Yummy! This tastes great!"* · 攻击 → *"Fight! Be brave!"*
+- **406 个新音频文件** — 156 条短语的英文+中文语音，Edge TTS 生成，音频总数达 1276+
+- **phraseLearn.js** — 新脚本模块，处理玩家动作事件订阅和短语播放
+- **phrases.js** — 新词库文件，包含全部 156 条动作短语
+- **voice.js SPECIAL_MAP** — 更新 17 个发音映射，提升 TTS 准确性
+- **第 4 种触发类型** — 玩家动作触发与实体靠近、方块挖掘/放置、物品切换并列为完整触发类型
+
+---
+
+## v2.7.0 (2026-02-25)
+
+### 📚 Vocabulary Expansion — 50 New Nouns | 词库扩充 — 50 个新名词
+
+- **484 Words total** (up from 434) — 50 new nouns added across levels covering mob variants, food items, flora, and more:
+  - **Mob variants**: `zombie_villager_v2`, `bogged`, `tadpole`, `trader_llama`
+  - **Food**: `cooked_cod`, and various cooked/raw food items
+  - **Flora**: flowers, saplings, and plant variants previously missing
+- **Comprehensive coverage** — closes gaps in common in-game items children encounter early in gameplay
+
+- **484 个单词**（从 434 扩充）— 新增 50 个名词，覆盖怪物变体、食物、植物等：
+  - **怪物变体**：`zombie_villager_v2`、`bogged`、`tadpole`、`trader_llama`
+  - **食物**：`cooked_cod` 及各类熟食/生食
+  - **植物**：花朵、树苗及此前缺失的植物变体
+- **覆盖补全** — 填补儿童在早期游玩中常遇到的词汇空白
+
+---
+
 ## v2.6.1 (2026-02-24)
 
 ### 🐛 Bug Fix — sound_definitions.json 结构修复 | Audio Structure Fix
