@@ -81,13 +81,19 @@ export function startPhraseEvents() {
             if (phrase) showPhrase(player, phrase, phrase.level);
           }
 
-          // Drowning detection (player underwater with low air)
+          // Drowning detection: player head is actually in water
           try {
-            const breathable = player.getComponent("minecraft:breathable");
-            if (breathable && breathable.suffocateTime <= 0) {
-              // Player is out of air
-              const phrase = statusPhrases.find(p => p.event === "drowning");
-              if (phrase) showPhrase(player, phrase, phrase.level);
+            if (player.isInWater) {
+              const eyePos = {
+                x: Math.floor(player.location.x),
+                y: Math.floor(player.location.y + 1.62),
+                z: Math.floor(player.location.z)
+              };
+              const eyeBlock = player.dimension.getBlock(eyePos);
+              if (eyeBlock && (eyeBlock.typeId === "minecraft:water" || eyeBlock.typeId === "minecraft:flowing_water")) {
+                const phrase = statusPhrases.find(p => p.event === "drowning");
+                if (phrase) showPhrase(player, phrase, phrase.level);
+              }
             }
           } catch (e) {}
 
