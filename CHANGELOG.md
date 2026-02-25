@@ -2,14 +2,18 @@
 
 ## v3.0.1 (2026-02-25)
 
-### Changed
-- 词条提示从 actionbar（屏幕底部）迁移到自定义 JSON UI（屏幕上方中央），避免与游戏物品名称提示重叠
+### Added
+- 自定义 JSON UI Override：将词条提示从 actionbar（屏幕底部）重定位到屏幕上方中央（128px from top），避免与游戏原生物品名称提示重叠
+- Resource Pack 新增 `ui/hud_screen.json`
+
+### Fixed
+- 修复溺水状态误报：从 breathable.suffocateTime 静态检测改为 player.isInWater + 头部水方块检测
+- 修复切换模组物品后原生物品词条失效的 bug：解耦 lastHeldItem 追踪与冷却检查，冷却中仍更新追踪状态
+- 修复语音播放锁阻断文字显示：语音被锁时仍显示文字提示
+
+### Changed  
 - 冷却时间从 20s 缩短到 5s
 - 语音播放锁从 4s 缩短到 2s
-- 溺水检测改为基于玩家实际水中位置（修复陆地误报）
-
-### Added
-- Resource Pack 新增 `ui/hud_screen.json`：自定义 HUD 覆盖，将 actionbar 重定位到屏幕顶部向下 128px
 
 ---
 

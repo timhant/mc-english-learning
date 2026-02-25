@@ -60,8 +60,7 @@ function handleBlock(player, blockId, actionType) {
     // Fall through to noun display
     setCooldown(player.id, blockId);
 
-    const played = playWordAudio(player, blockId);
-    if (!played) return;
+    playWordAudio(player, blockId);
 
     if (inLevel) {
       const result = unlockWord(player, "blocks", blockId, word.level);

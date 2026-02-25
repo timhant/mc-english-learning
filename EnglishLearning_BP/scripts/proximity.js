@@ -64,9 +64,7 @@ export function startProximityDetection() {
               if (isOnCooldown(player.id, typeId, true)) continue;
               setCooldown(player.id, typeId);
 
-              // Try to play audio; if locked, skip visual too
-              const played = playWordAudio(player, typeId);
-              if (!played) continue;
+              playWordAudio(player, typeId);
 
               const result = unlockWord(player, "entities", typeId, word.level);
               showFullExperience(player, word, result.isNew);
@@ -80,8 +78,7 @@ export function startProximityDetection() {
               if (isOnCooldown(player.id, typeId, false)) continue;
               setCooldown(player.id, typeId);
 
-              const played = playWordAudio(player, typeId);
-              if (!played) continue;
+              playWordAudio(player, typeId);
 
               showLightExperience(player, word);
             }

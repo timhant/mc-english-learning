@@ -39,7 +39,6 @@ function showLightExperience(player, word) {
 
 export function startItemLearning() {
   system.runInterval(() => {
-    const tick = system.currentTick;
     let players;
     try { players = world.getAllPlayers(); } catch (e) { return; }
 
@@ -55,20 +54,37 @@ export function startItemLearning() {
         const lastId = lastHeldItem.get(player.id);
 
         if (currentItemId === lastId) continue;
-        lastHeldItem.set(player.id, currentItemId);
 
-        if (!currentItemId) continue;
+        // DEBUG: log every item switch
+
+        if (!currentItemId) {
+          lastHeldItem.set(player.id, currentItemId);
+          continue;
+        }
 
         const word = itemMap.get(currentItemId);
-        if (!word) continue;
+        if (!word) {
+          lastHeldItem.set(player.id, currentItemId);
+          continue;
+        }
 
         const playerLevel = getPlayerLevel(player);
         const inLevel = word.level <= playerLevel;
 
-        if (!inLevel && !CONFIG.outOfLevelEnabled) continue;
-        if (isOnCooldown(player.id, currentItemId, inLevel)) continue;
+        if (!inLevel && !CONFIG.outOfLevelEnabled) {
+          lastHeldItem.set(player.id, currentItemId);
+          continue;
+        }
 
-        // v3.0: If noun is already learned, try to show food phrase instead
+        const onCooldown = isOnCooldown(player.id, currentItemId, inLevel);
+        if (onCooldown) {
+          lastHeldItem.set(player.id, currentItemId);
+          continue;
+        }
+
+        lastHeldItem.set(player.id, currentItemId);
+
+        // v3.0: phrase check
         if (inLevel && hasLearnedNoun(player, currentItemId)) {
           const phraseEntry = foodPhraseMap.get(currentItemId);
           if (phraseEntry) {
@@ -78,25 +94,22 @@ export function startItemLearning() {
           }
         }
 
-        // Fall through to noun display
         setCooldown(player.id, currentItemId);
+        playWordAudio(player, currentItemId);
 
-        const played = playWordAudio(player, currentItemId);
-        if (!played) continue;
 
         if (inLevel) {
           const result = unlockWord(player, "items", currentItemId, word.level);
           showFullExperience(player, word, result.isNew);
-
           if (result.leveledUp) {
-            system.runTimeout(() => {
-              celebrateLevelUp(player, result.newLevel);
-            }, 40);
+            system.runTimeout(() => { celebrateLevelUp(player, result.newLevel); }, 40);
           }
         } else {
           showLightExperience(player, word);
         }
-      } catch (e) {}
+      } catch (e) {
+        console.warn("[ItemLearn ERROR] " + e);
+      }
     }
   }, CHECK_INTERVAL);
 }
