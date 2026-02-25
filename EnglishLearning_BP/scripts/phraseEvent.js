@@ -1,12 +1,26 @@
-// phraseEvent.js - v3.0 Phrase trigger for weather changes and player status
+// phraseEvent.js - v3.0.2 Phrase trigger for weather changes and player status
+// Fix: edge-triggered status detection (only fires on state CHANGE, not continuously)
 import { world, system } from "@minecraft/server";
 import { weatherPhrases, statusPhrases } from "./phraseData.js";
 import { showPhrase } from "./phraseCore.js";
 
 const STATUS_CHECK_INTERVAL = 60; // every 3 seconds
 
-// Track dimension for portal detection
-const lastDimension = new Map(); // playerId -> dimensionId
+// Track previous states per player for edge detection
+const lastDimension = new Map();    // playerId -> dimensionId
+const lastHealthState = new Map();  // playerId -> "full"|"low"|"normal"
+const lastOnFire = new Map();       // playerId -> boolean
+const lastDrowning = new Map();     // playerId -> boolean
+const lastGliding = new Map();      // playerId -> boolean
+
+/**
+ * Edge detector: returns true only on state transition (false -> true)
+ */
+function edgeRising(map, playerId, currentState) {
+  const prev = map.get(playerId) || false;
+  map.set(playerId, currentState);
+  return !prev && currentState; // only trigger on false -> true
+}
 
 export function startPhraseEvents() {
   // --- Weather change ---
@@ -15,7 +29,6 @@ export function startPhraseEvents() {
       try {
         const players = world.getAllPlayers();
         for (const player of players) {
-          // Only trigger for overworld players
           if (player.dimension.id !== "minecraft:overworld") continue;
 
           let eventType = null;
@@ -25,15 +38,6 @@ export function startPhraseEvents() {
             eventType = "thunder";
           } else if (event.newWeather === "clear" || event.newWeather === "Clear") {
             eventType = "clear";
-          }
-
-          // Bedrock weatherChange event structure may differ, try alternate detection
-          if (!eventType) {
-            const dim = player.dimension;
-            try {
-              const weather = dim.getWeather ? dim.getWeather() : null;
-              // Fallback: check if it's raining/thundering
-            } catch (e) {}
           }
 
           if (!eventType) return;
@@ -46,42 +50,27 @@ export function startPhraseEvents() {
       } catch (e) {}
     });
   } catch (e) {
-    // weatherChange may not be available, use polling fallback
-    let lastWeather = "clear";
-    system.runInterval(() => {
-      try {
-        const players = world.getAllPlayers();
-        if (players.length === 0) return;
-
-        // Check overworld weather via command
-        const dim = world.getDimension("overworld");
-        let currentWeather = "clear";
-        // Use player-based detection as fallback
-        for (const player of players) {
-          if (player.dimension.id !== "minecraft:overworld") continue;
-          // Simple heuristic: we rely on the event-based approach primarily
-          break;
-        }
-      } catch (e) {}
-    }, 200); // every 10 seconds
+    // weatherChange may not be available
   }
 
-  // --- Status detection (tick-based) ---
+  // --- Status detection (tick-based, EDGE-TRIGGERED) ---
   system.runInterval(() => {
     try {
       const players = world.getAllPlayers();
-      const tick = system.currentTick;
 
       for (const player of players) {
         try {
-          // Fire detection
-          const onFire = player.getComponent("minecraft:onfire");
-          if (onFire) {
+          const pid = player.id;
+
+          // Fire detection (edge: not on fire -> on fire)
+          const onFire = !!player.getComponent("minecraft:onfire");
+          if (edgeRising(lastOnFire, pid, onFire)) {
             const phrase = statusPhrases.find(p => p.event === "fire");
             if (phrase) showPhrase(player, phrase, phrase.level);
           }
 
-          // Drowning detection: player head is actually in water
+          // Drowning detection (edge: not drowning -> drowning)
+          let isDrowning = false;
           try {
             if (player.isInWater) {
               const eyePos = {
@@ -91,28 +80,42 @@ export function startPhraseEvents() {
               };
               const eyeBlock = player.dimension.getBlock(eyePos);
               if (eyeBlock && (eyeBlock.typeId === "minecraft:water" || eyeBlock.typeId === "minecraft:flowing_water")) {
-                const phrase = statusPhrases.find(p => p.event === "drowning");
-                if (phrase) showPhrase(player, phrase, phrase.level);
+                isDrowning = true;
               }
             }
           } catch (e) {}
+          if (edgeRising(lastDrowning, pid, isDrowning)) {
+            const phrase = statusPhrases.find(p => p.event === "drowning");
+            if (phrase) showPhrase(player, phrase, phrase.level);
+          }
 
-          // Health detection
+          // Health detection (edge: state transition only)
           const health = player.getComponent("minecraft:health");
           if (health) {
             const ratio = health.currentValue / health.effectiveMax;
-            if (ratio <= 0.25) {
-              const phrase = statusPhrases.find(p => p.event === "low_health");
-              if (phrase) showPhrase(player, phrase, phrase.level);
-            } else if (ratio >= 1.0) {
-              const phrase = statusPhrases.find(p => p.event === "full_health");
-              if (phrase) showPhrase(player, phrase, phrase.level);
+            let state = "normal";
+            if (ratio <= 0.25) state = "low";
+            else if (ratio >= 1.0) state = "full";
+
+            const prevState = lastHealthState.get(pid) || "normal";
+            lastHealthState.set(pid, state);
+
+            // Only trigger on state CHANGE
+            if (state !== prevState) {
+              if (state === "low") {
+                const phrase = statusPhrases.find(p => p.event === "low_health");
+                if (phrase) showPhrase(player, phrase, phrase.level);
+              } else if (state === "full" && prevState === "low") {
+                // Only trigger full_health when recovering FROM low health
+                const phrase = statusPhrases.find(p => p.event === "full_health");
+                if (phrase) showPhrase(player, phrase, phrase.level);
+              }
             }
           }
 
-          // Dimension change detection (nether/end portals)
+          // Dimension change detection
           const currentDim = player.dimension.id;
-          const lastDim = lastDimension.get(player.id);
+          const lastDim = lastDimension.get(pid);
           if (lastDim && lastDim !== currentDim) {
             let eventType = null;
             if (currentDim === "minecraft:nether") eventType = "nether_enter";
@@ -124,22 +127,21 @@ export function startPhraseEvents() {
               if (phrase) showPhrase(player, phrase, phrase.level);
             }
           }
-          lastDimension.set(player.id, currentDim);
+          lastDimension.set(pid, currentDim);
 
-          // Elytra flight detection
+          // Elytra flight detection (edge: not gliding -> gliding)
           try {
-            if (player.isGliding) {
+            if (edgeRising(lastGliding, pid, !!player.isGliding)) {
               const phrase = statusPhrases.find(p => p.event === "elytra_fly");
               if (phrase) showPhrase(player, phrase, phrase.level);
             }
           } catch (e) {}
 
-          // Night detection (overworld only, time 13000-23000)
+          // Night detection (overworld only, narrow window)
           if (currentDim === "minecraft:overworld") {
             try {
               const time = world.getTimeOfDay();
               if (time >= 12500 && time <= 12600) {
-                // Just turned night (narrow window to trigger once)
                 const phrase = statusPhrases.find(p => p.event === "night");
                 if (phrase) showPhrase(player, phrase, phrase.level);
               }
@@ -154,7 +156,6 @@ export function startPhraseEvents() {
   try {
     world.afterEvents.playerSpawn.subscribe((event) => {
       if (!event.initialSpawn) {
-        // Player respawned after death
         const phrase = statusPhrases.find(p => p.event === "respawn");
         if (phrase) {
           system.runTimeout(() => {
