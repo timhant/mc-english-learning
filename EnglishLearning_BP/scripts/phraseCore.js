@@ -61,19 +61,25 @@ export function showPhrase(player, phrase, phraseLevel) {
 
     if (isNew) {
       // New phrase: celebration
-      dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({
+      dim.runCommand("titleraw " + sel + " times 5 50 10");
+      dim.runCommand("titleraw " + sel + " title " + JSON.stringify({ rawtext: [{ text: "" }] }));
+      dim.runCommand("titleraw " + sel + " subtitle " + JSON.stringify({
         rawtext: [{ text: "§e✨ §a§l" + phrase.en + " §f" + phrase.cn + " §e✨§r" }]
       }));
       dim.runCommand("playsound random.orb " + sel + " " + x + " " + y + " " + z + " 0.5 1.2");
       dim.runCommand("xp 2 " + sel);
     } else if (inLevel) {
       // Known phrase: normal display
-      dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({
+      dim.runCommand("titleraw " + sel + " times 5 40 10");
+      dim.runCommand("titleraw " + sel + " title " + JSON.stringify({ rawtext: [{ text: "" }] }));
+      dim.runCommand("titleraw " + sel + " subtitle " + JSON.stringify({
         rawtext: [{ text: "§a§l" + phrase.en + " §f" + phrase.cn + "§r" }]
       }));
     } else {
       // Out-of-level: dimmed display
-      dim.runCommand("titleraw " + sel + " actionbar " + JSON.stringify({
+      dim.runCommand("titleraw " + sel + " times 5 40 10");
+      dim.runCommand("titleraw " + sel + " title " + JSON.stringify({ rawtext: [{ text: "" }] }));
+      dim.runCommand("titleraw " + sel + " subtitle " + JSON.stringify({
         rawtext: [{ text: "§7" + phrase.en + " §8| §7" + phrase.cn + "§r" }]
       }));
     }
